@@ -1,0 +1,5 @@
+role_id,role_name,actor_type,organisation,trustworthiness_responsibilities,decision_scope,escalation_path
+R1,Data Provider,Organisation,Multiple,Data sovereignty and policy definition,Data publication,Federator
+R2,Data Consumer,Organisation,Org A,Query contextualisation and output validation,Query and response,Governance Board
+R3,Federator,Organisation,Consortium,Policy enforcement and metadata integrity,Cross-lifecycle,Consortium Board
+R4,Governance Board,Committee,Multi-org,Trustworthiness oversight and revision triggers,Cross-lifecycle,Executive Board
