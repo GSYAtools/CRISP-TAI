@@ -1,0 +1,4 @@
+trace_id,trustworthiness_dimension,decision_id,decision_description,lifecycle_phase,cr_rule,fr_rule,artefact,artefact_type,responsible_role,evidence_link,status,notes
+T-001,Lawfulness,CR-DEC-01,"Data usage limited to purpose X",Business Understanding,CR.1;CR.3,FR.1;FR.2,data-usage-requirements.md,Requirement,Data Owner,/evidence/legal-review.pdf,Active,"Derived from context description"
+T-002,Transparency,CR-DEC-02,"Human oversight required for all alerts",Modeling,CR.3,FR.1;FR.2,model-design-rationale.md,Design Rationale,ML Engineer,/evidence/design-review.md,Active,"Explains choice of interpretable model"
+T-003,Fairness,CR-DEC-03,"Periodic bias review required",Deployment & Monitoring,CR.5,FR.3;FR.4,monitoring-plan.md,Monitoring Specification,Operations Lead,/evidence/monitoring-plan.md,Active,"Triggered by deployment context"
