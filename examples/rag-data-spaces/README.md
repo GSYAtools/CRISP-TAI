@@ -4,7 +4,7 @@ This example illustrates how **CRISP-TAI** can be instantiated in a real-worldâ€
 scenario involving **Retrieval-Augmented Generation (RAG)** deployed over **federated Data Spaces (DSs)**.
 
 The example is derived from the architectural and experimental study presented in  
-*Guided and Federated RAG: Architectural Models for Trustworthy AI in Data Spaces* :contentReference[oaicite:2]{index=2},
+*Guided and Federated RAG: Architectural Models for Trustworthy AI in Data Spaces* (https://github.com/GSYAtools/DSRAG) ,
 and reinterprets that work from a **process and lifecycle perspective**, focusing on
 trustworthiness-related reasoning rather than architectural design or performance evaluation.
 
