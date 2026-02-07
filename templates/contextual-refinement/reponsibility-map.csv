@@ -1,0 +1,6 @@
+role_id,role_name,actor_type,organisation,trustworthiness_responsibilities,decision_scope,artefacts_owned,escalation_path,notes
+R1,Product Owner,Human,Organisation A,"Overall system objectives; trustworthiness prioritisation; approval of trade-offs","Business and evaluation phases","principle-prioritisation.md; context-description.md","Ethics Committee",""
+R2,Data Owner,Human,Organisation B,"Data usage constraints; data quality assumptions; consent management","Data understanding and preparation","data-inventory.csv; assumption-log.md","Legal Office",""
+R3,ML Engineer,Human,Organisation A,"Model design choices; explainability mechanisms; performance vs fairness trade-offs","Modeling and evaluation","model-design.md; evaluation-criteria.md","Technical Lead",""
+R4,Operations Lead,Human,Organisation A,"Deployment conditions; monitoring strategy; incident response","Deployment and monitoring","monitoring-plan.md; feedback-log.md","Risk Management Board",""
+R5,Governance Board,Committee,Multi-org,"Oversight of trustworthiness decisions; accountability review; revision triggers","Cross-lifecycle","review-reports.md","Executive Board",""
