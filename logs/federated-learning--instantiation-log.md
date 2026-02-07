@@ -1,98 +1,93 @@
-# Instantiation Log — TrustAIoT Platform
+# Instantiation Log — Federated Learning (Early Trustworthiness Monitoring)
 
-This log documents how **CRISP-TAI** was instantiated at the **platform level** in the
-TrustAIoT scenario, capturing when and why Contextual Refinement (CR) and Functional
-Refinement (FR) rules were applied during system evolution.
+This log documents the **execution-based instantiation of CRISP-TAI** in a
+**Federated Learning (FL)** scenario focused on early detection of backdoor
+and poisoning attacks during system operation.
 
-The purpose of this artefact is to provide **process-level evidence** of execution-based
-validation, rather than to report implementation details or performance results.
+The instantiation is aligned with the study:
+*Early detection of backdoor attacks in federated learning via ecosystemic symmetry breaking*,
+and records **process-level decisions and refinements**, not algorithmic details
+or experimental results.
 
 ---
 
 ## 1. Instantiation scope
 
-- Platform: TrustAIoT (Trustworthy AIoT Platform)
-- Scope: Platform-wide governance and continuous operation
-- Instantiation phase: Initial deployment and early operational phase
-- Responsible body: Platform Governance Board
+- System: Federated Learning with secure aggregation
+- Scope: Operational monitoring and governance during training rounds
+- Instantiation phase: Deployment and continuous operation
+- Responsible body: Operations and Security Team
 
 ---
 
 ## 2. Applied Contextual Refinement (CR) rules
 
-The following Contextual Refinement rules were applied:
-
 - **CR.1 — Context Interpretation**  
-  Used to characterise the edge–fog–cloud architecture, heterogeneous IoT devices,
-  and long-lived operational nature of the platform.
+  Interpreted the FL setting as a partially observable system with distributed
+  clients, secure aggregation, and adversarial risk.
 
 - **CR.2 — Responsibility Allocation**  
-  Applied to distribute trustworthiness responsibilities across platform owner,
-  platform teams, project teams, and compliance actors.
+  Allocated responsibilities for monitoring, alert interpretation, and escalation
+  to the Operations and Security Team, with governance oversight.
 
 - **CR.3 — Principle Prioritisation**  
-  Used to prioritise lawfulness, robustness, and explicability at platform level,
-  reflecting regulatory exposure and human-centric requirements.
+  Prioritised robustness and security over performance optimisation, reflecting
+  the adversarial threat model.
 
 - **CR.4 — Assumption Documentation**  
-  Applied to document assumptions about device lifecycle management,
-  project adherence to platform guidelines, and regulatory stability.
+  Documented assumptions regarding benign majority of clients, stability of
+  detection signals, and effectiveness of aggregation protocols.
 
 - **CR.5 — Context Revision Triggers**  
-  Defined triggers for revisiting contextual interpretations, including regulatory
-  updates, platform incidents, and onboarding of new device classes.
+  Defined triggers such as repeated alerts, calibration drift, or changes in
+  client population to revisit assumptions and priorities.
 
 ---
 
 ## 3. Applied Functional Refinement (FR) rules
 
-The following Functional Refinement rules were activated:
-
 - **FR.1 — Artefact Derivation**  
-  Resulted in the creation of platform-wide compliance guidelines,
-  explainability guidelines, and lifecycle management policies.
+  Derived monitoring and escalation artefacts from contextual interpretations,
+  including monitoring plans and response procedures.
 
 - **FR.2 — Decision Traceability**  
-  Used to link trustworthiness decisions to concrete artefacts and responsible
-  roles across platform layers.
+  Linked trustworthiness decisions to monitoring artefacts and responsible roles
+  across training rounds.
 
 - **FR.3 — Operational Adjustment**  
-  Activated when monitoring and audit signals required changes to platform
-  procedures or project onboarding conditions.
+  Enabled pre-aggregation mitigation actions (e.g., client exclusion) based on
+  detected anomalies.
 
 - **FR.4 — Iterative Feedback Integration**  
-  Enabled feedback from audits and user communities to trigger revisions of
-  assumptions and priorities.
+  Integrated feedback from alerts and reviews to adjust thresholds and assumptions.
 
 - **FR.6 — Continuity Enforcement**  
-  Ensured that trustworthiness artefacts and responsibilities remained active
-  across platform evolution and organisational changes.
+  Ensured that monitoring and review remained active across successive training
+  rounds and system updates.
 
 ---
 
 ## 4. Key instantiation outcomes
 
-- Trustworthiness concerns were managed **at platform level**, rather than
-  delegated entirely to individual AIoT projects.
-- Responsibilities and escalation paths were clarified across organisational layers.
-- Monitoring and feedback mechanisms enabled continuous governance without
-  introducing static compliance checkpoints.
+- Trustworthiness monitoring was embedded **before aggregation**, rather than
+  applied post-hoc.
+- Alerts were treated as **signals requiring interpretation**, not automatic verdicts.
+- Governance decisions could be taken early, reducing systemic risk.
 
 ---
 
 ## 5. Lessons learned
 
-- Platform-level instantiation requires explicit separation between
-  project-specific and platform-wide trustworthiness concerns.
-- Long-lived AIoT systems benefit from early definition of revision triggers,
-  as assumptions become invalid over time.
-- CRISP-TAI artefacts provided a shared language across technical,
-  governance, and compliance teams.
+- Early operational monitoring is critical in partially observable FL settings.
+- Explicit separation between detection signals and governance decisions improves
+  interpretability and trust.
+- CRISP-TAI artefacts supported coordination between technical and governance roles
+  without modifying the underlying FL protocol.
 
 ---
 
 ## Notes
 
-This instantiation log is illustrative and focuses on **process execution and refinement**.
-It does not replace the detailed architectural or technical descriptions provided
-in the TrustAIoT publication.
+This instantiation log focuses on **process execution and refinement**.
+It complements the technical contribution of the referenced paper by
+making trustworthiness-related reasoning explicit and traceable.
