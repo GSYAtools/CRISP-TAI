@@ -1,6 +1,14 @@
 # Instantiation Log — RAG in Federated Data Spaces
 
-- Contextual Refinement rules applied: CR.1–CR.5
-- Functional Refinement rules applied: FR.1–FR.4
-- Key outcome: Explicit provenance, responsibility allocation, and revision triggers
-- Lessons learned: Trustworthiness reasoning must be continuously revisited as federation evolves
+This file is a **pointer** to the canonical execution log for this example.
+
+**Canonical log location:**
+```
+/logs/rag-data-spaces-instantiation-log.md
+```
+
+Please refer to the file above for the complete execution-based trace documenting
+how CRISP-TAI Contextual and Functional Refinement rules were applied in this scenario.
+
+This pointer is provided to avoid duplication and to keep execution logs
+centralised in the `/logs` directory.
