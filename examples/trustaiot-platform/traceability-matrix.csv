@@ -1,0 +1,4 @@
+trace_id,dimension,decision,artefact,responsible_role
+T1,Lawfulness,Enforce platform compliance,compliance-guidelines.md,Compliance Team
+T2,Explicability,Require explanations,explainability-guidelines.md,Platform Architecture Team
+T3,Sustainability,Manage device lifecycle,lifecycle-policies.md,Platform Owner
