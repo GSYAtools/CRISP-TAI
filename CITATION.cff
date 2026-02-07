@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: >
+  This repository accompanies the CRISP-TAI research article,
+  which is currently under review. Please refer to the README
+  for context and usage, and update this citation once the
+  article is formally published.
+
+title: "CRISP-TAI: An Engineering Process Model for Operationalizing Trustworthy AI"
+
+authors:
+  - family-names: Braga
+    given-names: Carlos Mario
+  - family-names: Serrano
+    given-names: Manuel A.
+  - family-names: Fernández-Medina
+    given-names: Eduardo
+
+status: "under review"
