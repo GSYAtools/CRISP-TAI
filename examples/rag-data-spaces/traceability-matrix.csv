@@ -1,0 +1,4 @@
+trace_id,trustworthiness_dimension,decision,artefact,responsible_role
+T-01,Lawfulness,Enforce purpose limitation,data-usage-requirements.md,Data Provider
+T-02,Traceability,Log retrieved sources,provenance-log.md,Federator
+T-03,Transparency,Provide explanation summary,explanation-guidelines.md,Data Consumer
