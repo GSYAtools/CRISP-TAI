@@ -1,0 +1,3 @@
+trace_id,dimension,decision,artefact,responsible_role
+T1,Robustness,Monitor client divergence,monitoring-plan.md,Operations Team
+T2,Security,Escalate suspected attack,escalation-procedure.md,Governance Board
