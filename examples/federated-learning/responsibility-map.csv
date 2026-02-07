@@ -1,0 +1,5 @@
+role_id,role_name,actor_type,organisation,trustworthiness_responsibilities,decision_scope,escalation_path
+R1,Client,Organisation,Multiple,Local training integrity,Training rounds,FL Server
+R2,FL Server,Organisation,Provider,Aggregation and orchestration,Global model,Operations Team
+R3,Operations Team,Human,Provider,Monitoring and alert interpretation,Operation,Governance Board
+R4,Governance Board,Committee,Provider,Risk thresholds and escalation,Cross-lifecycle,Executive Board
