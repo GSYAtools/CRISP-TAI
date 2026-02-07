@@ -1,0 +1,6 @@
+role_id,role_name,actor_type,organisation,trustworthiness_responsibilities,decision_scope,escalation_path
+R1,Platform Owner,Organisation,Provider,Strategic trust governance,Platform lifecycle,Executive Board
+R2,Platform Architecture Team,Team,Provider,Trust-by-design across layers,Design and evolution,Platform Owner
+R3,Compliance Team,Team,Provider,Regulatory alignment and audits,Cross-lifecycle,Platform Owner
+R4,Project Team,Team,Multiple,Application-level trust requirements,Project lifecycle,Platform Governance Board
+R5,User Community,Group,External,Feedback and participatory evaluation,Operation,Governance Board
