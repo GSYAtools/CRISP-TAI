@@ -1,11 +1,11 @@
 cff-version: 1.2.0
-message: >
-  This repository accompanies the CRISP-TAI research article,
-  which is currently under review. Please refer to the README
-  for context and usage, and update this citation once the
-  article is formally published.
 
-title: "CRISP-TAI: An Engineering Process Model for Operationalizing Trustworthy AI"
+message: >
+  This repository contains the engineering artefacts supporting
+  the CRISP-TAI instantiation of the Lifecycle Refinement Framework.
+  If you use these artefacts, please cite the associated research article.
+
+title: "CRISP-TAI Engineering Artefacts"
 
 authors:
   - family-names: Braga
