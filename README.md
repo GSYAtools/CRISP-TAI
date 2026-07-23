@@ -1,173 +1,236 @@
-# CRISP-TAI — Technical Artefact for Practical Adoption
+# CRISP-TAI --- First Instantiation of the Lifecycle Refinement Framework
 
-This repository provides a **technical artefact that complements the CRISP-TAI process model** presented in the associated research article.  
-Its purpose is to support **practical adoption, instantiation, and reuse** of CRISP-TAI in real-world AI engineering projects.
+This repository contains the engineering artefacts supporting
+**CRISP-TAI**, the **first published instantiation** of the **Lifecycle
+Refinement Framework (LRF)** introduced in the associated research
+article.
 
-> **Important scope note**  
-> This repository does **not** reproduce the paper, its figures, or its conceptual explanations.  
-> The article remains the authoritative source for the motivation, theoretical foundations, and validation of CRISP-TAI.  
-> This repository focuses exclusively on **practical engineering artefacts**, templates, and example instantiations that cannot be fully detailed in an academic paper.
+The Lifecycle Refinement Framework defines a **process-independent
+refinement method** for operationalising Trustworthy AI within
+established software processes through two complementary refinement
+mechanisms:
 
----
+-   **Contextual Refinement (CR)**
+-   **Functional Refinement (FR)**
 
-## What this repository is
+CRISP-TAI demonstrates how this framework can be instantiated over the
+CRISP-DM lifecycle while preserving the original process structure.
 
-- A **technical companion** to the CRISP-TAI article  
-- A collection of **engineering artefacts** that operationalise the process model  
-- A set of **templates and examples** to help practitioners apply CRISP-TAI  
-- A reference for **traceability, evaluability, and governance-ready lifecycle documentation**
+This repository provides the practical engineering artefacts required to
+instantiate, adapt, and reuse that refinement process in real AI
+engineering projects.
 
----
+> **Important scope note**
+>
+> This repository does **not** reproduce the paper, its figures, or its
+> conceptual explanations. The associated article remains the
+> authoritative source for the conceptual foundations, the Lifecycle
+> Refinement Framework, and the scientific evaluation.
+>
+> This repository focuses exclusively on **implementation-oriented
+> engineering artefacts**, reusable templates, execution traces, and
+> practical guidance supporting the CRISP-TAI instantiation.
 
-## What this repository is *not*
+------------------------------------------------------------------------
 
-- ❌ Not a certification framework  
-- ❌ Not an automated compliance or auditing tool  
-- ❌ Not a checklist for Trustworthy AI  
-- ❌ Not a metrics or benchmarking library  
-- ❌ Not a replacement for human governance or organisational decision-making  
+# What this repository provides
 
-CRISP-TAI supports **evaluability and traceability**, not automated judgement or normative enforcement.
+-   Engineering artefacts supporting the CRISP-TAI instantiation
+-   Reusable templates implementing Contextual Refinement (CR) and
+    Functional Refinement (FR)
+-   Practical examples showing framework instantiation in heterogeneous
+    AI domains
+-   Traceability artefacts supporting lifecycle refinement
+-   Practitioner guidance for adapting the refinement method to real
+    projects
 
----
+------------------------------------------------------------------------
 
-## Repository structure
+# What this repository is *not*
 
+-   ❌ Not a certification framework
+-   ❌ Not an automated compliance or auditing tool
+-   ❌ Not a Trustworthy AI checklist
+-   ❌ Not a metrics or benchmarking library
+-   ❌ Not a replacement for organisational governance or human
+    decision-making
+
+The repository supports **traceability, evaluability, and engineering
+operationalisation**, not automated judgement or normative enforcement.
+
+------------------------------------------------------------------------
+
+# Repository structure
+
+``` text
+/docs
+    Practical guidance
+/templates
+    /CR
+    /FR
+/examples
+    Cross-domain framework instantiations
+/logs
+    Refinement and traceability records
+/appendix
+    Supplementary engineering material
 ```
-/docs        Practical guidance for applying CRISP-TAI
-/templates   Reusable engineering templates (CR / FR artefacts)
-/examples    Cross-domain instantiations and execution traces
-/logs        Illustrative rule-usage and refinement logs
-/appendix    Extended tables and detailed traces referenced by examples
-```
 
----
+------------------------------------------------------------------------
 
-## /docs — Practitioner-oriented guidance
+# /docs --- Practitioner Guidance
 
-This directory contains **hands-on documentation** aimed at engineers and teams applying CRISP-TAI in practice.
+This directory contains practical documentation explaining how to apply
+the CRISP-TAI instantiation in engineering projects.
 
 Typical contents include:
 
-- `getting-started.md`  
-  How to start applying CRISP-TAI in an AI project
+-   `getting-started.md`
+-   `lifecycle-walkthrough.md`
+-   `rule-application-guide.md`
+-   `governance-notes.md`
+-   `crisp-tai-instantiation.md`
 
-- `lifecycle-walkthrough.md`  
-  A phase-by-phase walkthrough showing how trustworthiness considerations evolve across the lifecycle
+These documents explain **how** the refinement method is applied in
+practice rather than the conceptual rationale behind the framework.
 
-- `rule-application-guide.md`  
-  How Contextual Refinement (CR) and Functional Refinement (FR) rules are used in practice
+------------------------------------------------------------------------
 
-- `governance-notes.md`  
-  Practical notes on roles, responsibilities, reviews, and organisational integration
+# /templates --- Engineering Artefacts
 
-These documents **extend** the paper by focusing on *how* CRISP-TAI is applied, not *why* it is valid.
+The templates implement the two refinement mechanisms defined by the
+Lifecycle Refinement Framework.
 
----
+## Contextual Refinement (CR)
 
-## /templates — Core engineering artefacts
+Supports governance-oriented reasoning through artefacts such as:
 
-This directory contains **reusable templates** that implement the CRISP-TAI refinement mechanisms.
+-   `context-description.md`
+-   `responsibility-map.csv`
+-   `principle-prioritisation.md`
+-   `assumption-log.md`
 
-### Contextual Refinement templates
-Used to support reflexive and governance-oriented reasoning:
+## Functional Refinement (FR)
 
-- `context-description.md`
-- `responsibility-map.csv`
-- `principle-prioritisation.md`
-- `assumption-log.md`
+Supports engineering operationalisation through artefacts such as:
 
-### Functional Refinement templates
-Used to translate refined interpretations into concrete artefacts:
+-   `artefact-derivation.md`
+-   `traceability-matrix.csv`
+-   `monitoring-plan.md`
+-   `feedback-log.md`
 
-- `artefact-derivation.md`
-- `traceability-matrix.csv`
-- `monitoring-plan.md`
-- `feedback-log.md`
+## Optional phase-oriented guidance
 
-### Phase-oriented checklists
-Optional lightweight guidance per lifecycle phase:
+-   `business-understanding.md`
+-   `data-understanding.md`
+-   `data-preparation.md`
+-   `modeling.md`
+-   `evaluation.md`
+-   `deployment-monitoring.md`
 
-- `business-understanding.md`
-- `data-understanding.md`
-- `data-preparation.md`
-- `modeling.md`
-- `evaluation.md`
-- `deployment-monitoring.md`
+All templates are intentionally:
 
-All templates are **technology-agnostic**, **domain-independent**, and intended to be adapted to local engineering practices.
+-   technology-agnostic
+-   domain-independent
+-   reusable
+-   adaptable to organisational engineering practices
 
----
+------------------------------------------------------------------------
 
-## /examples — Execution-based instantiations
+# /examples --- Framework Instantiations
 
-This directory contains **illustrative instantiations of CRISP-TAI** in heterogeneous settings, reflecting the execution-based validation discussed in the paper.
+This directory contains illustrative applications of the Lifecycle
+Refinement Framework through its CRISP-TAI instantiation.
 
 Examples may include:
 
-- Retrieval-Augmented Generation in Data Spaces  
-- Federated Learning environments  
-- AI-enabled Internet of Things (TrustAIoT)  
+-   Retrieval-Augmented Generation in Data Spaces
+-   Federated Learning
+-   AI-enabled Internet of Things (TrustAIoT)
 
-Each example typically includes:
+Each example typically contains:
 
-- A short contextual description (`README.md`)  
-- An `instantiation-log.md` documenting applied CR/FR rules  
-- Selected artefacts derived during execution (anonymised or synthetic)  
-- Traceability and responsibility records  
+-   contextual description
+-   refinement log
+-   generated artefacts
+-   traceability records
+-   responsibility mappings
 
-These examples are **not reference implementations**, but **evidence of instantiability and practical use**.
+These examples are **illustrative framework instantiations**, not
+production-ready reference implementations.
 
----
+------------------------------------------------------------------------
 
-## /logs — Refinement and traceability records
+# /logs --- Refinement Records
 
-This directory provides **illustrative logs** showing how refinement rules may be activated and revisited over time, for example:
+Illustrative logs showing:
 
-- Context revision triggers  
-- Artefact updates  
-- Monitoring feedback loops  
+-   Context revision triggers
+-   Refinement iterations
+-   Monitoring feedback
+-   Artefact evolution
+-   Traceability updates
 
-These logs support **evaluability and audit-readiness** without prescribing auditing procedures.
+These records demonstrate lifecycle refinement and evaluability without
+prescribing auditing procedures.
 
----
+------------------------------------------------------------------------
 
-## /appendix — Supplementary material
+# /appendix --- Supplementary Material
 
-Contains extended tables, detailed traces, or supporting material referenced by examples, when such detail would clutter the main repository structure.
+Contains extended engineering material supporting the examples when such
+information exceeds the scope of the main repository.
 
----
+------------------------------------------------------------------------
 
-## Relationship to the research article
+# Relationship to the Lifecycle Refinement Framework
 
-The CRISP-TAI article presents:
+The associated article introduces two complementary research
+contributions.
 
-- The motivation and problem framing  
-- The design rationale of the process model  
-- The distinction between operational and reflexive reasoning  
-- The execution-based validation across domains  
+1.  **The Lifecycle Refinement Framework**, a process-independent
+    refinement method for operationalising Trustworthy AI.
 
-This repository provides:
+2.  **CRISP-TAI**, the first published instantiation of that framework
+    over the CRISP-DM lifecycle.
 
-- The **engineering artefacts** that make CRISP-TAI usable in practice  
-- The **templates and traces** that operationalise the model  
-- Additional material that supports adoption but exceeds article length constraints  
+This repository complements the second contribution by providing:
 
-For conceptual, methodological, and validation details, **refer to the article**.
+-   reusable engineering artefacts
+-   implementation templates
+-   refinement traces
+-   practical guidance
+-   example instantiations
 
----
+The repository intentionally focuses on implementation-oriented material
+that exceeds the space available in the article.
 
-## License and reuse
+------------------------------------------------------------------------
 
-This repository is intended to support reuse and adaptation in both research and industrial contexts.  
-See `LICENSE` for terms of use.
+# Future Framework Instantiations
 
----
+The Lifecycle Refinement Framework has been designed to remain
+independent of any particular software process.
 
-## Citation
+Although this repository currently contains only the CRISP-TAI
+instantiation, future work may provide additional instantiations over
+alternative software development processes.
 
-If you use CRISP-TAI or artefacts from this repository in academic work, please cite the associated article.
+------------------------------------------------------------------------
 
-Citation details are provided in `CITATION.cff`.
+# License and reuse
 
+This repository is intended to support reuse and adaptation in both
+research and industrial environments.
+
+See `LICENSE` for licensing terms.
+
+------------------------------------------------------------------------
+
+# Citation
+
+If you use CRISP-TAI or any artefacts contained in this repository,
+please cite the associated research article.
+
+Bibliographic information is provided in `CITATION.cff`.
 
