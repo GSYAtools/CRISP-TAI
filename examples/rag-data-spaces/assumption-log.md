@@ -1,18 +1,20 @@
 # Assumption Log — RAG in Federated Data Spaces Worked Example
 
-This document is an **illustrative retrospective completion** of the
-`assumption-log.md` template using documentary evidence from the
-RAG-in-Data-Spaces case.
+This document is an **illustrative completion** of the
+`assumption-log.md` template using contextual conditions that can be derived
+from documentary evidence in the RAG-in-Data-Spaces case.
 
 It is not an original project record and does not imply prospective
 application of CRISP-TAI.
 
-This worked artefact primarily illustrates:
+The analytical evaluation reported in the associated article reconstructs
+**CR.1–CR.3** for the RAG case. It does **not** identify
+**CR.4 — Assumption Documentation** or **CR.5 — Context Revision Trigger**
+as part of the paper-supported RAG reconstruction.
 
-- **CR.4 — Assumption Documentation**
-- **CR.5 — Context Revision Trigger**, where source, provenance, governance,
-  or organisational evidence challenges an existing contextual assumption or
-  interpretation
+Accordingly, this file demonstrates how the reusable CRISP-TAI assumption
+template can be populated consistently with the case evidence without
+extending the analytical claims made in the associated article.
 
 ---
 
@@ -22,51 +24,53 @@ This worked artefact primarily illustrates:
 - Log ID: `RAG-ASSUMPTIONS-01`
 - Related context record: `RAG-CTX-01`
 - Related prioritisation record: `RAG-PRIO-01`
-- Related contextual decision: `RAG-CD01`
-- Artefact status: Retrospective worked-example representation
+- Paper-supported CR reconstruction: `CR.1–CR.3`
+- Template function illustrated here: `CR.4 — Assumption Documentation`
+- Artefact status: Additional illustrative worked-template representation
 - Repository version: `0.2.0`
 
 ---
 
 ## 2. Assumption register
 
-The assumptions below are retrospective representations of contextual
-conditions supported by the documented RAG-in-Data-Spaces case.
+The assumptions below are **illustrative structured assumptions** derived from
+contextual conditions documented in the RAG-in-Data-Spaces case.
 
-| Assumption ID | Assumption | Type | Validity condition | Rationale / evidence | Affected contextual decision or interpretation | Responsible role | Revision trigger | Status |
+They are not presented as assumptions explicitly reconstructed through CR.4
+in the analytical evaluation reported in the associated article.
+
+| Assumption ID | Assumption | Type | Validity condition | Rationale / evidence | Related contextual or engineering element | Responsible role | Illustrative review trigger | Status |
 |---|---|---|---|---|---|---|---|---|
-| RAG-A01 | Source and governance information remains sufficiently available to support governed retrieval and use | Governance / Information | Relevant source metadata and governance information remain available and associated with the information to which they apply | Documented source metadata, governance roles, and governed retrieval mechanisms | RAG-CD01 | Data Provider / Federator | Material loss, inconsistency, or change in source metadata or governance information | Active |
-| RAG-A02 | Provenance information remains sufficiently preserved to support the reconstructed traceability relation | Provenance / Traceability | Relevant provenance information remains available across retrieval and subsequent information use | Documented provenance and traceability mechanisms | RAG-CD01 | Federator / relevant technical actor | Material loss, degradation, or inconsistency of provenance or traceability information | Active |
-| RAG-A03 | Existing governance and responsibility interpretations remain applicable while the relevant federation conditions remain materially unchanged | Governance / Organisational | No material governance, policy, actor, source, or organisational change invalidates the existing contextual interpretation | Documented distributed governance and responsibility structure | RAG-CD01 | Relevant governance actor | Material governance, policy, source, actor, or organisational change | Active |
+| RAG-A01 | Source and governance information remains sufficiently available to support governed retrieval and use | Governance / Information | Relevant source metadata and governance information remain available and associated with the information to which they apply | Documented source metadata, governance roles, and governed retrieval mechanisms | RAG-CTX-01; RAG-ER01; RAG-ER02 | Data Provider / Federator | Material loss, inconsistency, or change in source metadata or governance information | Illustrative |
+| RAG-A02 | Provenance information remains sufficiently preserved to support the reconstructed traceability relation | Provenance / Traceability | Relevant provenance information remains available across retrieval and subsequent information use | Documented provenance and traceability mechanisms | RAG-CTX-01; RAG-ER02; RAG-ER03 | Federator / relevant technical actor | Material loss, degradation, or inconsistency of provenance or traceability information | Illustrative |
+| RAG-A03 | Existing governance and responsibility interpretations remain applicable while the relevant federation conditions remain materially unchanged | Governance / Organisational | No material governance, actor, source, or organisational change invalidates the existing contextual interpretation | Documented distributed governance and responsibility structure | RAG-CTX-01; RAG-ER01; RAG-ER03 | Relevant responsible actors | Material governance, source, actor, or organisational change | Illustrative |
 
-The earlier repository version expressed assumptions concerning provider
-policy enforcement, document representativeness, and short-term legal
-stability. The v0.2.0 reconstruction instead records the assumptions required
-by the governance, provenance, responsibility, and traceability relationships
-that are actually reconstructed in this worked example.
+These assumptions make explicit conditions that are implicit in the worked
+representation of the case. Their inclusion demonstrates template usage; it
+does not add CR.4 to the set of rules reconstructed in the paper.
 
 ---
 
 ## 3. Assumption types
 
-The worked example uses the following contextual categories:
+The worked example uses the following illustrative categories:
 
 - **Governance / Information** — availability and association of source and
   governance information
 - **Provenance / Traceability** — preservation of information required to
   reconstruct relevant source and retrieval relations
 - **Governance / Organisational** — continued applicability of responsibility
-  and governance interpretations in a changing federated setting
+  and governance interpretations in a federated setting
 
-These categories describe this retrospective reconstruction and do not
-constitute a mandatory taxonomy.
+These categories are used for the worked example and do not constitute a
+mandatory taxonomy or an additional analytical result.
 
 ---
 
-## 4. Assumption review
+## 4. Illustrative assumption review
 
-When documentary, architectural, or operational evidence challenges an
-assumption, it should be reviewed against its documented validity condition.
+In a prospective application of CRISP-TAI, evidence challenging one of these
+assumptions could be reviewed against its validity condition.
 
 ### Illustrative review structure
 
@@ -80,124 +84,189 @@ assumption, it should be reviewed against its documented validity condition.
   - Potentially invalid
   - Invalid
   - Uncertain
-- Affected contextual decision or interpretation:
+- Related contextual interpretation:
 - Related Engineering Representation(s):
 - Supporting rationale:
 
-Relevant evidence may include:
+Potential evidence could include:
 
 - Missing or changed source metadata
 - Missing or inconsistent governance information
 - Loss or degradation of provenance information
 - Changes in participating sources or actors
-- Changes in governance or policy conditions
+- Changes in governance conditions
 - Evidence that an existing responsibility boundary no longer reflects the
   federated setting
 
-An observed issue does not automatically imply contextual revision.
+This section demonstrates prospective use of the reusable template. It does
+not reconstruct a historical review performed in the original case.
 
 ---
 
-## 5. Context revision decision
+## 5. Illustrative context-revision path
 
-Where evidence challenges an assumption or contextual interpretation,
-**CR.5 — Context Revision Trigger** may determine whether the existing
-contextual decision should be:
+In a prospective application, evidence invalidating an assumption could
+provide input to **CR.5 — Context Revision Trigger**.
 
-- Retained
-- Updated
-- Reconsidered through a new refinement cycle
+The generic relation would be:
 
-### Retrospective decision record
+**Triggering evidence  
+→ review of the affected assumption or contextual interpretation  
+→ retain / update / reconsider  
+→ subsequent Functional Refinement where required**
+
+### Illustrative revision record
 
 - Revision record ID:
 - Assumption ID:
 - Triggering evidence:
-- Affected contextual decision: `RAG-CD01`
+- Affected contextual interpretation:
 - Responsible role(s):
 - Revision decision:
 - Decision rationale:
 - Updated assumption or validity condition, where applicable:
-- Updated contextual interpretation, where applicable:
 - Downstream Engineering Representation(s) potentially affected:
 - Related feedback record:
 
-This worked example does not claim that a specific CR.5 record was produced
-during the original RAG-in-Data-Spaces study.
-
-The structure illustrates how relevant documentary evidence could be related
-to contextual reconsideration using the current CRISP-TAI artefacts.
+No such CR.5 execution is claimed for the RAG retrospective application
+reported in the associated article.
 
 ---
 
-## 6. Monitoring and evidence sources
+## 6. Illustrative evidence sources
 
 | Assumption ID | Evidence / signal | Source | Review condition | Responsible role | Related Engineering Representation |
 |---|---|---|---|---|---|
 | RAG-A01 | Missing, changed, or inconsistent source metadata or governance information | Source metadata / governance mechanisms | Evidence affects the ability to connect information with its source or applicable governance conditions | Data Provider / Federator | RAG-ER01; RAG-ER02 |
 | RAG-A02 | Missing, degraded, or inconsistent provenance information | Provenance / traceability mechanisms | Evidence affects the ability to reconstruct the relevant information chain | Federator / relevant technical actor | RAG-ER02; RAG-ER03 |
-| RAG-A03 | Material change in governance conditions, participating actors, or source relationships | Governance / federation evidence | Change potentially invalidates an existing responsibility or governance interpretation | Relevant governance actor | RAG-ER01; RAG-ER03 |
+| RAG-A03 | Material change in governance conditions, participating actors, or source relationships | Governance / federation evidence | Change potentially invalidates an existing responsibility or governance interpretation | Relevant responsible actors | RAG-ER01; RAG-ER03 |
 
-The related Engineering Representations are completed in
-`engineering-representation.md`.
+These rows demonstrate how evidence could be linked to assumption review in a
+prospective application.
 
----
-
-## 7. Relationship to provenance and traceability
-
-`RAG-A01` and `RAG-A02` are particularly important to this worked example.
-
-The reconstructed contextual decision `RAG-CD01` depends on source,
-governance, and provenance information remaining sufficiently available to
-support the traceability relation.
-
-The retrospective relationship is:
-
-**Source / governance condition  
-→ contextual assumption  
-→ contextual decision  
-→ provenance or traceability Engineering Representation  
-→ documented architectural instantiation**
-
-A material loss of the supporting information may therefore require review of
-both the contextual interpretation and its downstream Engineering
-Representations.
+They are not historical monitoring records.
 
 ---
 
-## 8. Revision history
+## 7. Relationship to the paper-supported reconstruction
 
-| Version | Date | Assumption / record affected | Trigger / reason | Change | Responsible role |
-|---|---|---|---|---|---|
-| 0.2.0 | Retrospective reconstruction | Initial worked example | Alignment with revised Lifecycle Refinement Framework | Assumptions represented using explicit validity conditions and conditional CR.5 revision structure | Repository authors |
+The paper-supported RAG reconstruction is:
+
+**documented case evidence  
+→ CR.1 Context Interpretation  
+→ CR.2 Responsibility Allocation  
+→ CR.3 Principle Prioritisation  
+→ FR.1 Engineering Representation Derivation  
+→ FR.2 Decision Traceability  
+→ documented Process Instantiation**
+
+This `assumption-log.md` sits **outside that claimed rule set**.
+
+Its relationship to the reconstruction is therefore:
+
+**paper-supported contextual and architectural evidence  
+→ additional illustrative assumption representation**
+
+rather than:
+
+**paper-supported evidence  
+→ reconstructed CR.4**
+
+This distinction is intentional.
+
+---
+
+## 8. Relationship to Engineering Representations
+
+Although CR.4 is not claimed as part of the paper-supported RAG
+reconstruction, the illustrative assumptions help demonstrate how the reusable
+templates can expose validity conditions associated with the reconstructed
+Engineering Representations.
+
+For example:
+
+- `RAG-A01` is relevant to responsibility/governance traceability and
+  source-identification representations.
+- `RAG-A02` is relevant to provenance and information-use traceability.
+- `RAG-A03` is relevant to responsibility boundaries and their continued
+  contextual applicability.
+
+If one of these assumptions were invalidated in a prospective application, the
+affected Engineering Representation could require subsequent review.
+
+---
+
+## 9. Relationship to RAG-CD01
+
+`RAG-CD01` represents the **paper-supported CR.3 prioritisation decision**:
+
+> Where sovereignty, distributed control, and traceability dominate the
+> deployment context, preserving those properties may justify accepting the
+> higher response latency documented for a more distributed RAG architecture.
+
+The assumptions in this file are **not prerequisites used to establish that
+documented architectural trade-off**.
+
+They instead illustrate additional contextual validity conditions relevant to
+the governance, provenance, and traceability representations in the worked
+example.
+
+This separation prevents the illustrative CR.4 template content from being
+mistaken for part of the paper-supported CR.3 reconstruction.
+
+---
+
+## 10. Analytical boundary
+
+For the RAG case, the associated article supports:
+
+- **CR.1 — Context Interpretation**
+- **CR.2 — Responsibility Allocation**
+- **CR.3 — Principle Prioritisation**
+- **FR.1 — Engineering Representation Derivation**
+- **FR.2 — Decision Traceability**
+- **P1 — Lifecycle Anchoring**
+- **P2 — Coordinated Contextual and Functional Refinement**
+
+This file additionally illustrates:
+
+- **CR.4 — Assumption Documentation**
+- A possible prospective path to **CR.5 — Context Revision Trigger**
+
+Those additional template functions are **not** claimed as rules reconstructed
+in the retrospective analytical evaluation.
+
+---
+
+## 11. Versioning and ownership
+
+- Artefact type: Additional illustrative completion of a CRISP-TAI v0.2.0
+  template
+- Source case: RAG in Federated Data Spaces
+- Repository version: `0.2.0`
+- Status: Illustrative worked-template representation
+- Original project record: No
+- Paper-supported CR.4 reconstruction: No
+- Paper-supported CR.5 reconstruction: No
 
 ---
 
 ## Notes
 
-This log is a **retrospectively completed contextual-refinement artefact**.
+This log demonstrates how explicit assumptions can be represented using the
+reusable CRISP-TAI template without extending the claims of the associated
+research article.
 
-The assumptions above are not presented as verbatim assumptions originally
-recorded during the RAG-in-Data-Spaces study. They are structured
-reconstructions of contextual conditions supported by the documentary evidence
-used in the retrospective analysis.
+The assumptions are not presented as verbatim historical project records or as
+outputs of a CR.4 execution reconstructed in the paper.
 
-Their purpose is to demonstrate the CR.4 relationship:
+Their illustrative relationship is:
 
-**Assumption  
+**documented contextual condition  
+→ explicit assumption  
 → validity condition  
-→ affected contextual decision  
-→ revision trigger**
+→ related Engineering Representation  
+→ potential review if the condition changes**
 
-and, where documentary evidence requires contextual reconsideration, the CR.5
-relationship:
-
-**Triggering evidence  
-→ contextual review  
-→ retain / update / reconsider  
-→ subsequent Functional Refinement where required**
-
-The example deliberately avoids inferring assumptions concerning document
-representativeness, legal stability, or provider behaviour where those
-assumptions are not required by the retrospective reconstruction reported in
-the revised framework evaluation.
+The authoritative analytical boundary for the RAG case remains the
+CR.1–CR.3 / FR.1–FR.2 reconstruction reported in the associated article.
