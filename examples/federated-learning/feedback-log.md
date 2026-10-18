@@ -1,19 +1,26 @@
 # Feedback Log — Federated Learning Worked Example
 
-This document is an **illustrative retrospective completion** of the
-`feedback-log.md` template using documentary evidence from the Federated
-Learning case.
+This document is an **additional illustrative completion** of the
+`feedback-log.md` template using technical and experimental evidence that can
+be related to the Federated Learning case.
 
 It is not an original project record and does not imply prospective
 application of CRISP-TAI.
 
-This worked artefact primarily illustrates:
+The analytical evaluation reported in the associated article reconstructs:
 
-- **FR.4 — Iterative Feedback Integration**
-- **CR.5 — Context Revision Trigger**, where operational evidence challenges
-  an existing contextual interpretation or assumption
-- **FR.3 — Operational Adjustment**, where reviewed evidence requires a new or
-  revised Engineering Representation specifying an operational response
+- **CR.3 — Principle Prioritisation**
+- **FR.1 — Engineering Representation Derivation**
+
+and provides analytical evidence for:
+
+- **P2 — Coordinated Contextual and Functional Refinement**
+
+It does **not** reconstruct CR.5, FR.3, FR.4, or FR.6 for this case.
+
+Accordingly, this file demonstrates how the reusable feedback template could
+represent later evidence and conditional review paths without extending the
+analytical claims made in the associated article.
 
 ---
 
@@ -21,271 +28,389 @@ This worked artefact primarily illustrates:
 
 - Feedback log ID: `FL-FEEDBACK-01`
 - System or component: Federated Learning setting
-- Related context record: `FL-CTX-01`
-- Related monitoring plan: `FL-MON-01`
+- Related contextual decision:
+  - `FL-CD01`
+- Related monitoring illustration:
+  - `FL-MON-01`
 - Related Engineering Representations:
-  - `FL-ER01`
-  - `FL-ER02`
-  - `FL-ER03`
-- Responsible roles: Operations and Security Team; Server / Coordinator;
-  governance actor where escalation is required
-- Artefact status: Retrospective worked-example representation
+  - `FL-ER01` — Lightweight early-detection representation
+  - `FL-ER02` — Benign-reference calibration representation
+  - `FL-ER03` — Threshold-based monitoring representation
+- Related technical instantiations:
+  - `FL-PI01`
+  - `FL-PI02`
+  - `FL-PI03`
+- Paper-supported CR reconstruction:
+  - `CR.3`
+- Paper-supported FR reconstruction:
+  - `FR.1`
+- Paper-supported assessment criterion:
+  - `P2`
+- Artefact status: Additional illustrative worked-template representation
 - Repository version: `0.2.0`
 
 ---
 
 ## 2. Evidence sources
 
-Relevant feedback may originate from:
+The original Federated Learning study provides technical and experimental
+evidence that can be used to demonstrate the feedback template.
 
-- Pre-aggregation detection evidence
-- Anomaly or alert signals
-- Repeated or contradictory detection evidence
-- Changes in observed training behaviour
-- Changes in client participation or operating conditions
-- Changes in aggregation or training configuration
-- Operational review outcomes
-- Evidence concerning continued monitoring across training rounds
+Relevant evidence includes:
 
-These sources provide **evidence for review**. They do not automatically
-determine an operational response or governance decision.
+- Early-warning detection behaviour
+- Benign reference observations
+- Bootstrap calibration results
+- Statistical-distance values
+- Per-feature threshold behaviour
+- Threshold exceedances
+- Strong attack scenarios
+- Stealthy attack scenarios
+- Independent experimental runs
+- Material changes in the technical conditions supporting the detection
+  mechanism
+
+These sources are treated here as **evidence that could support review in a
+prospective application**.
+
+They are not reconstructed historical CRISP-TAI feedback events.
 
 ---
 
-## 3. Feedback entries
+## 3. Illustrative feedback entries
 
-The entries below illustrate how evidence documented in the Federated Learning
-case can be represented using the current feedback structure.
+| Feedback ID | Evidence source | Evidence / observation | Related concern | Related Engineering Representation | Related technical instantiation | Status |
+|---|---|---|---|---|---|---|
+| FL-F01 | Early-warning / adversarial evidence | Detection behaviour under strong or stealthy adversarial conditions differs materially from the conditions supporting the current early-detection capability | Lightweight early detection | FL-ER01 | FL-PI01 | Illustrative conditional review |
+| FL-F02 | Benign-reference / calibration evidence | The benign reference or its calibrated characteristics differ materially from the conditions supporting the current calibration | Benign-reference calibration | FL-ER02 | FL-PI02 | Illustrative conditional review |
+| FL-F03 | Statistical-distance / threshold evidence | Statistical-distance behaviour or threshold exceedances differ materially from the conditions supporting the current detection criteria | Threshold-based monitoring | FL-ER03 | FL-PI03 | Illustrative conditional review |
+| FL-F04 | Technical / architectural evidence | Secure-aggregation or other relevant operating constraints change materially | Context-dependent operational priority | FL-ER01; FL-ER02; FL-ER03 | FL-PI01; FL-PI02; FL-PI03 | Illustrative conditional review |
 
-| Feedback ID | Evidence source | Evidence / observation | Trustworthiness concern | Trigger / collection condition | Related monitoring item | Responsible role | Status |
-|---|---|---|---|---|---|---|---|
-| FL-F01 | Pre-aggregation detection / monitoring | Detection evidence indicates potentially anomalous or adversarial behaviour requiring review | Early detection and security monitoring | Relevant detection evidence observed before aggregation | FL-M01 | Operations and Security Team | Under review |
-| FL-F02 | Detection / monitoring review | Repeated, changed, or contradictory detection evidence may challenge the current interpretation of the signal | Evidence interpretation | Material change or repeated evidence affecting the current interpretation | FL-M02 | Operations and Security Team | Under review |
-| FL-F03 | Technical / configuration evidence | A material change in aggregation, orchestration, or training configuration may affect the existing monitoring placement or continuity conditions | Lifecycle anchoring and continuity | Relevant system or configuration change | FL-M04 | Server / Coordinator | Under review |
-| FL-F04 | Continued operation | Monitoring or review is unavailable or no longer consistent across successive training rounds | Operational continuity | Evidence of discontinuity during repeated operation | FL-M03 | Server / Coordinator; Operations and Security Team | Under review |
+These entries are **illustrative review conditions**, not historical incidents
+reconstructed from the original study.
 
-These entries are retrospective representations of evidence types supported by
-the documented case. They are not claimed to be verbatim historical feedback
+---
+
+## 4. Illustrative assessment
+
+### FL-F01 — Early-detection evidence
+
+Potentially related records:
+
+- `FL-CD01`
+- `FL-A01`
+- `FL-ER01`
+- `FL-PI01`
+
+Possible prospective assessment:
+
+- Existing early-detection relation remains supported
+- Additional evidence is required
+- The validity condition represented by FL-A01 requires review
+- FL-ER01 requires engineering review
+- FL-PI01 requires technical review
+
+---
+
+### FL-F02 — Benign-reference evidence
+
+Potentially related records:
+
+- `FL-A02`
+- `FL-ER02`
+- `FL-PI02`
+
+Possible prospective assessment:
+
+- Existing benign reference remains suitable
+- Additional calibration evidence is required
+- FL-A02 requires review
+- FL-ER02 requires engineering review
+- FL-PI02 requires technical review
+
+---
+
+### FL-F03 — Threshold evidence
+
+Potentially related records:
+
+- `FL-A03`
+- `FL-ER03`
+- `FL-PI03`
+
+Possible prospective assessment:
+
+- Existing calibrated thresholds remain suitable
+- Additional experimental evidence is required
+- FL-A03 requires review
+- FL-ER03 requires engineering review
+- FL-PI03 requires technical review
+
+---
+
+### FL-F04 — Operating-constraint evidence
+
+Potentially related records:
+
+- `FL-CTX-01`
+- `FL-PRIO-01`
+- `FL-CD01`
+- `FL-ER01`
+- `FL-ER02`
+- `FL-ER03`
+
+Possible prospective assessment:
+
+- Existing contextual priority remains applicable
+- The operating constraints have materially changed
+- FL-CD01 requires contextual reconsideration
+- One or more Engineering Representations require subsequent review
+
+These assessments illustrate how evidence could be connected to existing
 records.
 
----
-
-## 4. Assessment against existing refinement records
-
-### FL-F01 — Potentially adversarial behaviour
-
-- Existing contextual decision potentially affected: `FL-CD01`; `FL-CD02`
-- Related assumptions: `FL-A01`; `FL-A02`
-- Existing Engineering Representations:
-  - `FL-ER01`
-  - `FL-ER02`
-- Existing Process Instantiations:
-  - `FL-PI01`
-  - `FL-PI02`
-- Responsible reviewer: Operations and Security Team
-- Possible assessment:
-  - Evidence does not justify further response
-  - Additional review is required
-  - An engineering adjustment may be required
-  - Evidence requires governance escalation
-
-The detection evidence does not itself determine which assessment is selected.
-
-### FL-F02 — Changed or repeated detection evidence
-
-- Existing contextual decision potentially affected: `FL-CD02`
-- Related assumption: `FL-A02`
-- Existing Engineering Representation: `FL-ER02`
-- Responsible reviewer: Operations and Security Team
-- Possible assessment:
-  - Existing interpretation remains adequate
-  - Detection evidence requires further review
-  - `FL-A02` may no longer remain valid
-  - Existing response conditions require engineering reconsideration
-
-### FL-F03 — Technical or configuration change
-
-- Existing contextual decisions potentially affected:
-  - `FL-CD01`
-  - `FL-CD03`
-- Related assumption: `FL-A03`
-- Existing Engineering Representations:
-  - `FL-ER01`
-  - `FL-ER03`
-- Existing Process Instantiations:
-  - `FL-PI01`
-  - `FL-PI03`
-- Responsible reviewer: Server / Coordinator with relevant operational actors
-- Possible assessment:
-  - Existing anchoring remains valid
-  - Pre-aggregation placement requires review
-  - Monitoring continuity requires review
-  - Contextual or engineering re-refinement is required
-
-### FL-F04 — Monitoring discontinuity
-
-- Existing contextual decision potentially affected: `FL-CD03`
-- Related assumptions:
-  - `FL-A02`
-  - `FL-A03`
-- Existing Engineering Representation: `FL-ER03`
-- Existing Process Instantiation: `FL-PI03`
-- Responsible reviewers: Server / Coordinator; Operations and Security Team
-- Possible assessment:
-  - Continuity remains adequate
-  - Monitoring requirement is temporarily unmet
-  - Engineering or process-specific revision is required
-
-These assessments illustrate **FR.4 — Iterative Feedback Integration** by
-relating operational evidence to existing contextual and engineering records
-before a revision or response is determined.
+They do not constitute retrospective reconstruction of
+**FR.4 — Iterative Feedback Integration**.
 
 ---
 
-## 5. Context revision decision
+## 5. Relationship to the paper-supported reconstruction
 
-Where evidence challenges an assumption or contextual interpretation,
-**CR.5 — Context Revision Trigger** determines whether the affected contextual
-element should be retained, updated, or reconsidered.
+The authoritative Federated Learning reconstruction is:
 
-| Feedback ID | Contextual element potentially affected | CR.5 invoked when | Possible revision decision | Related assumption |
+**documented operational priorities and constraints  
+→ CR.3 Principle Prioritisation  
+→ FL-CD01  
+→ FR.1 Engineering Representation Derivation  
+→ FL-ER01 / FL-ER02 / FL-ER03  
+→ documented technical instantiation  
+→ experimental evidence  
+→ P2**
+
+This feedback log sits **outside that reconstructed rule path**.
+
+Its purpose is to demonstrate how later evidence could be connected to those
+records in a prospective application.
+
+---
+
+## 6. Illustrative CR.5 path
+
+In a prospective application, evidence challenging the contextual conditions
+supporting `FL-CD01` could provide input to
+**CR.5 — Context Revision Trigger**.
+
+For example:
+
+**material change in adversarial conditions  
+or secure-aggregation constraints  
+→ review of FL-CD01  
+→ retain / update / reconsider the contextual priority**
+
+Evidence concerning only a calibration or threshold mechanism would not
+necessarily require contextual revision.
+
+It could instead require review of the corresponding Engineering
+Representation or technical instantiation.
+
+No CR.5 execution is claimed for the retrospective Federated Learning
+application reported in the associated article.
+
+---
+
+## 7. Illustrative engineering review
+
+Where evidence indicates that an Engineering Representation may no longer be
+adequate, a prospective application could perform subsequent Functional
+Refinement.
+
+| Feedback ID | Existing Engineering Representation | Illustrative engineering review |
+|---|---|---|
+| FL-F01 | FL-ER01 | Review whether the lightweight early-detection capability remains adequate |
+| FL-F02 | FL-ER02 | Review whether the benign-reference calibration capability remains adequate |
+| FL-F03 | FL-ER03 | Review whether the threshold-based monitoring capability remains adequate |
+| FL-F04 | FL-ER01; FL-ER02; FL-ER03 | Review affected Engineering Representations after any revised contextual prioritisation |
+
+This section does not claim retrospective reconstruction of
+**FR.3 — Operational Adjustment**.
+
+If an adjustment were required prospectively, it would need to be represented
+through the appropriate refinement function before technical enactment.
+
+---
+
+## 8. Illustrative technical-instantiation review
+
+Where an Engineering Representation changes, the corresponding technical
+instantiation could require review.
+
+| Feedback ID | Engineering Representation | Existing technical instantiation | Potential prospective review | Traceability record |
 |---|---|---|---|---|
-| FL-F01 | FL-CD01 / FL-CD02 | Evidence challenges the operating assumptions under which detection or interpretation remains meaningful | Retain / Update / Reconsider | FL-A01; FL-A02 |
-| FL-F02 | FL-CD02 | Detection behaviour materially challenges the current interpretation of evidence | Retain / Update / Reconsider | FL-A02 |
-| FL-F03 | FL-CD01 / FL-CD03 | Technical change invalidates an existing operational or anchoring condition | Retain / Update / Reconsider | FL-A03 |
-| FL-F04 | FL-CD03 | Monitoring discontinuity challenges the contextual expectation of continued observation | Retain / Update / Reconsider | FL-A02; FL-A03 |
+| FL-F01 | FL-ER01 | FL-PI01 | Review the client-level early-warning detection mechanism | FL-T01 |
+| FL-F02 | FL-ER02 | FL-PI02 | Review the benign reference distribution or bootstrap calibration procedure | FL-T02 |
+| FL-F03 | FL-ER03 | FL-PI03 | Review statistical distance measures or calibrated per-feature thresholds | FL-T03 |
+| FL-F04 | FL-ER01; FL-ER02; FL-ER03 | FL-PI01; FL-PI02; FL-PI03 | Review affected technical mechanisms after any revised contextual or engineering decision | FL-T01; FL-T02; FL-T03 |
 
-CR.5 is **conditional**. The existence of an alert or technical change does not
-by itself demonstrate that contextual revision occurred.
+This is an illustrative prospective propagation path.
 
----
-
-## 6. Engineering update decision
-
-Where reviewed evidence requires an engineering change, the response should be
-represented through subsequent Functional Refinement.
-
-| Feedback ID | Existing Engineering Representation | Potential engineering response | Applicable FR function | Responsible role |
-|---|---|---|---|---|
-| FL-F01 | FL-ER01 / FL-ER02 | Retain the existing requirements or derive a revised response requirement where reviewed evidence justifies adjustment | FR.3; FR.4 | Operations and Security Team |
-| FL-F02 | FL-ER02 | Revise evidence-interpretation or operational-response requirements where current conditions are no longer adequate | FR.3; FR.4 | Operations and Security Team |
-| FL-F03 | FL-ER01 / FL-ER03 | Revise detection placement or continuity requirements where the technical configuration has materially changed | FR.4; FR.6; subsequent FR as required | Server / Coordinator; Operations and Security Team |
-| FL-F04 | FL-ER03 | Revise continuity requirements or their process-specific enactment | FR.4; FR.6 | Server / Coordinator; Operations and Security Team |
-
-Where **FR.3 — Operational Adjustment** applies, it produces or revises the
-Engineering Representation specifying the required adjustment.
-
-It does **not** itself perform a client exclusion, threshold update,
-configuration change, or other intervention.
+It is not a reconstructed historical re-instantiation.
 
 ---
 
-## 7. Process-specific propagation
+## 9. Illustrative evidence-to-review trace
 
-Where an Engineering Representation changes, its existing Process
-Instantiation may require corresponding review.
-
-| Feedback ID | Engineering Representation | Existing instantiation | Potential propagation | Traceability record |
-|---|---|---|---|---|
-| FL-F01 | FL-ER01 / FL-ER02 | FL-PI01 / FL-PI02 | Review the pre-aggregation monitoring or operational-response enactment where required | FL-T01 / FL-T02 |
-| FL-F02 | FL-ER02 | FL-PI02 | Review the evidence-review or response mechanism where required | FL-T02 |
-| FL-F03 | FL-ER01 / FL-ER03 | FL-PI01 / FL-PI03 | Reconsider monitoring placement or continued monitoring across rounds | FL-T01 / FL-T03 |
-| FL-F04 | FL-ER03 | FL-PI03 | Restore, revise, or re-instantiate the affected continuity mechanism where required | FL-T03 |
-
-This propagation belongs to subsequent **Process Instantiation**, not to FR.4
-itself.
-
----
-
-## 8. Evidence-to-decision trace
-
-| Feedback ID | Evidence | Affected contextual element | Affected Engineering Representation | CR.5 decision | Engineering update | Instantiation update |
+| Feedback ID | Evidence | Contextual decision potentially affected | Engineering Representation potentially affected | Contextual review | Engineering review | Technical-instantiation review |
 |---|---|---|---|---|---|---|
-| FL-F01 | Potentially adversarial detection evidence | FL-CD01 / FL-CD02 | FL-ER01 / FL-ER02 | Conditional on assessment | Conditional on reviewed evidence | FL-PI01 / FL-PI02 if required |
-| FL-F02 | Repeated or changed detection evidence | FL-CD02 | FL-ER02 | Conditional on impact on FL-A02 | Conditional on assessment | FL-PI02 if required |
-| FL-F03 | Aggregation / training configuration change | FL-CD01 / FL-CD03 | FL-ER01 / FL-ER03 | Conditional on invalidated anchoring or operating condition | Conditional on assessment | FL-PI01 / FL-PI03 if required |
-| FL-F04 | Monitoring discontinuity | FL-CD03 | FL-ER03 | Conditional on contextual impact | Conditional on assessment | FL-PI03 if required |
+| FL-F01 | Material change in early-detection behaviour under relevant adversarial conditions | FL-CD01 where the operational priority itself is challenged | FL-ER01 | Conditional | Conditional | FL-PI01 if required |
+| FL-F02 | Material change in benign-reference or calibration behaviour | — | FL-ER02 | Not necessarily required | Conditional | FL-PI02 if required |
+| FL-F03 | Material change in statistical-distance or threshold behaviour | — | FL-ER03 | Not necessarily required | Conditional | FL-PI03 if required |
+| FL-F04 | Material change in secure-aggregation or relevant operating constraints | FL-CD01 | FL-ER01; FL-ER02; FL-ER03 | Conditional | Conditional | Affected FL-PI records if required |
 
-The repeated use of `Conditional` is deliberate. The documentary evidence
-supports the existence of detection, monitoring, review, and technical
-response mechanisms, but it does not justify reconstructing a specific
-historical decision for every possible evidence condition.
+This distinction is deliberate.
 
----
-
-## 9. Relationship to documented mitigation mechanisms
-
-The original Federated Learning material includes technical response or
-mitigation mechanisms.
-
-Within this worked example, those mechanisms are treated as **documented
-process-specific enactments**, not as direct outputs of detection evidence.
-
-The retrospective relation is therefore:
-
-**Detection evidence  
-→ operational review  
-→ required adjustment identified, where justified  
-→ Engineering Representation through FR.3  
-→ Process Instantiation  
-→ documented technical response or mitigation**
-
-This replaces the direct relationship used in the earlier repository version:
-
-**Anomalous behaviour → client excluded**
-
-and similarly avoids treating repeated alerts as automatically implying a
-threshold change.
+Not every technical observation requires contextual revision.
 
 ---
 
-## 10. Closure and follow-up
+## 10. Relationship to experimental evidence
 
-For a prospective application, a feedback item should be closed only when the
-required assessment and resulting decisions have been documented.
+The original study already provides experimental observations such as
+threshold exceedances under documented attack conditions.
 
-Relevant closure information would include:
+Within the paper-supported retrospective reconstruction, those observations
+serve as **experimental evidence associated with the documented technical
+instantiation**.
 
-- Whether contextual revision was required
+They are not interpreted as historical CRISP-TAI feedback events.
+
+This distinction is:
+
+**experimental result in the original technical study**
+
+versus:
+
+**feedback event processed through a lifecycle-refinement mechanism**.
+
+The former is documented.
+
+The latter is illustrated here only as a possible prospective use of the
+template.
+
+---
+
+## 11. Relationship to repeated operation
+
+Federated Learning operates across repeated training rounds and can produce
+repeated detection evidence.
+
+That fact alone does not establish:
+
+- FR.4 — Iterative Feedback Integration
+- FR.6 — Continuity Enforcement
+- P3 — Continuity and Iterative Feedback
+
+Repeated technical operation and lifecycle-refinement feedback are different
+concepts.
+
+The associated article therefore does not use the Federated Learning case as
+evidence of P3.
+
+---
+
+## 12. Relationship to assessment criteria
+
+This feedback artefact does not provide additional assessment-criterion
+coverage.
+
+The paper-supported Federated Learning criterion remains:
+
+- **P2 — Coordinated Contextual and Functional Refinement**
+
+The case is not used as independent evidence of:
+
+- P1 — Lifecycle Anchoring
+- P3 — Continuity and Iterative Feedback
+
+P4 — Cross-Domain Adaptability is assessed through the cross-case comparison.
+
+---
+
+## 13. Scope limitation
+
+This worked artefact does **not** claim:
+
+- Historical CR.5 execution
+- Historical FR.3 execution
+- Historical FR.4 execution
+- Historical FR.6 execution
+- A historical CRISP-TAI feedback cycle
+- A historical governance escalation
+- Automatic mitigation from threshold exceedance
+- P1 evidence
+- P3 evidence
+
+The original study's experimental observations and technical mechanisms remain
+valid evidence about that study.
+
+They are not reclassified as lifecycle-refinement events.
+
+---
+
+## 14. Closure and follow-up
+
+In a prospective application, a feedback item could be closed only after the
+relevant review and resulting decisions had been documented.
+
+Relevant information could include:
+
+- Evidence reviewed
+- Validity condition affected
+- Whether contextual reconsideration was required
 - Whether an Engineering Representation was retained or revised
-- Whether Process Instantiation required update
-- Whether continued monitoring remains necessary
+- Whether technical instantiation required review
 - Responsible role
-- Supporting evidence
+- Supporting rationale
+- Follow-up required
 
-This retrospective worked example does not invent closure decisions where the
-original documentary evidence does not provide them.
+No historical closure decisions are reconstructed here.
 
 ---
 
-## 11. Versioning and ownership
+## 15. Versioning and ownership
 
-- Artefact type: Retrospectively completed CRISP-TAI v0.2.0 template
+- Artefact type: Additional illustrative completion of a CRISP-TAI v0.2.0
+  template
 - Source case: Federated Learning
 - Repository version: `0.2.0`
-- Status: Illustrative worked example
+- Status: Illustrative worked-template representation
 - Original project record: No
+- Paper-supported CR.5 reconstruction: No
+- Paper-supported FR.3 reconstruction: No
+- Paper-supported FR.4 reconstruction: No
+- Paper-supported FR.6 reconstruction: No
+- Paper-supported P3 evidence: No
 
 ---
 
 ## Notes
 
-This worked feedback log illustrates:
+This feedback log demonstrates how technical or experimental evidence could be
+connected to a prospective review process without extending the retrospective
+claims of the associated article.
 
-**Operational evidence  
-→ FR.4 assessment  
-→ CR.5 where contextual reconsideration is required  
-→ subsequent Functional Refinement  
-→ revised Engineering Representation  
-→ updated Process Instantiation where required**
+Its illustrative relation is:
 
-Where an operational adjustment is required:
+**paper-supported CR.3 / FR.1 records  
+→ later technical or experimental evidence  
+→ potential contextual or engineering review  
+→ potential technical re-instantiation**
 
-**Reviewed evidence  
-→ FR.3  
-→ new or revised Engineering Representation  
-→ Process Instantiation  
-→ technical enactment**
+The authoritative analytical chain remains:
 
-The example deliberately preserves the boundary between **detection evidence**
-and **decision or action**.
+**CR.3  
+→ FL-CD01  
+→ FR.1  
+→ FL-ER01 / FL-ER02 / FL-ER03  
+→ documented technical instantiation  
+→ experimental evidence  
+→ P2**
