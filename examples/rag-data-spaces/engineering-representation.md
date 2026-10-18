@@ -7,10 +7,19 @@ RAG-in-Data-Spaces case.
 It is not an original project record and does not imply prospective
 application of CRISP-TAI.
 
-This worked artefact illustrates **FR.1 — Engineering Representation
-Derivation** by showing how reconstructed contextual decisions can be expressed
-as **process-independent Engineering Representations** before their subsequent
-architectural and lifecycle instantiation.
+For the analytical evaluation reported in the associated article, this worked
+artefact represents **FR.1 — Engineering Representation Derivation**.
+
+The paper-supported reconstruction expresses the contextual outputs produced
+through CR.1–CR.3 as process-independent Engineering Representations
+concerning:
+
+- Provenance
+- Distributed control
+- Traceability
+
+These representations remain distinct from the architectural mechanisms
+through which they are subsequently instantiated.
 
 ---
 
@@ -18,211 +27,283 @@ architectural and lifecycle instantiation.
 
 - Record group ID: `RAG-ER`
 - System or component: RAG in Federated Data Spaces
-- Trustworthiness concerns: Governance, responsibility, source
-  identification, provenance, and traceability
-- Trigger for engineering representation: The reconstructed contextual
-  decision `RAG-CD01` requires explicit engineering expression before its
-  documented architectural enactment can be represented
-- Responsible engineering role(s): Reconstructed federation, information
-  provision, and information-use actors
-- Supporting governance role(s): Relevant reconstructed governance actors
+- Primary reconstructed rule: `FR.1 — Engineering Representation Derivation`
+- Originating Contextual Refinement:
+  - `CR.1 — Context Interpretation`
+  - `CR.2 — Responsibility Allocation`
+  - `CR.3 — Principle Prioritisation`
+- Trustworthiness concerns:
+  - Provenance
+  - Distributed control
+  - Traceability
+  - Data sovereignty
+- Trigger for engineering representation: The contextual decisions
+  reconstructed through CR.1–CR.3 require process-independent engineering
+  expression before their documented architectural enactment can be
+  represented
+- Responsible engineering role(s): Reconstructed Data Provider, Federator,
+  and Data Consumer actors
 - Related context record: `RAG-CTX-01`
 - Related prioritisation record: `RAG-PRIO-01`
-- Related assumption records: `RAG-A01` to `RAG-A03`
+- Related responsibility records:
+  - `RAG-R01`
+  - `RAG-R02`
+  - `RAG-R03`
 - Artefact status: Retrospective worked-example representation
 - Repository version: `0.2.0`
 
 ---
 
-## 2. Originating contextual decision
+## 2. Originating contextual reconstruction
 
-| Contextual decision ID | Contextual decision / interpretation | Applicable constraint, responsibility, or assumption | Source |
+The paper-supported Functional Refinement does not originate from a single
+isolated contextual statement.
+
+It draws on the combined outputs of CR.1–CR.3.
+
+| Contextual record | CR rule | Reconstructed contextual output | Relevance to FR.1 |
 |---|---|---|---|
-| RAG-CD01 | Relevant governance and responsibility information should remain connected to sufficient source-identification, provenance, and traceability information throughout governed retrieval and subsequent information use | Distributed source provision, federation, source-specific governance conditions, multi-actor responsibility, and assumptions `RAG-A01` to `RAG-A03` | `context-description.md`; `principle-prioritisation.md`; `responsibility-map.csv`; `assumption-log.md` |
+| RAG-CTX-01 | CR.1 | Distributed governance context, provenance constraints, differentiated actor roles, and distributed-control conditions | Establishes the contextual conditions that the Engineering Representations must address |
+| RAG-R01–R03 | CR.2 | Responsibility boundaries across Data Providers, Federators, and Data Consumers | Establishes which distributed responsibilities must remain identifiable |
+| RAG-CD01 | CR.3 | Where sovereignty, distributed control, and traceability dominate the deployment context, preserving those properties may justify accepting higher response latency | Establishes the context-dependent priority that the Engineering Representations must preserve |
 
-This contextual decision is a retrospective reconstruction from the documented
-RAG-in-Data-Spaces evidence.
+`RAG-CD01` therefore represents the paper-supported prioritisation decision,
+not the entire contextual input to FR.1.
+
+The FR.1 reconstruction uses the combined contextual outputs of CR.1, CR.2,
+and CR.3.
 
 ---
 
-## 3. Engineering Representation derivation
+## 3. FR.1 — Engineering Representation derivation
 
-| Representation ID | Contextual decision ID | Representation type | Engineering Representation | Rationale | Responsible role |
+| Representation ID | Primary contextual source | Representation type | Engineering Representation | Rationale | Responsible role |
 |---|---|---|---|---|---|
-| RAG-ER01 | RAG-CD01 | Responsibility and governance traceability requirement | Relevant information provision, federation, retrieval, and use responsibilities shall remain identifiable and traceable across the governed information chain | Preserves responsibility boundaries in a multi-actor federated setting without assigning end-to-end accountability to a single technical actor | Relevant provider, consumer, federation, and governance actors |
-| RAG-ER02 | RAG-CD01 | Provenance and source-identification requirement | Retrieved information shall retain sufficient source-identification, metadata, and provenance information to support reconstruction of its relevant origin and governance context | Operationalises the contextual requirement to preserve source and provenance information independently of the final architectural mechanism | Data Provider / Federator |
-| RAG-ER03 | RAG-CD01 | Information-use traceability requirement | Relevant relationships between retrieved information, its provenance context, and its subsequent use shall remain reconstructable where supported by the documented architecture | Extends traceability beyond source identification so that the relevant information-use chain can be inspected | Federator / Data Consumer |
+| RAG-ER01 | RAG-CTX-01; RAG-R01–R03; RAG-CD01 | Distributed-control representation | The engineering solution shall preserve the relevant distribution of control and responsibility across Data Providers, Federators, and Data Consumers where required by the selected governance and sovereignty priorities | Expresses the documented distributed-control concern independently of the architectural mechanism used to enact it | Data Provider; Federator; Data Consumer |
+| RAG-ER02 | RAG-CTX-01; RAG-R01; RAG-R03; RAG-CD01 | Provenance representation | Retrieved information shall retain sufficient provenance and source-identification information to support reconstruction of its relevant origin and governance context | Expresses the provenance requirement independently of the metadata or provenance mechanism used to enact it | Data Provider; Federator |
+| RAG-ER03 | RAG-CTX-01; RAG-R02; RAG-R03; RAG-CD01 | Traceability representation | Relevant relationships among participating actors, retrieved information, provenance context, and subsequent information use shall remain reconstructable where required by the selected traceability priority | Expresses traceability independently of the architectural structures used to implement it | Federator; Data Consumer |
 
-These are **process-independent Engineering Representations**. They do not
-prescribe a specific CRISP-DM phase, metadata technology, provenance format,
-architectural component, logging mechanism, or lifecycle artefact.
+These are **process-independent Engineering Representations**.
+
+They do not prescribe:
+
+- A specific CRISP-DM phase
+- A particular RAG architectural variant
+- A metadata technology
+- A provenance format
+- A logging mechanism
+- A concrete lifecycle artefact
+
+Those decisions belong to subsequent Process Instantiation.
 
 ---
 
 ## 4. Representation specification
 
-### RAG-ER01 — Responsibility and governance traceability
+### RAG-ER01 — Distributed control
 
-- Representation type: Responsibility and governance traceability requirement
-- Originating contextual decision: `RAG-CD01`
-- Applicable constraints:
-  - Distributed organisational actors
-  - Source-specific governance conditions
-  - Separation between information provision, federation, and use
-- Relevant assumptions:
-  - `RAG-A01`
-  - `RAG-A03`
-- Responsible role(s): Data Providers, Data Consumers, Federators, and
-  relevant governance actors
-- Verification condition: Relevant responsibilities and governance conditions
-  can be related to the corresponding actors and information-use context
-- Dependencies: Responsibility allocation and availability of relevant
-  governance information
-- Revision conditions: Material actor, source, governance, or organisational
-  change
+- Representation type: Distributed-control representation
+- Contextual basis:
+  - `RAG-CTX-01`
+  - `RAG-R01`
+  - `RAG-R02`
+  - `RAG-R03`
+  - `RAG-CD01`
+- Relevant contextual concerns:
+  - Data sovereignty
+  - Distributed governance
+  - Responsibility boundaries
+  - Distributed control
+- Responsible role(s):
+  - Data Provider
+  - Federator
+  - Data Consumer
+- Verification condition: The relevant distribution of control and
+  responsibility remains identifiable in the selected architectural
+  instantiation
+- Documentary basis:
+  - Distribution of retrieval and generation responsibilities
+  - Role allocation across participating actors
+  - Architectural differences among the documented RAG variants
 
 ### RAG-ER02 — Provenance and source identification
 
-- Representation type: Provenance and source-identification requirement
-- Originating contextual decision: `RAG-CD01`
-- Applicable constraints:
-  - Distributed information sources
-  - Federated retrieval
-  - Need to preserve relevant source and governance context
-- Relevant assumptions:
-  - `RAG-A01`
-  - `RAG-A02`
-- Responsible role(s): Data Provider; Federator
+- Representation type: Provenance representation
+- Contextual basis:
+  - `RAG-CTX-01`
+  - `RAG-R01`
+  - `RAG-R03`
+  - `RAG-CD01`
+- Relevant contextual concerns:
+  - Provenance
+  - Source identification
+  - Governed information use
+- Responsible role(s):
+  - Data Provider
+  - Federator
 - Verification condition: Retrieved information can be related to sufficient
-  source-identification and provenance information to support the reconstructed
-  traceability relation
-- Dependencies: Source metadata and provenance mechanisms
-- Revision conditions: Material loss, degradation, inconsistency, or change in
-  source or provenance information
+  source and provenance information to reconstruct its relevant origin and
+  governance context
+- Documentary basis:
+  - Source metadata
+  - Provenance mechanisms
+  - Source-labelled retrieval
 
-### RAG-ER03 — Information-use traceability
+### RAG-ER03 — Traceability
 
-- Representation type: Information-use traceability requirement
-- Originating contextual decision: `RAG-CD01`
-- Applicable constraints:
-  - Information may pass through multiple actors and architectural mechanisms
-  - Relevant provenance information must remain usable for subsequent
-    traceability
-- Relevant assumptions:
-  - `RAG-A01`
-  - `RAG-A02`
-  - `RAG-A03`
-- Responsible role(s): Federator; Data Consumer; relevant governance actor
-- Verification condition: The relevant relationship between retrieved
-  information, provenance context, and subsequent information use can be
+- Representation type: Traceability representation
+- Contextual basis:
+  - `RAG-CTX-01`
+  - `RAG-R02`
+  - `RAG-R03`
+  - `RAG-CD01`
+- Relevant contextual concerns:
+  - Traceability
+  - Responsibility
+  - Information-use transparency
+- Responsible role(s):
+  - Federator
+  - Data Consumer
+- Verification condition: The relevant relationships among actors, sources,
+  retrieved information, provenance, and subsequent information use can be
   reconstructed
-- Dependencies: Source metadata, provenance, federation, and traceability
-  structures
-- Revision conditions: Material change in federation, retrieval, source,
-  governance, or information-use conditions
+- Documentary basis:
+  - Architectural traceability mechanisms
+  - Role allocation
+  - Provenance mechanisms
+  - Source-labelled retrieval
 
 ---
 
 ## 5. Derivation rationale
 
-The reconstructed Engineering Representations are derived from documented
-governance and information-chain conditions rather than from a direct mapping
-between a trustworthiness principle and a lifecycle artefact.
+The Engineering Representations are not obtained through a direct mapping from
+trustworthiness principles to lifecycle artefacts.
 
-The derivation logic is:
+The paper-supported reconstruction follows:
 
-**Documented governance / source evidence  
-→ reconstructed contextual decision  
-→ required engineering function  
-→ process-independent Engineering Representation**
+**documented case evidence  
+→ CR.1 contextual interpretation  
+→ CR.2 responsibility allocation  
+→ CR.3 context-dependent prioritisation  
+→ FR.1 process-independent Engineering Representations**
 
 For example:
 
-**Distributed sources + source metadata + documented provenance mechanisms  
-→ source and governance information must remain connected to retrieved
-information  
-→ explicit provenance and source-identification capability is required  
-→ `RAG-ER02`**
+**documented federated governance  
++ distributed actor responsibilities  
++ prioritisation of sovereignty and distributed control  
+→ required engineering capability to preserve relevant distributed control  
+→ RAG-ER01**
 
 Similarly:
 
-**Distributed responsibility across providers, federation actors, and
-consumers  
-→ responsibility boundaries must remain reconstructable  
-→ explicit responsibility and governance traceability is required  
-→ `RAG-ER01`**
+**distributed governed sources  
++ documented provenance constraints  
++ prioritisation of traceability  
+→ required provenance capability  
+→ RAG-ER02**
 
-This derivation remains separate from the architectural mechanisms through
-which these requirements were documented as being enacted.
+and:
+
+**distributed actors  
++ provenance relationships  
++ traceability priority  
+→ required reconstructability of the relevant information chain  
+→ RAG-ER03**
+
+The resulting Engineering Representations remain process-independent until
+subsequent Process Instantiation.
 
 ---
 
-## 6. Traceability
+## 6. FR.2 — Traceability to contextual decisions
 
-| Representation ID | Trustworthiness concern | Contextual decision | Responsibility record | Assumption record(s) | Supporting documentary evidence |
-|---|---|---|---|---|---|
-| RAG-ER01 | Governance and distributed responsibility | RAG-CD01 | RAG-R01; RAG-R02; RAG-R03; RAG-R04 | RAG-A01; RAG-A03 | Documented actor roles, governance responsibilities, and distributed information-use structure |
-| RAG-ER02 | Provenance and source identification | RAG-CD01 | RAG-R01; RAG-R03 | RAG-A01; RAG-A02 | Source metadata, provenance mechanisms, and governed retrieval structures |
-| RAG-ER03 | End-to-end information-use traceability | RAG-CD01 | RAG-R02; RAG-R03; RAG-R04 | RAG-A01; RAG-A02; RAG-A03 | Traceability structures and architectural relationships among sources, retrieval, and information use |
+Although this artefact primarily represents FR.1, the associated article also
+reconstructs **FR.2 — Decision Traceability** for the RAG case.
 
-The complete refinement-to-instantiation chain is represented in
+The corresponding relationship is:
+
+| Representation ID | CR.1 context | CR.2 responsibility | CR.3 prioritisation | Documentary basis |
+|---|---|---|---|---|
+| RAG-ER01 | RAG-CTX-01 | RAG-R01; RAG-R02; RAG-R03 | RAG-CD01 | Actor roles, distributed control, architectural responsibility allocation, evaluated architectural trade-offs |
+| RAG-ER02 | RAG-CTX-01 | RAG-R01; RAG-R03 | RAG-CD01 | Source metadata, provenance mechanisms, source-labelled retrieval |
+| RAG-ER03 | RAG-CTX-01 | RAG-R02; RAG-R03 | RAG-CD01 | Architectural traceability mechanisms, provenance relations, evaluated traceability properties |
+
+The complete end-to-end relationship is represented in
 `traceability-matrix.csv`.
 
 ---
 
-## 7. Revision conditions
+## 7. Documented Process Instantiation
 
-| Revision condition | Representation affected | Evidence source | Responsible role |
+The original RAG-in-Data-Spaces material provides documented architectural
+mechanisms through which the reconstructed Engineering Representations can be
+retrospectively mapped.
+
+| Representation ID | Instantiation ID | Documented process-specific enactment | Instantiation rationale |
 |---|---|---|---|
-| Material change in actor or responsibility structure | RAG-ER01; RAG-ER03 | Governance / organisational evidence | Relevant governance actor |
-| Material loss or change in source metadata | RAG-ER01; RAG-ER02 | Source / metadata evidence | Data Provider / Federator |
-| Material loss or degradation of provenance information | RAG-ER02; RAG-ER03 | Provenance / traceability evidence | Federator / relevant technical actor |
-| Material change in retrieval, federation, or information-use conditions | RAG-ER01; RAG-ER02; RAG-ER03 | Architectural / governance evidence | Relevant federation, consumer, or governance actor |
+| RAG-ER01 | RAG-PI01 | Role allocation and architectural distribution of retrieval and generation responsibilities across Data Providers, Federators, and Data Consumers | These documented structures enact the distributed-control representation |
+| RAG-ER02 | RAG-PI02 | Source metadata, provenance mechanisms, and source-labelled retrieval | These mechanisms enact the provenance and source-identification representation |
+| RAG-ER03 | RAG-PI03 | Architectural traceability mechanisms connecting participating actors, retrieved information, provenance, and information use | These mechanisms enact the traceability representation |
+
+The original case also documents publication and query-execution activities
+that provide lifecycle-level evidence of where relevant architectural
+mechanisms are enacted.
+
+These mappings are **retrospective Process Instantiations**.
+
+They do not imply that `RAG-ER01` to `RAG-ER03` were explicitly formulated
+before the original architecture was developed.
 
 ---
 
-## 8. Subsequent Process Instantiation
+## 8. Relationship to P1 — Lifecycle Anchoring
 
-The original RAG-in-Data-Spaces material documents architectural mechanisms
-through which the reconstructed Engineering Representations can be
-retrospectively mapped.
+The RAG case provides analytical evidence for **P1 — Lifecycle Anchoring**
+through the documented relationship between the reconstructed Engineering
+Representations and their process-specific architectural enactment.
 
-| Representation ID | Instantiation ID | Documented lifecycle location or mechanism | Documented process-specific enactment | Instantiation rationale |
-|---|---|---|---|---|
-| RAG-ER01 | RAG-PI01 | Governance and architectural responsibility structures | Documented governance roles, responsibility relations, and architectural actor boundaries | These elements provide the documented enactment through which responsibility and governance traceability can be reconstructed |
-| RAG-ER02 | RAG-PI02 | Source metadata, retrieval, and provenance mechanisms | Source-identification metadata and documented provenance mechanisms associated with retrieved information | These mechanisms enact the provenance and source-identification requirement represented by RAG-ER02 |
-| RAG-ER03 | RAG-PI03 | Traceability structures connecting sources, retrieval, and subsequent information use | Documented traceability structures and architectural relationships | These mechanisms provide the documented enactment through which the relevant information-use chain can be reconstructed |
+For example:
 
-These mappings are **retrospective Process Instantiations**. They do not imply
-that `RAG-ER01` to `RAG-ER03` were explicitly formulated before the original
-architecture was developed.
+**RAG-ER02 provenance representation  
+→ source metadata / provenance mechanisms / source-labelled retrieval**
+
+and:
+
+**RAG-ER01 distributed-control representation  
+→ documented allocation of retrieval and generation responsibilities**
+
+provide evidence that the reconstructed process-independent representations
+can be related to identifiable process-specific activities and mechanisms.
+
+This P1 evidence does **not** imply that CR.6 is independently reconstructed
+for the RAG case.
 
 ---
 
 ## 9. Process-instantiation boundary
 
-This worked example is particularly useful for illustrating the distinction
-between an Engineering Representation and its architectural enactment.
+This worked example illustrates the distinction between an Engineering
+Representation and its architectural enactment.
 
-For example:
+For example, `RAG-ER02` is the process-independent requirement:
 
-**RAG-ER02**
+> Retrieved information shall retain sufficient provenance and
+> source-identification information to support reconstruction of its relevant
+> origin and governance context.
 
-is the process-independent requirement:
+The documented source metadata, provenance mechanisms, and source-labelled
+retrieval are **not FR.1 outputs**.
 
-> Retrieved information shall retain sufficient source-identification,
-> metadata, and provenance information to support reconstruction of its
-> relevant origin and governance context.
-
-The documented source metadata and provenance mechanisms are **not FR.1
-outputs**. They are the process-specific architectural mechanisms through
-which that reconstructed requirement is retrospectively instantiated.
+They are process-specific architectural mechanisms through which the
+reconstructed requirement is retrospectively instantiated.
 
 The relationship is therefore:
 
-**Contextual decision  
-→ FR.1  
-→ Engineering Representation  
+**Contextual Refinement  
+→ FR.1 Engineering Representation  
+→ FR.2 traceability  
 → Process Instantiation  
 → documented architectural mechanism**
 
@@ -230,36 +311,80 @@ and not:
 
 **Trustworthiness concern  
 → FR.1  
-→ lifecycle or architectural artefact**
+→ architectural artefact**
 
 ---
 
-## 10. Verification and evidence
+## 10. Additional worked-template validity conditions
 
-The retrospective FR.1 reconstruction is supported by documented:
+The additional `assumption-log.md` demonstrates how validity conditions could
+be associated with the reconstructed Engineering Representations in a
+prospective application.
 
-- Data Provider, Data Consumer, and federation roles
-- Governance responsibilities
+For example:
+
+- `RAG-A01` can be related to `RAG-ER01` and `RAG-ER02`
+- `RAG-A02` can be related to `RAG-ER02` and `RAG-ER03`
+- `RAG-A03` can be related to `RAG-ER01` and `RAG-ER03`
+
+These relations are useful for demonstrating reusable template integration.
+
+They are **not inputs used to claim CR.4 reconstruction in the associated
+article**.
+
+---
+
+## 11. Verification and evidence
+
+The paper-supported FR.1 and FR.2 reconstruction is supported by documented:
+
+- Data Provider, Federator, and Data Consumer roles
+- Distributed governance
+- Distribution of retrieval and generation responsibilities
 - Source metadata
 - Provenance mechanisms
-- Traceability structures
-- Governed retrieval mechanisms
-- Architectural components connecting distributed sources with subsequent
-  information use
+- Source-labelled retrieval
+- Architectural traceability mechanisms
+- Evaluated architectural trade-offs
+- Traceability and semantic-consistency results
 
 Verification in this worked example means that each reconstructed Engineering
 Representation can be related to:
 
-1. A documented contextual or governance concern
-2. `RAG-CD01`
-3. Supporting documentary evidence
-4. A documented architectural enactment
+1. A documented contextual concern
+2. A paper-supported CR.1–CR.3 contextual reconstruction
+3. Documentary evidence
+4. A documented process-specific enactment
 
-It does not mean that FR.1 was prospectively executed in the original study.
+It does not mean that FR.1 or FR.2 was prospectively executed in the original
+study.
 
 ---
 
-## 11. Versioning and ownership
+## 12. Analytical boundary
+
+For the RAG case, the associated article supports:
+
+### Contextual Refinement
+- CR.1 — Context Interpretation
+- CR.2 — Responsibility Allocation
+- CR.3 — Principle Prioritisation
+
+### Functional Refinement
+- FR.1 — Engineering Representation Derivation
+- FR.2 — Decision Traceability
+
+### Assessment criteria
+- P1 — Lifecycle Anchoring
+- P2 — Coordinated Contextual and Functional Refinement
+
+The additional assumption, monitoring, feedback, revision, scope, or
+placement structures available in the repository do not extend this
+paper-supported analytical boundary.
+
+---
+
+## 13. Versioning and ownership
 
 - Artefact type: Retrospectively completed CRISP-TAI v0.2.0 template
 - Source case: RAG in Federated Data Spaces
@@ -271,19 +396,21 @@ It does not mean that FR.1 was prospectively executed in the original study.
 
 ## Notes
 
-This worked artefact demonstrates the revised methodological boundary:
+This worked artefact demonstrates the paper-aligned methodological boundary:
 
-**Contextual decision  
-→ process-independent Engineering Representation  
+**CR.1–CR.3 contextual reconstruction  
+→ FR.1 process-independent Engineering Representations  
+→ FR.2 traceability  
 → Process Instantiation  
 → documented architectural enactment**
 
-The previous repository version represented this relation directly as
+The previous repository version represented this relation more directly as
 `Contextual Interpretation → Derived Artefact`. The v0.2.0 example separates
 these steps explicitly.
 
-RAG in Federated Data Spaces is particularly useful for illustrating this
-boundary because provenance and traceability requirements can be distinguished
-clearly from the metadata, provenance, and architectural mechanisms through
-which they are subsequently enacted.
-
+The RAG-in-Data-Spaces case is particularly useful for demonstrating this
+boundary because **provenance, distributed control, and traceability
+representations** can be distinguished clearly from the source metadata,
+provenance mechanisms, role allocations, source-labelled retrieval, and
+architectural traceability mechanisms through which they are subsequently
+enacted.
