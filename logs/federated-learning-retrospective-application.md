@@ -11,11 +11,13 @@ aligned with the original study:
 *Early detection of backdoor attacks in federated learning via ecosystemic
 symmetry breaking*.
 
-This record reconstructs trustworthiness-related contextual decisions,
-engineering representations, and their documented technical enactment from the
-available case material. It does **not** imply that CRISP-TAI was prospectively
-executed during the original study and should not be interpreted as independent
-empirical validation of the framework.
+This record reconstructs only those Contextual Refinement and Functional
+Refinement relations supported by the analytical evaluation reported in the
+associated article.
+
+It does **not** imply that CRISP-TAI was prospectively executed during the
+original study and should not be interpreted as independent empirical
+validation of the framework.
 
 ---
 
@@ -24,59 +26,62 @@ empirical validation of the framework.
 - Setting: Federated Learning with distributed clients and secure aggregation
 - Application type: Retrospective analytical reconstruction
 - Framework instantiation: CRISP-TAI
-- Primary concern examined: Early operational detection and response to
+- Primary challenge: Partial observability, distributed control, and
   adversarial behaviour
-- Operational context: Repeated training rounds in a partially observable
-  distributed environment
-- Evidence basis: Documented operational constraints, detection mechanisms,
-  monitoring logic, and technical mitigation or response mechanisms described
-  in the original case material
+- CR reconstruction reported in the associated article:
+  **CR.3 — Principle Prioritisation**
+- FR reconstruction reported in the associated article:
+  **FR.1 — Engineering Representation Derivation**
+- Assessment criterion supported:
+  **P2 — Coordinated Contextual and Functional Refinement**
+- Evidence basis:
+  - Operational constraints documented in the original study
+  - Robustness requirements concerning strong and stealthy attacks
+  - Compatibility with secure aggregation
+  - Benign reference distribution
+  - Bootstrap calibration procedure
+  - Statistical distance measures
+  - Per-feature detection thresholds
+  - Experimental threshold exceedances
 
 ---
 
 ## 2. Reconstructed Contextual Refinement
 
-### CR.1 — Context Interpretation
+### CR.3 — Principle Prioritisation
 
-The documented FL setting provides evidence for reconstructing the relevant
-operational context, including distributed clients, secure aggregation,
-partial observability, repeated training rounds, and adversarial risk.
+The original Federated Learning study documents operational priorities and
+constraints relevant to the adversarial setting.
 
-**Reconstructed contextual output:**
-- An interpretation of the system as a distributed and partially observable
-  operational environment in which trustworthiness-related evidence must be
-  interpreted before aggregation and across successive training rounds.
+The analytical reconstruction reported in the associated article identifies
+two particularly relevant conditions:
 
-**Documentary basis:**
-- System architecture, secure-aggregation setting, adversarial threat model,
-  and operational conditions documented in the original study.
+- Robustness against strong and stealthy attacks
+- Compatibility with secure aggregation
 
-### CR.4 — Assumption Documentation
-
-The case material contains operational assumptions and conditions on which
-detection and response depend.
+These documented conditions provide the basis for reconstructing a
+context-dependent operational priority through
+**CR.3 — Principle Prioritisation**.
 
 **Reconstructed contextual output:**
-- Assumptions and operational constraints concerning the expected system
-  behaviour, detection conditions, and distributed training environment.
+
+> The engineering response should provide lightweight early detection of
+> adversarial behaviour while remaining compatible with the secure-aggregation
+> constraints of the Federated Learning setting.
+
+This reconstruction captures the operational balance documented in the
+original study.
+
+It does not establish a universal prioritisation of robustness or security
+over other trustworthiness concerns.
 
 **Documentary basis:**
-- Conditions and assumptions underlying the detection and monitoring approach
-  described in the original study.
 
-### CR.6 — Lifecycle Anchoring
-
-The case provides evidence that relevant trustworthiness-related requirements
-must be considered before aggregation and maintained during repeated training
-rounds.
-
-**Reconstructed anchoring output:**
-- Lifecycle and operational conditions requiring early placement of detection
-  and monitoring mechanisms before aggregation and their continued availability
-  during operation.
-
-CR.6 records these anchoring conditions without making the final technical
-placement itself part of Contextual Refinement.
+- Adversarial threat setting
+- Partial observability
+- Secure aggregation
+- Strong and stealthy attack scenarios
+- Operational requirement for early detection
 
 ---
 
@@ -84,87 +89,70 @@ placement itself part of Contextual Refinement.
 
 ### FR.1 — Engineering Representation Derivation
 
-The reconstructed contextual constraints can be expressed through
-process-independent engineering representations concerning detection,
-monitoring, and response.
+The operational priority reconstructed through CR.3 can be expressed as
+process-independent Engineering Representations.
 
-**Reconstructed engineering representations include:**
-- Detection requirements
-- Monitoring requirements
-- Response or mitigation requirements
-- Operational review requirements
+The associated article identifies representations requiring:
 
-These representations describe the engineering response required by the
-context without prescribing their final technical implementation or lifecycle
-location.
+- Lightweight early detection
+- Benign-reference calibration
+- Threshold-based monitoring
 
-### FR.2 — Decision Traceability
+These representations express **what engineering capabilities are required**
+without making the specific statistical implementation part of FR.1.
 
-The documented relationship among operational constraints, detection signals,
-monitoring mechanisms, and technical response provides evidence for
-reconstructing traceability between contextual decisions and engineering
-representations.
+### Reconstructed Engineering Representations
 
-**Reconstructed traceability relation:**
+#### FL-ER01 — Lightweight early-detection representation
 
-**Operational constraint / contextual decision  
-→ detection or monitoring Engineering Representation  
-→ documented technical enactment**
+Potentially adversarial behaviour should be detectable early enough to support
+the intended Federated Learning operation without requiring unrestricted
+inspection of individual client behaviour.
 
-### FR.3 — Operational Adjustment
+#### FL-ER02 — Benign-reference calibration representation
 
-Where detected evidence indicates that an operational response may be
-required, the case supports reconstruction of an engineering representation
-specifying the required adjustment or mitigation condition.
+The detection mechanism should establish an operational reference from benign
+behaviour against which relevant deviations can be evaluated.
 
-FR.3 is interpreted here as deriving or revising the **Engineering
-Representation specifying the adjustment**. It does not itself execute a
-client exclusion, configuration change, or other mitigation action.
+#### FL-ER03 — Threshold-based monitoring representation
 
-### FR.4 — Iterative Feedback Integration
+Detection evidence should be evaluated against calibrated decision thresholds
+that make relevant deviations observable during operation.
 
-Detection and monitoring evidence can be related back to existing operational
-assumptions and engineering representations.
+These are **process-independent Engineering Representations**.
 
-The reconstructed feedback relation is:
-
-**Operational evidence  
-→ assessment against existing assumptions and Engineering Representations  
-→ potential contextual reconsideration or engineering revision**
-
-This reconstruction does not imply that the original study executed the
-Lifecycle Refinement Framework prospectively.
-
-### FR.6 — Continuity Enforcement
-
-The repeated-round nature of Federated Learning provides evidence for
-reconstructing continuity requirements concerning monitoring and review across
-successive training rounds.
-
-**Reconstructed engineering representation:**
-- Monitoring and review obligations must remain active across repeated rounds
-  and relevant system changes.
+The benign reference distribution, bootstrap procedure, statistical distance
+measures, and concrete per-feature thresholds documented in the original study
+belong to their subsequent technical instantiation.
 
 ---
 
 ## 4. Documented process-specific instantiation
 
-The original case material documents technical mechanisms through which the
-reconstructed engineering representations were enacted.
+The original case material provides concrete technical evidence through which
+the reconstructed Engineering Representations were enacted.
 
-Representative instantiation evidence includes:
+| Engineering Representation | Documented technical instantiation |
+|---|---|
+| FL-ER01 — Lightweight early detection | Client-level early-warning detection mechanism operating prior to aggregation |
+| FL-ER02 — Benign-reference calibration | Benign reference distribution and bootstrap calibration procedure |
+| FL-ER03 — Threshold-based monitoring | Statistical distance measures and per-feature detection thresholds |
 
-- Detection mechanisms operating before aggregation
-- Monitoring across training rounds
-- Alert or anomaly signals requiring interpretation
-- Technical response or mitigation mechanisms
-- Continued observation across successive rounds
+The original experimental evaluation additionally provides operational
+evidence through:
 
-These elements are treated retrospectively as **documented process-specific
-instantiations** of the reconstructed engineering representations.
+- Benign updates used to establish the calibrated reference
+- Strong attack scenarios
+- Stealthy attack scenarios
+- Independent experimental runs
+- Observed threshold exceedances
 
-Their existence in the original system does not imply that CRISP-TAI was used
-prospectively to derive them.
+These elements provide documented evidence that the reconstructed operational
+priority and Engineering Representations can be related to concrete technical
+mechanisms.
+
+Their existence does not imply that CR.3 or FR.1 were prospectively executed
+during development of the original study.
 
 ---
 
@@ -172,48 +160,177 @@ prospectively to derive them.
 
 | Trustworthiness concern | Contextual reconstruction | CR rule | Engineering Representation | FR rule | Documented instantiation evidence |
 |---|---|---|---|---|---|
-| Distributed adversarial risk | Partially observable FL environment with distributed clients and secure aggregation | CR.1 | Detection and monitoring requirements | FR.1; FR.2 | Detection and monitoring mechanisms documented in the original case |
-| Operational assumptions | Detection and response depend on documented operating conditions and assumptions | CR.4 | Review and monitoring requirements | FR.1; FR.2; FR.4 | Monitoring evidence and review logic |
-| Early detection | Relevant trustworthiness controls must operate before aggregation | CR.6 | Early detection / placement requirement | FR.1 | Pre-aggregation detection mechanism |
-| Operational response | Detection evidence may require a defined engineering response | CR.1; CR.4 | Operational adjustment or mitigation requirement | FR.3 | Documented technical response or mitigation mechanism |
-| Continuity | Monitoring must persist across repeated training rounds | CR.6 | Continuity requirement | FR.6 | Continued monitoring across successive rounds |
+| Early adversarial detection | Robustness against strong and stealthy attacks under partial observability and secure aggregation | CR.3 | Lightweight early-detection representation | FR.1 | Client-level pre-aggregation early-warning mechanism |
+| Detection calibration | Early detection must operate using an appropriate reference under the documented FL conditions | CR.3 | Benign-reference calibration representation | FR.1 | Benign reference distribution and bootstrap calibration |
+| Operational detection criterion | Relevant deviations must become observable through the detection mechanism | CR.3 | Threshold-based monitoring representation | FR.1 | Statistical distance measures, per-feature thresholds, and observed experimental threshold exceedances |
 
 ---
 
-## 6. Process-level evidence
+## 6. P2 — Coordinated Contextual and Functional Refinement
 
-This retrospective application provides evidence primarily for:
+The Federated Learning case provides analytical evidence for:
 
-- **Lifecycle anchoring**, through the documented placement of detection and
-  monitoring mechanisms before aggregation and during repeated operation
-- **Coordinated contextual and functional refinement**, through the
-  reconstructable relationship between operational constraints and
-  detection, monitoring, and response representations
-- **Iterative feedback integration**, through the relationship between
-  operational evidence, review, and potential revision
-- **Continuity**, through monitoring and review across successive training
-  rounds
+**P2 — Coordinated Contextual and Functional Refinement**
 
-The evidence is analytical and retrospective. It supports reconstruction of
-these process-level properties within the CRISP-TAI instantiation but does not
-establish prospective effectiveness or independent empirical validation.
+through the reconstructable relationship:
+
+**documented operational priorities and constraints  
+→ CR.3 Principle Prioritisation  
+→ FR.1 process-independent Engineering Representations  
+→ documented technical instantiation  
+→ experimental operational evidence**
+
+The experimental evaluation provides a particularly useful connection between
+the reconstructed refinement chain and the documented technical mechanism.
+
+Benign updates establish the calibrated reference, while strong and stealthy
+attack scenarios are evaluated against the resulting thresholds. The observed
+threshold exceedances therefore provide documentary evidence connecting:
+
+- The operational constraints reconstructed through CR.3
+- The Engineering Representations reconstructed through FR.1
+- Their concrete technical instantiation
+
+This is the basis for the P2 assessment reported in the associated article.
 
 ---
 
-## 7. Relationship to repository artefacts
+## 7. Assessment boundary
 
-The reconstruction can be represented using:
+The Federated Learning retrospective application reported in the associated
+article is limited to:
 
-- `templates/contextual-refinement/context-description.md`
-- `templates/contextual-refinement/assumption-log.md`
+### Contextual Refinement
+- **CR.3 — Principle Prioritisation**
+
+### Functional Refinement
+- **FR.1 — Engineering Representation Derivation**
+
+### Assessment criterion
+- **P2 — Coordinated Contextual and Functional Refinement**
+
+The paper-supported retrospective application does **not** use this case as
+evidence of:
+
+- CR.1 — Context Interpretation
+- CR.4 — Assumption Documentation
+- CR.5 — Context Revision Trigger
+- CR.6 — Lifecycle Anchoring
+- CR.7 — Scope Control
+- FR.2 — Decision Traceability
+- FR.3 — Operational Adjustment
+- FR.4 — Iterative Feedback Integration
+- FR.5 — Shift-Left Integration
+- FR.6 — Continuity Enforcement
+- P1 — Lifecycle Anchoring
+- P3 — Continuity and Iterative Feedback
+
+P4 — Cross-Domain Adaptability is assessed through the cross-case comparison
+of all three retrospective applications rather than through the Federated
+Learning case alone.
+
+---
+
+## 8. Relationship to repository artefacts
+
+The paper-supported reconstruction can be represented principally through:
+
+- `templates/contextual-refinement/principle-prioritisation.md`
 - `templates/functional-refinement/engineering-representation.md`
-- `templates/functional-refinement/traceability-matrix.csv`
-- `templates/functional-refinement/monitoring-plan.md`
-- `templates/functional-refinement/feedback-log.md`
 
-These reusable templates make the reconstructed chain explicit while
-preserving the distinction between original documentary evidence and the
-retrospective application of the framework.
+The worked example also uses other reusable templates to demonstrate how
+additional contextual, responsibility, assumption, traceability, monitoring,
+or feedback information could be structured.
+
+Those additional worked-template artefacts do **not** extend the set of CR or
+FR rules reconstructed for Federated Learning in the associated article.
+
+The distinction is:
+
+**paper-supported reconstruction**
+- CR.3
+- FR.1
+- P2
+
+versus:
+
+**additional illustrative template usage**
+- Other contextual or functional artefacts used to demonstrate repository
+  reuse and integration
+
+---
+
+## 9. Relationship to pre-aggregation placement
+
+The original study documents detection **prior to aggregation**.
+
+This is relevant technical evidence concerning the implementation of the
+early-detection mechanism.
+
+Within the paper-supported retrospective evaluation, however, this technical
+placement is treated as part of the documented instantiation of the
+reconstructed Engineering Representation.
+
+It is **not** used to claim independent reconstruction of
+**CR.6 — Lifecycle Anchoring** or evidence of
+**P1 — Lifecycle Anchoring** for the Federated Learning case.
+
+This distinction preserves the analytical boundary reported in the associated
+article.
+
+---
+
+## 10. Relationship to repeated training rounds
+
+The original Federated Learning mechanism operates across training rounds and
+produces operational detection evidence.
+
+These characteristics can be used in the worked example to illustrate
+monitoring, assumption review, feedback, or continuity templates.
+
+They are not used in the associated article to claim retrospective
+reconstruction of:
+
+- FR.4 — Iterative Feedback Integration
+- FR.6 — Continuity Enforcement
+- P3 — Continuity and Iterative Feedback
+
+The repository therefore distinguishes the **technical characteristics of the
+original system** from the **refinement rules reconstructed in the analytical
+evaluation**.
+
+---
+
+## 11. Verification and evidence
+
+The paper-supported reconstruction is grounded in documented:
+
+- Partial observability
+- Distributed Federated Learning
+- Secure aggregation
+- Strong and stealthy adversarial scenarios
+- Lightweight early-warning detection
+- Benign reference distribution
+- Bootstrap calibration
+- Statistical distance measures
+- Per-feature detection thresholds
+- Experimental threshold exceedances
+
+These elements allow the relationship between CR.3, FR.1, and the documented
+technical mechanism to be inspected without claiming prospective framework
+execution.
+
+---
+
+## 12. Analytical status
+
+- Application type: Retrospective analytical reconstruction
+- Original CRISP-TAI project record: No
+- Prospective framework execution: No
+- Independent empirical validation of CRISP-TAI: No
+- Paper-supported CR reconstruction: CR.3
+- Paper-supported FR reconstruction: FR.1
+- Paper-supported assessment criterion: P2
 
 ---
 
@@ -221,9 +338,17 @@ retrospective application of the framework.
 
 This record is a **retrospective application log**, not an execution log.
 
-Its purpose is to document how evidence already present in the Federated
-Learning case can be reconstructed through Contextual Refinement, Functional
-Refinement, and subsequent process-specific instantiation.
+Its authoritative analytical chain is:
 
-The record does not claim that the original technical study was designed or
-executed using CRISP-TAI.
+**documented FL operational constraints  
+→ CR.3 Principle Prioritisation  
+→ FR.1 Engineering Representation Derivation  
+→ documented technical instantiation  
+→ experimental operational evidence  
+→ P2**
+
+The original Federated Learning study contains additional contextual,
+monitoring, placement, and repeated-operation characteristics. These may be
+represented using additional repository templates for illustrative purposes,
+but they do not extend the retrospective rule reconstruction reported in the
+associated article.
