@@ -1,16 +1,26 @@
 # Engineering Representation — TrustAIoT Worked Example
 
-This document is an **illustrative retrospective completion** of the
-`engineering-representation.md` template using documentary evidence from the
+This document is a **supporting retrospective representation** using the
+`engineering-representation.md` template and documentary evidence from the
 TrustAIoT case.
 
 It is not an original TrustAIoT project record and does not imply prospective
 application of CRISP-TAI.
 
-This worked artefact illustrates **FR.1 — Engineering Representation
-Derivation** by showing how reconstructed contextual decisions can be expressed
-as **process-independent Engineering Representations** before their subsequent
-process-specific instantiation.
+The analytical evaluation reported in the associated article reconstructs:
+
+- **CR.4 — Assumption Documentation**
+- **CR.6 — Lifecycle Anchoring**
+- **FR.4 — Iterative Feedback Integration**
+- **FR.6 — Continuity Enforcement**
+
+It does **not** independently reconstruct
+**FR.1 — Engineering Representation Derivation** for the TrustAIoT case.
+
+Accordingly, this file uses process-independent Engineering Representations to
+make the paper-supported CR.4 / CR.6 / FR.4 / FR.6 relationships inspectable
+without extending the analytical rule coverage reported in the associated
+article.
 
 ---
 
@@ -18,177 +28,373 @@ process-specific instantiation.
 
 - Record group ID: `TAIOT-ER`
 - System or component: TrustAIoT platform
-- Trustworthiness concerns: Lifecycle governance, monitoring, feedback,
-  continuity, and contextual adaptation
-- Trigger for engineering representation: Reconstructed contextual decisions
-  require explicit engineering expression before their documented
-  process-specific enactment can be represented
-- Responsible engineering role(s): Reconstructed platform and technical actors
-- Supporting governance or domain role(s): Reconstructed governance,
-  compliance, project, and stakeholder actors
-- Related context record: `TAIOT-CTX-01`
-- Related prioritisation record: `TAIOT-PRIO-01`
-- Related assumption records: `TAIOT-A01` to `TAIOT-A04`
+- Primary concerns:
+  - Lifecycle governance
+  - Lifecycle anchoring
+  - Monitoring
+  - Feedback
+  - Continuity
+  - Adaptation during platform evolution
+- Paper-supported CR reconstruction:
+  - `CR.4 — Assumption Documentation`
+  - `CR.6 — Lifecycle Anchoring`
+- Paper-supported FR reconstruction:
+  - `FR.4 — Iterative Feedback Integration`
+  - `FR.6 — Continuity Enforcement`
+- Assessment criteria:
+  - `P1 — Lifecycle Anchoring`
+  - `P2 — Coordinated Contextual and Functional Refinement`
+  - `P3 — Continuity and Iterative Feedback`
+- Related context record:
+  - `TAIOT-CTX-01`
+- Related assumption records:
+  - `TAIOT-A01`
+  - `TAIOT-A02`
+  - `TAIOT-A03`
+  - `TAIOT-A04`
+- Artefact function: Supporting process-independent representation
 - Artefact status: Retrospective worked-example representation
 - Repository version: `0.2.0`
 
 ---
 
-## 2. Originating contextual decisions
+## 2. Paper-supported contextual basis
 
-| Contextual record ID | Contextual decision / interpretation | Applicable constraint, priority, responsibility, or assumption | Source |
+The Engineering Representations in this file organise requirements associated
+with the paper-supported CR.4 and CR.6 reconstruction.
+
+### CR.4 — Assumption Documentation
+
+The relevant contextual assumptions concern:
+
+- Continued availability of platform governance and lifecycle-management
+  mechanisms
+- Continued relationship between platform-level requirements and hosted
+  projects
+- Continued applicability of regulatory and policy interpretations
+- Continued availability of monitoring, validation, feedback, and review
+  mechanisms
+
+These are represented through `TAIOT-A01` to `TAIOT-A04`.
+
+### CR.6 — Lifecycle Anchoring
+
+The documented TrustAIoT material identifies lifecycle dependencies involving:
+
+- Governance activities
+- Testing and validation
+- Deployment and operation
+- Continuous monitoring
+- User feedback
+- Maintenance
+- Change management
+- Platform updates
+- Policy adaptation
+
+These dependencies constrain where the relevant requirements must subsequently
+be enacted.
+
+CR.6 does not perform the final TrustAIoT-specific mapping.
+
+---
+
+## 3. Supporting Engineering Representations
+
+| Representation ID | Representation type | Engineering Representation | Paper-supported function represented | Rationale |
+|---|---|---|---|---|
+| TAIOT-ER01 | Lifecycle governance and anchoring representation | Trustworthiness-related governance obligations shall remain relatable to identifiable responsibilities and lifecycle activities through which they can be enacted and reviewed during platform evolution | CR.6; supports P1 and P2 | Makes the lifecycle dependency explicit without prescribing the final TrustAIoT-specific activity or artefact |
+| TAIOT-ER02 | Monitoring and feedback representation | Relevant monitoring, validation, and stakeholder-feedback evidence shall remain available for assessment against existing contextual assumptions and engineering records during continued platform operation | FR.4; supports P2 and P3 | Represents the evidence-to-review capability required for iterative feedback without prescribing a specific monitoring technology |
+| TAIOT-ER03 | Continuity and adaptation representation | Trustworthiness-related monitoring, review, maintenance, responsibility, and update obligations shall remain active or be reconsidered when material platform, organisational, regulatory, or policy change occurs | FR.6; supports P2 and P3 | Represents continuity during platform evolution independently of the specific maintenance, change-management, or policy-adaptation mechanism |
+
+These are **supporting process-independent Engineering Representations**.
+
+Their use in this worked example does not imply that FR.1 is independently
+reconstructed for TrustAIoT.
+
+---
+
+## 4. TAIOT-ER01 — Lifecycle governance and anchoring
+
+- Representation type: Lifecycle governance and anchoring representation
+- Paper-supported basis:
+  - `CR.6 — Lifecycle Anchoring`
+- Related assumptions:
+  - `TAIOT-A01`
+  - `TAIOT-A02`
+  - `TAIOT-A03`
+- Relevant concerns:
+  - Governance
+  - Accountability
+  - Lifecycle integration
+  - Regulatory and organisational dependencies
+- Verification condition: Relevant trustworthiness-related obligations can be
+  related to identifiable responsibilities and lifecycle activities in the
+  documented TrustAIoT process
+- Documentary basis:
+  - BPMN lifecycle activities
+  - Process inputs and outputs
+  - Governance structures
+  - Platform and project responsibilities
+  - Testing and validation activities
+
+The representation does not prescribe a specific BPMN activity or lifecycle
+location.
+
+Those mappings belong to Process Instantiation.
+
+---
+
+## 5. TAIOT-ER02 — Monitoring and feedback
+
+- Representation type: Monitoring and feedback representation
+- Paper-supported basis:
+  - `FR.4 — Iterative Feedback Integration`
+- Related assumptions:
+  - `TAIOT-A01`
+  - `TAIOT-A02`
+  - `TAIOT-A04`
+- Relevant concerns:
+  - Monitoring
+  - Validation
+  - User feedback
+  - Evidence review
+- Verification condition: Relevant operational, validation, or stakeholder
+  evidence can be related back to existing contextual assumptions or
+  engineering records
+- Documentary basis:
+  - Continuous monitoring
+  - Testing and validation results
+  - User-feedback mechanisms
+  - Governance and review mechanisms
+
+The representation expresses the required evidence-to-review capability.
+
+It does not itself determine whether a contextual or engineering revision is
+required.
+
+---
+
+## 6. TAIOT-ER03 — Continuity and adaptation
+
+- Representation type: Continuity and adaptation representation
+- Paper-supported basis:
+  - `FR.6 — Continuity Enforcement`
+- Related assumptions:
+  - `TAIOT-A01`
+  - `TAIOT-A02`
+  - `TAIOT-A03`
+  - `TAIOT-A04`
+- Relevant concerns:
+  - Continued monitoring
+  - Maintenance
+  - Change management
+  - Responsibility continuity
+  - Platform updates
+  - Policy adaptation
+- Verification condition: Relevant trustworthiness-related obligations remain
+  active or are explicitly reconsidered during material platform,
+  organisational, regulatory, or policy change
+- Documentary basis:
+  - Maintenance procedures
+  - Change-management mechanisms
+  - Platform updates
+  - Continuous monitoring
+  - Policy-adaptation mechanisms
+
+The representation expresses continuity requirements independently of the
+specific TrustAIoT mechanisms used to enact them.
+
+---
+
+## 7. Relationship to FR.4 — Iterative Feedback Integration
+
+`TAIOT-ER02` provides the principal supporting representation for the
+paper-supported FR.4 reconstruction.
+
+The documented relation is:
+
+**monitoring / validation / user evidence  
+→ assessment against existing contextual assumptions or engineering records  
+→ reconsideration where justified**
+
+Representative evidence includes:
+
+- Continuous monitoring results
+- Testing and validation evidence
+- User feedback
+- Governance or review evidence
+
+Where evidence challenges a CR.4 assumption, contextual reconsideration may be
+required.
+
+A possible relationship with CR.5 remains conditional and does not add CR.5
+to the canonical TrustAIoT rule reconstruction.
+
+---
+
+## 8. Relationship to FR.6 — Continuity Enforcement
+
+`TAIOT-ER03` provides the principal supporting representation for the
+paper-supported FR.6 reconstruction.
+
+The documented TrustAIoT material supports continuity through:
+
+- Continued monitoring
+- Maintenance
+- Change management
+- Platform updates
+- Responsibility mechanisms
+- Policy adaptation
+
+The reconstructed relation is:
+
+**existing trustworthiness-related obligation  
+→ continued operation or material change  
+→ obligation remains active or is reconsidered  
+→ updated Process Instantiation where required**
+
+This is distinct from simply observing that the platform continues to operate.
+
+FR.6 concerns continuity of the relevant trustworthiness-related obligations.
+
+---
+
+## 9. Relationship between FR.4 and FR.6
+
+The two paper-supported Functional Refinement functions are complementary.
+
+**FR.4** concerns how later evidence is integrated into existing contextual
+and engineering records.
+
+**FR.6** concerns whether relevant trustworthiness-related obligations remain
+active or are reconsidered during continued operation and evolution.
+
+In TrustAIoT, the relationship can be represented as:
+
+**monitoring / validation / user evidence  
+→ FR.4 assessment  
+→ review or re-refinement where justified  
+→ FR.6 continuity of relevant obligations  
+→ Process Instantiation update where required**
+
+This relation provides the principal paper-supported evidence for P3.
+
+---
+
+## 10. Documented Process Instantiation
+
+The original TrustAIoT material documents process-specific mechanisms through
+which the supporting Engineering Representations can be retrospectively
+mapped.
+
+| Representation ID | Instantiation ID | Documented lifecycle location or mechanism | Documented process-specific enactment |
 |---|---|---|---|
-| TAIOT-CD01 | Trustworthiness-related governance decisions must remain connected to relevant organisational, regulatory, and operational conditions during platform evolution | Governance and lifecycle conditions may change over time | `context-description.md`; `principle-prioritisation.md` |
-| TAIOT-CD02 | Monitoring, feedback, maintenance, and revision capabilities must remain available during continued platform operation | Assumptions `TAIOT-A01`, `TAIOT-A02`, and `TAIOT-A04` remain valid only while the corresponding lifecycle mechanisms remain operational | `context-description.md`; `assumption-log.md` |
-| TAIOT-CD03 | Material regulatory, policy, operational, or stakeholder evidence may require existing contextual interpretations to be reconsidered | Existing interpretations remain applicable only while their documented validity conditions hold | `assumption-log.md`; `principle-prioritisation.md` |
+| TAIOT-ER01 | TAIOT-PI01 | Governance and lifecycle activities | BPMN activities, governance procedures, process inputs and outputs, platform/project responsibility structures, testing and validation activities |
+| TAIOT-ER02 | TAIOT-PI02 | Continued operation, monitoring, validation, and feedback | Continuous monitoring mechanisms, testing and validation results, user-feedback mechanisms, and review activities |
+| TAIOT-ER03 | TAIOT-PI03 | Maintenance, change, and adaptation activities | Maintenance procedures, change-management mechanisms, platform updates, responsibility mechanisms, and policy adaptation |
 
-These contextual decisions are retrospective reconstructions from the
-documented TrustAIoT evidence.
+These mappings are **retrospective Process Instantiations**.
 
----
-
-## 3. Engineering Representation derivation
-
-| Representation ID | Contextual record ID | Representation type | Engineering Representation | Rationale | Responsible role |
-|---|---|---|---|---|---|
-| TAIOT-ER01 | TAIOT-CD01 | Governance / lifecycle requirement | Trustworthiness-related governance requirements shall remain traceable to the relevant platform responsibilities and lifecycle mechanisms throughout platform evolution | Preserves the relationship between contextual governance constraints and their subsequent engineering enactment | Platform / governance owner |
-| TAIOT-ER02 | TAIOT-CD02 | Monitoring and continuity requirement | Monitoring, feedback, maintenance, and review mechanisms relevant to trustworthiness shall remain active, owned, and reviewable during continued platform operation and change | Operationalises the reconstructed requirement for continued observation, feedback, and lifecycle persistence | Operational / platform owner |
-| TAIOT-ER03 | TAIOT-CD03 | Revision requirement | Material regulatory, policy, operational, validation, or stakeholder evidence shall trigger review of affected contextual assumptions and, where required, revision of downstream engineering representations | Preserves the evidence-to-decision relationship required for contextual adaptation | Governance / compliance owner |
-
-These are **process-independent Engineering Representations**. They do not
-specify their final CRISP-DM phase, BPMN activity, architectural component, or
-lifecycle artefact.
+The documented mechanisms are not themselves process-independent Engineering
+Representations.
 
 ---
 
-## 4. Representation specification
+## 11. Relationship to P1 — Lifecycle Anchoring
 
-### TAIOT-ER01 — Governance and lifecycle traceability
+`TAIOT-ER01` helps make the P1 relationship inspectable:
 
-- Representation type: Governance / lifecycle requirement
-- Originating contextual decision: `TAIOT-CD01`
-- Applicable constraints: Organisational, regulatory, governance, and
-  lifecycle conditions
-- Relevant assumptions: `TAIOT-A01`, `TAIOT-A02`
-- Responsible role(s): Platform and governance actors
-- Verification condition: Relevant governance requirements can be traced to
-  responsible actors and documented lifecycle mechanisms
-- Dependencies: Responsibility allocation and applicable contextual conditions
-- Revision conditions: Material organisational, governance, platform, or
-  lifecycle change
+**CR.6 lifecycle dependency  
+→ TAIOT-ER01  
+→ TAIOT-PI01  
+→ identifiable TrustAIoT lifecycle activity or mechanism**
 
-### TAIOT-ER02 — Monitoring and continuity
-
-- Representation type: Monitoring and continuity requirement
-- Originating contextual decision: `TAIOT-CD02`
-- Applicable constraints: Long-lived platform operation and continued
-  availability of monitoring, feedback, maintenance, and review
-- Relevant assumptions: `TAIOT-A01`, `TAIOT-A02`, `TAIOT-A04`
-- Responsible role(s): Operational, platform, and governance actors
-- Verification condition: Relevant monitoring and review mechanisms remain
-  active and associated with identifiable responsibilities
-- Dependencies: Monitoring, maintenance, feedback, and change-management
-  mechanisms
-- Revision conditions: Material loss, degradation, or change in those
-  mechanisms
-
-### TAIOT-ER03 — Contextual revision
-
-- Representation type: Revision requirement
-- Originating contextual decision: `TAIOT-CD03`
-- Applicable constraints: Existing contextual decisions remain valid only
-  while their validity conditions continue to hold
-- Relevant assumptions: `TAIOT-A01` to `TAIOT-A04`
-- Responsible role(s): Governance, compliance, platform, and other relevant
-  contextual owners
-- Verification condition: Material evidence can be related to the affected
-  contextual element and resulting revision decision
-- Dependencies: Monitoring, validation, stakeholder feedback, regulatory or
-  policy review
-- Revision conditions: New evidence affecting the current revision mechanism
-  or responsibility structure
+P1 is supported by the ability to connect trustworthiness-related obligations
+with documented lifecycle locations.
 
 ---
 
-## 5. Derivation rationale
+## 12. Relationship to P2 — Coordinated Contextual and Functional Refinement
 
-The reconstructed Engineering Representations are derived from documented
-TrustAIoT characteristics rather than from an inferred direct mapping between
-trustworthiness principles and lifecycle artefacts.
-
-The derivation logic is:
-
-**Documented contextual evidence  
-→ reconstructed contextual interpretation or decision  
-→ required engineering function  
-→ process-independent Engineering Representation**
+The three supporting representations help expose the coordination between
+contextual and functional refinement.
 
 For example:
 
-**Documented continuous monitoring, user feedback, maintenance, and change
-management  
-→ continued observation and adaptation are required during platform evolution  
-→ monitoring and continuity must be represented explicitly  
-→ `TAIOT-ER02`**
+**TAIOT-A04 through CR.4  
+→ monitoring / feedback evidence  
+→ TAIOT-ER02 / FR.4**
 
-This derivation remains separate from the subsequent identification of the
-specific TrustAIoT activities or mechanisms through which the requirement was
-enacted.
+and:
 
----
+**CR.6 lifecycle dependency  
+→ TAIOT-ER01  
+→ TAIOT-ER03 / FR.6  
+→ documented lifecycle enactment**
 
-## 6. Traceability
-
-| Representation ID | Trustworthiness concern | Contextual decision | Responsibility record | Assumption record(s) | Supporting documentary evidence |
-|---|---|---|---|---|---|
-| TAIOT-ER01 | Governance and accountability | TAIOT-CD01 | TAIOT-R01; TAIOT-R02; TAIOT-R04 | TAIOT-A01; TAIOT-A02 | Governance structures, lifecycle activities, process inputs and outputs |
-| TAIOT-ER02 | Monitoring, feedback, and continuity | TAIOT-CD02 | TAIOT-R01; TAIOT-R02; TAIOT-R04; TAIOT-R05 | TAIOT-A01; TAIOT-A02; TAIOT-A04 | Continuous monitoring, user feedback, maintenance, change-management mechanisms |
-| TAIOT-ER03 | Contextual adaptation | TAIOT-CD03 | TAIOT-R01; TAIOT-R03; TAIOT-R05 | TAIOT-A01; TAIOT-A03; TAIOT-A04 | Regulatory and policy inputs, monitoring, validation, feedback, policy adaptation |
-
-The complete refinement-to-instantiation chain is represented in
-`traceability-matrix.csv`.
+These relationships provide inspectable evidence for P2 without claiming
+independent FR.1 reconstruction.
 
 ---
 
-## 7. Revision conditions
+## 13. Relationship to P3 — Continuity and Iterative Feedback
 
-| Revision condition | Representation affected | Evidence source | Responsible role |
-|---|---|---|---|
-| Material governance or organisational change | TAIOT-ER01 | Governance / organisational evidence | Platform / governance owner |
-| Material change in monitoring, maintenance, or feedback capability | TAIOT-ER02 | Operational and lifecycle evidence | Operational / platform owner |
-| Regulatory or policy change | TAIOT-ER03 | Regulatory / policy evidence | Governance / compliance owner |
-| Monitoring, validation, or stakeholder evidence challenges an existing contextual assumption | TAIOT-ER02; TAIOT-ER03 | Monitoring / validation / feedback evidence | Relevant operational and governance actors |
+`TAIOT-ER02` and `TAIOT-ER03` jointly expose the principal P3 relationship:
 
----
+**monitoring / validation / user feedback  
+→ FR.4  
+→ review where justified  
+→ FR.6  
+→ maintenance / change management / policy adaptation  
+→ continued or updated Process Instantiation**
 
-## 8. Subsequent Process Instantiation
-
-The original TrustAIoT material documents process-specific mechanisms through
-which the reconstructed Engineering Representations can be retrospectively
-mapped.
-
-| Representation ID | Instantiation ID | Documented lifecycle location or mechanism | Documented process-specific enactment | Instantiation rationale |
-|---|---|---|---|---|
-| TAIOT-ER01 | TAIOT-PI01 | Governance and lifecycle activities | BPMN activities, governance procedures, process inputs and outputs, architectural or module-level responsibilities | These documented elements enact governance and lifecycle requirements represented by TAIOT-ER01 |
-| TAIOT-ER02 | TAIOT-PI02 | Continued operation and monitoring | Continuous monitoring, user-feedback mechanisms, maintenance, update, and change-management procedures | These mechanisms enact the monitoring and continuity requirement represented by TAIOT-ER02 |
-| TAIOT-ER03 | TAIOT-PI03 | Review and adaptation mechanisms | Policy adaptation, governance review, change management, and related revision mechanisms | These mechanisms provide process-specific enactment of the revision requirement represented by TAIOT-ER03 |
-
-These mappings are **retrospective Process Instantiations**. They do not imply
-that the Engineering Representations above were explicitly formulated before
-the original TrustAIoT mechanisms were designed.
+TrustAIoT provides explicit documentary evidence for these mechanisms.
 
 ---
 
-## 9. Verification and evidence
+## 14. Conditional contextual revision
 
-The retrospective FR.1 reconstruction is supported by documented:
+Where FR.4 evidence materially invalidates a contextual assumption represented
+through CR.4, a prospective application could invoke:
+
+**CR.5 — Context Revision Trigger**
+
+The conditional relation is:
+
+**evidence  
+→ affected CR.4 assumption  
+→ CR.5 where contextual reconsideration is justified  
+→ subsequent Functional Refinement**
+
+This does not establish CR.5 as an additional TrustAIoT reconstruction claim.
+
+---
+
+## 15. Revision conditions
+
+| Evidence or change condition | Representation potentially affected | Documentary source |
+|---|---|---|
+| Material governance, organisational, or lifecycle change | TAIOT-ER01; TAIOT-ER03 | Governance / organisational / lifecycle evidence |
+| Material change in monitoring, validation, or feedback capability | TAIOT-ER02; TAIOT-ER03 | Operational / validation / feedback evidence |
+| Regulatory or policy change | TAIOT-ER01; TAIOT-ER03 | Regulatory / policy evidence |
+| Maintenance or change-management failure | TAIOT-ER03 | Maintenance / change-management evidence |
+| User or stakeholder evidence challenges an existing assumption | TAIOT-ER02; potentially TAIOT-ER03 | User / stakeholder feedback |
+
+These conditions connect documented evidence with possible review.
+
+They do not imply automatic revision.
+
+---
+
+## 16. Verification and evidence
+
+The supporting Engineering Representations are grounded in documented:
 
 - Stakeholder requirements
 - Regulations and strategic objectives
 - Governance structures
 - BPMN lifecycle activities
 - Process inputs and outputs
-- Architectural or module-level mechanisms
 - Testing and validation
 - Continuous monitoring
 - User feedback
@@ -196,38 +402,83 @@ The retrospective FR.1 reconstruction is supported by documented:
 - Maintenance and update procedures
 - Policy-adaptation mechanisms
 
-Verification in this worked example means that each reconstructed Engineering
-Representation can be related to:
+Verification in this worked example means that each representation can be
+related to:
 
-1. A documented contextual concern or decision
-2. Supporting documentary evidence
+1. A paper-supported CR.4 or CR.6 contextual relationship, or a
+   paper-supported FR.4 or FR.6 functional relationship
+2. Documentary TrustAIoT evidence
 3. A documented process-specific enactment
 
-It does not mean that FR.1 was prospectively executed in the original project.
+It does not mean that FR.1 was prospectively or retrospectively reconstructed
+as an independent TrustAIoT case-level rule.
 
 ---
 
-## 10. Versioning and ownership
+## 17. Analytical boundary
 
-- Artefact type: Retrospectively completed CRISP-TAI v0.2.0 template
+For TrustAIoT, the associated article supports:
+
+### Contextual Refinement
+- **CR.4 — Assumption Documentation**
+- **CR.6 — Lifecycle Anchoring**
+
+### Functional Refinement
+- **FR.4 — Iterative Feedback Integration**
+- **FR.6 — Continuity Enforcement**
+
+### Assessment criteria
+- **P1**
+- **P2**
+- **P3**
+
+This engineering-representation artefact is a **supporting repository
+representation**.
+
+Its existence does not add:
+
+- FR.1
+- FR.2
+- FR.3
+- FR.5
+
+to the paper-supported TrustAIoT reconstruction.
+
+---
+
+## 18. Versioning and ownership
+
+- Artefact type: Supporting retrospective completion of a CRISP-TAI v0.2.0
+  template
 - Source case: TrustAIoT
 - Repository version: `0.2.0`
-- Status: Illustrative worked example
+- Status: Supporting worked-example representation
 - Original project record: No
+- Paper-supported FR.1 reconstruction: No
+- Paper-supported FR.4 reconstruction: Yes
+- Paper-supported FR.6 reconstruction: Yes
 
 ---
 
 ## Notes
 
-This worked artefact demonstrates the methodological boundary introduced in
-the revised Lifecycle Refinement Framework:
+This artefact uses Engineering Representations to make the TrustAIoT
+refinement and instantiation chain inspectable without extending the rule
+coverage reported in the associated article.
 
-**Contextual decision  
-→ process-independent Engineering Representation  
-→ Process Instantiation  
-→ documented lifecycle artefact or operational mechanism**
+Its principal structure is:
 
-The previous repository version represented this relation directly as
-`Interpretation → Derived Artefact`. The v0.2.0 worked example separates these
-steps explicitly so that the contextual rationale remains traceable without
-making lifecycle-specific placement part of FR.1.
+**CR.4 assumptions + CR.6 lifecycle dependencies  
+→ supporting process-independent representations  
+→ FR.4 feedback integration + FR.6 continuity  
+→ documented Process Instantiation  
+→ P1 / P2 / P3**
+
+The distinction between representation and enactment remains:
+
+**TAIOT-ER01 / TAIOT-ER02 / TAIOT-ER03  
+≠  
+BPMN activities / monitoring mechanisms / maintenance procedures /
+policy-adaptation mechanisms**
+
+The latter are documented TrustAIoT-specific instantiations.
