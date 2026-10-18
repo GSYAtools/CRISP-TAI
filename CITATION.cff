@@ -1,18 +1,43 @@
 cff-version: 1.2.0
 
 message: >
-  This repository contains the engineering artefacts supporting
-  the CRISP-TAI instantiation of the Lifecycle Refinement Framework.
-  If you use these artefacts, please cite the associated research article.
+  This repository contains the engineering artefacts supporting CRISP-TAI,
+  the first instantiation of the Lifecycle Refinement Framework over the
+  CRISP-DM lifecycle. Version 0.2.0 is aligned with the revised version of
+  the associated research article. If you use these artefacts, please cite
+  the associated research article.
 
 title: "CRISP-TAI Engineering Artefacts"
+
+version: "0.2.0"
 
 authors:
   - family-names: Braga
     given-names: Carlos Mario
+
   - family-names: Serrano
     given-names: Manuel A.
+
   - family-names: Fernández-Medina
     given-names: Eduardo
 
-status: "under review"
+repository-code: "https://github.com/GSYAtools/CRISP-TAI"
+
+url: "https://github.com/GSYAtools/CRISP-TAI"
+
+license: "Apache-2.0"
+
+date-released: "2026-10-18"
+
+preferred-citation:
+  type: article
+  title: "A Process-Independent Framework for Lifecycle Refinement in Trustworthy AI"
+  authors:
+    - family-names: Braga
+      given-names: Carlos Mario
+
+    - family-names: Serrano
+      given-names: Manuel A.
+
+    - family-names: Fernández-Medina
+      given-names: Eduardo
