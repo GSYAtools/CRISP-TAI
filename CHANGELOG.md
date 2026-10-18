@@ -29,10 +29,11 @@ Framework**, which defines the process-independent refinement method, and
   process-independent Lifecycle Refinement Framework and its first
   process-specific instantiation, CRISP-TAI.
 - Clarified the distinction between **contextual interpretations**,
-  **process-independent engineering representations**, and their subsequent
-  **process-specific instantiation** as lifecycle artefacts.
-- Revised terminology for the cross-domain examples to describe them as
-  illustrative applications of the framework through CRISP-TAI rather than
+  **process-independent Engineering Representations**, and their subsequent
+  **process-specific instantiation** as lifecycle artefacts or operational
+  mechanisms.
+- Revised terminology for the cross-domain cases to describe them as
+  retrospective applications of the framework through CRISP-TAI rather than
   as independent framework instantiations.
 - Updated repository structure references to use `/appendices`.
 
@@ -46,12 +47,13 @@ Framework**, which defines the process-independent refinement method, and
 - Added versioning expectations for proposed methodological changes to the
   canonical CR and FR rule definitions.
 - Added traceability expectations connecting contextual decisions,
-  engineering representations, and lifecycle artefacts.
+  Engineering Representations, Process Instantiation, and lifecycle
+  artefacts.
 
 #### Practitioner documentation
 
 - Updated `docs/getting-started.md` to distinguish Contextual Refinement,
-  Functional Refinement, process-independent engineering representations,
+  Functional Refinement, process-independent Engineering Representations,
   and subsequent Process Instantiation.
 - Updated `docs/rule-application-guide.md` to reflect the canonical
   CR.1--CR.7 and FR.1--FR.6 rule definitions and their common operational
@@ -69,15 +71,15 @@ Framework**, which defines the process-independent refinement method, and
 - Renamed `templates/functional-refinement/artefact-derivation.md` to
   `templates/functional-refinement/engineering-representation.md` to align
   with **FR.1 — Engineering Representation Derivation** and distinguish
-  process-independent engineering representations from subsequently
+  process-independent Engineering Representations from subsequently
   instantiated lifecycle artefacts.
-- Updated the Functional Refinement templates to distinguish engineering
-  representation, operational evidence, feedback integration, continuity,
+- Updated the Functional Refinement templates to distinguish Engineering
+  Representation, operational evidence, feedback integration, continuity,
   and subsequent process-specific instantiation.
 - Expanded `traceability-matrix.csv` to preserve explicit links between
-  contextual decisions, process-independent engineering representations,
-  lifecycle anchoring and placement constraints, process-specific
-  instantiation, and instantiated lifecycle artefacts.
+  contextual decisions, process-independent Engineering Representations,
+  lifecycle anchoring and placement constraints, Process Instantiation, and
+  instantiated lifecycle artefacts.
 - Updated monitoring and feedback templates to preserve the
   evidence-to-decision chain across FR.4, CR.5, subsequent re-refinement,
   and process-specific re-instantiation where required.
@@ -98,7 +100,7 @@ Framework**, which defines the process-independent refinement method, and
   case studies.
 - Updated the RAG-in-Data-Spaces record to distinguish documented governance
   and provenance evidence, reconstructed Contextual Refinement, reconstructed
-  process-independent engineering representations, and documented
+  process-independent Engineering Representations, and documented
   process-specific instantiation.
 - Updated the Federated Learning record to distinguish operational and
   contextual constraints, reconstructed detection, monitoring, adjustment,
@@ -107,11 +109,106 @@ Framework**, which defines the process-independent refinement method, and
   lifecycle anchoring from reconstructed feedback and continuity
   representations and their documented process-specific enactment.
 - Added explicit traceability summaries linking documentary case evidence,
-  reconstructed CR and FR rules, process-independent engineering
-  representations, and documented instantiation evidence.
+  reconstructed CR and FR rules, process-independent Engineering
+  Representations, and documented instantiation evidence.
 - Linked each retrospective application record to the reusable repository
   templates that can represent the reconstructed refinement and
   instantiation chain.
+
+#### Worked retrospective examples
+
+- Reworked the three `/examples` cases as **retrospectively completed worked
+  examples** of the v0.2.0 reusable templates rather than as records of
+  prospective CRISP-TAI execution.
+- Standardised the TrustAIoT, Federated Learning, and RAG-in-Data-Spaces
+  example directories around a common structure containing:
+  - `README.md`
+  - `context-description.md`
+  - `responsibility-map.csv`
+  - `principle-prioritisation.md`
+  - `assumption-log.md`
+  - `engineering-representation.md`
+  - `traceability-matrix.csv`
+  - `monitoring-plan.md`
+  - `feedback-log.md`
+- Removed the redundant example-level `instantiation-log.md` pointer files;
+  the canonical methodological reconstructions are now maintained under
+  `/logs` as retrospective application records.
+- Renamed example-level `artefact-derivation.md` files to
+  `engineering-representation.md` and revised their contents to distinguish
+  contextual decisions, process-independent Engineering Representations, and
+  subsequent Process Instantiation.
+- Revised the worked examples to distinguish documentary case evidence from
+  retrospectively reconstructed refinement records and to state explicitly
+  that the completed artefacts are not original project records.
+- Removed unsupported claims of prospective CRISP-TAI execution, complete
+  CR/FR rule coverage, execution-based validation, and independent empirical
+  validation from the example documentation.
+- Removed or reformulated unsupported fixed priority rankings, review
+  frequencies, dates, thresholds, and historical actions where the available
+  documentary evidence did not justify them.
+- Standardised example-level identifiers linking contextual decisions,
+  assumptions, Engineering Representations, Process Instantiations, monitoring
+  evidence, feedback, and traceability records.
+- Expanded the worked traceability matrices to represent the chain:
+  **contextual decision → Engineering Representation → instantiation
+  constraints → Process Instantiation → documented process-specific
+  enactment**.
+- Separated `framework_instantiation` (`CRISP-TAI`) from `target_process`
+  (`CRISP-DM`) in the worked traceability matrices.
+- Treated availability of a traceability field as distinct from evidence that
+  a corresponding CR or FR rule was reconstructed, avoiding artificial rule
+  coverage.
+
+##### TrustAIoT worked example
+
+- Reconstructed contextual assumptions, governance conditions, lifecycle
+  anchoring, monitoring, feedback, continuity, and contextual adaptation from
+  documented TrustAIoT material.
+- Introduced explicit Engineering Representations for governance/lifecycle
+  traceability, monitoring/continuity, and contextual revision.
+- Linked those representations retrospectively to documented BPMN lifecycle
+  activities, governance mechanisms, continuous monitoring, user feedback,
+  maintenance, change management, and policy-adaptation mechanisms.
+- Represented monitoring and feedback as evidence-to-decision paths rather
+  than as automatic revision mechanisms.
+
+##### Federated Learning worked example
+
+- Reconstructed the distributed, partially observable Federated Learning
+  context, including secure aggregation, repeated training rounds, adversarial
+  risk, and early pre-aggregation detection.
+- Introduced explicit Engineering Representations for early detection and
+  monitoring, operational review and adjustment, and continuity across
+  successive training rounds.
+- Represented **lifecycle anchoring before aggregation** explicitly while
+  preserving the distinction between anchoring constraints and final
+  process-specific technical placement.
+- Separated detection evidence from operational or governance decisions and
+  removed direct `alert → action` relationships from the earlier example.
+- Clarified that FR.3 represents a required operational adjustment through a
+  new or revised Engineering Representation and does not itself execute
+  client exclusion, threshold changes, configuration changes, or other
+  interventions.
+
+##### RAG in Federated Data Spaces worked example
+
+- Refocused the worked example on the documentary evidence most strongly
+  supported by the retrospective assessment: distributed governance,
+  responsibility, source identification, provenance, and traceability.
+- Introduced explicit Engineering Representations for responsibility and
+  governance traceability, provenance and source identification, and
+  information-use traceability.
+- Distinguished these process-independent representations from the documented
+  source metadata, provenance mechanisms, traceability structures, and
+  architectural relationships through which they are retrospectively
+  instantiated.
+- Kept monitoring and feedback artefacts deliberately conditional and limited
+  where the documentary evidence did not support reconstruction of historical
+  monitoring schedules, feedback events, operational adjustments, or
+  continuity mechanisms.
+- Demonstrated that reusable templates do not require artificial completion of
+  every refinement rule or lifecycle property in every application setting.
 
 #### Design provenance and supplementary material
 
@@ -129,7 +226,7 @@ Framework**, which defines the process-independent refinement method, and
   allocation, and principle prioritisation without treating CR.1--CR.3 as
   phase-specific rules.
 - Updated the Data Preparation trace to distinguish historical preprocessing
-  activities from the process-independent engineering representation and
+  activities from the process-independent Engineering Representation and
   traceability functions subsequently formalised through FR.1 and FR.2.
 - Updated the Evaluation trace to distinguish its process-specific evaluation
   activities from the iterative feedback function subsequently formalised
@@ -153,12 +250,17 @@ Framework**, which defines the process-independent refinement method, and
 - Linked the repository version to the revised manuscript
   *A Process-Independent Framework for Lifecycle Refinement in Trustworthy AI*.
 
-### Repository alignment under review
+### Release scope
 
-The remaining illustrative application material in `/examples` is being
-reviewed for consistency with the revised framework specification. Its
-corresponding changes will be recorded in this section before version 0.2.0
-is released.
+Version 0.2.0 completes repository-wide alignment with the revised manuscript
+across the root governance files, practitioner documentation, reusable
+templates, retrospective application records, worked examples, and
+supplementary design-provenance material.
+
+The release is intended to support **inspectability, reuse, traceability, and
+reproducibility of the refinement and instantiation structure**. It does not
+claim prospective empirical validation of the Lifecycle Refinement Framework
+or CRISP-TAI.
 
 ---
 
