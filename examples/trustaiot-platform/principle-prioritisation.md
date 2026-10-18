@@ -1,16 +1,26 @@
 # Principle Prioritisation — TrustAIoT Worked Example
 
-This document is an **illustrative retrospective completion** of the
+This document is an **additional illustrative completion** of the
 `principle-prioritisation.md` template using documentary evidence from the
 TrustAIoT case.
 
 It is not an original TrustAIoT project record and does not imply prospective
 application of CRISP-TAI.
 
-This worked artefact illustrates how trustworthiness concerns identified in
-the original case can be represented through **CR.3 — Principle
-Prioritisation** where the documentary evidence supports an explicit
-context-dependent prioritisation or trade-off.
+The analytical evaluation reported in the associated article reconstructs:
+
+- **CR.4 — Assumption Documentation**
+- **CR.6 — Lifecycle Anchoring**
+- **FR.4 — Iterative Feedback Integration**
+- **FR.6 — Continuity Enforcement**
+
+It does **not** independently reconstruct
+**CR.3 — Principle Prioritisation** for the TrustAIoT case.
+
+Accordingly, this file demonstrates how trustworthiness concerns and
+dependencies documented in TrustAIoT can be represented using the reusable
+prioritisation template without extending the analytical claims made in the
+associated article.
 
 ---
 
@@ -18,132 +28,221 @@ context-dependent prioritisation or trade-off.
 
 - Record ID: `TAIOT-PRIO-01`
 - System or component: TrustAIoT platform
-- Trigger for prioritisation: Multiple trustworthiness concerns must be
-  considered within a long-lived, heterogeneous, and governed AIoT platform
+- Purpose of this record: Illustrate representation of documented
+  trustworthiness concerns and contextual dependencies
 - Decision context: Platform-level governance and continued operation
-- Responsible role(s): Reconstructed governance actors
-- Accountable role: Platform-level governance authority
 - Related context record: `TAIOT-CTX-01`
-- Related responsibility record: `TAIOT-R01` to `TAIOT-R05`
-- Artefact status: Retrospective worked-example representation
+- Related assumption records:
+  - `TAIOT-A01`
+  - `TAIOT-A02`
+  - `TAIOT-A03`
+- Paper-supported CR reconstruction:
+  - `CR.4`
+  - `CR.6`
+- Template function illustrated here:
+  - `CR.3 — Principle Prioritisation`
+- Artefact status: Additional illustrative worked-template representation
+- Repository version: `0.2.0`
 
 ---
 
-## 2. Applicable trustworthiness principles or concerns
+## 2. Documented trustworthiness concerns
 
 The TrustAIoT material identifies multiple trustworthiness concerns relevant
 to platform governance and evolution.
 
-| Principle / concern | Why applicable | Contextual constraint or expectation | Relevant actor(s) |
+| Principle / concern | Why applicable | Contextual dependency or expectation | Relevant actor(s) |
 |---|---|---|---|
-| Lawfulness | Platform operation is subject to regulatory and governance requirements | Trustworthiness-related decisions must remain aligned with applicable requirements as the platform evolves | Platform Owner; Compliance Team |
-| Robustness | AIoT operation involves heterogeneous devices and technical dependencies | Relevant controls and monitoring must remain effective under changing operational conditions | Platform Architecture Team; Project Teams |
-| Explainability / transparency | Human-centred governance and oversight require understandable system behaviour and decisions | Explanation-related expectations must be reflected in relevant engineering and governance mechanisms | Platform Owner; Platform Architecture Team; Project Teams |
-| Sustainability | Long-lived AIoT operation introduces lifecycle and resource considerations | Platform evolution and device lifecycle management may require continued consideration of long-term impacts | Platform Owner; Platform Architecture Team |
-| Accountability | Multiple platform and project actors participate in governance and operation | Responsibility and accountability boundaries must remain explicit across organisational and technical layers | Platform Owner; Compliance Team; Project Teams |
+| Lawfulness | Platform operation is subject to regulatory and governance requirements | Trustworthiness-related activities must remain compatible with applicable requirements as the platform evolves | Platform Owner; Compliance Team |
+| Robustness | AIoT operation involves heterogeneous devices, AI-enabled components, and technical dependencies | Relevant technical and operational mechanisms must remain suitable under changing platform conditions | Platform Architecture Team; Project Teams |
+| Explainability / transparency | Human-centred governance and oversight require understandable system behaviour and decisions | Explanation-related concerns remain relevant to platform governance and project-level enactment | Platform Owner; Platform Architecture Team; Project Teams |
+| Sustainability | Long-lived AIoT operation introduces lifecycle and resource considerations | Platform evolution and device lifecycle management may affect long-term trustworthiness concerns | Platform Owner; Platform Architecture Team |
+| Accountability | Multiple platform and project actors participate in governance and operation | Responsibility boundaries must remain identifiable across organisational and technical layers | Platform Owner; Compliance Team; Project Teams |
 
-These concerns are reconstructed from the documented case material. Their
-presence does not by itself establish a formal priority ordering.
+The presence of these concerns does **not** establish a paper-supported CR.3
+priority ordering.
 
 ---
 
-## 3. Tensions and dependencies
+## 3. Documented dependencies
 
-The retrospective reconstruction identifies dependencies among the concerns
-above, but the available repository evidence does not support assigning a
-universal numerical or ordinal ranking to all of them.
+The case material supports representation of dependencies among the concerns
+above.
 
-Representative dependencies include:
-
-| Tension / dependency | Concerns involved | Contextual consideration | Retrospective interpretation |
+| Dependency | Concerns involved | Contextual consideration | Worked-example interpretation |
 |---|---|---|---|
-| Regulatory alignment and platform evolution | Lawfulness; accountability | Governance and policy requirements may evolve during long-term operation | Regulatory and governance constraints must remain revisable |
-| Human-centred operation and technical complexity | Explainability / transparency; robustness | Heterogeneous AIoT components may complicate explanation and oversight | Explanation-related requirements must be represented without ignoring operational constraints |
-| Long-term platform evolution | Sustainability; robustness; accountability | Maintenance, device evolution, and organisational change affect continued operation | Continuity and revision mechanisms are required |
+| Regulatory alignment during platform evolution | Lawfulness; accountability | Governance and policy conditions may evolve during long-term operation | Existing assumptions and governance conditions may require later review |
+| Human-centred operation under technical complexity | Explainability / transparency; robustness | Heterogeneous AIoT components may complicate explanation and oversight | Explanation-related concerns coexist with operational and architectural constraints |
+| Long-term platform evolution | Sustainability; robustness; accountability | Maintenance, device evolution, organisational change, and policy change affect continued operation | Monitoring, maintenance, feedback, and adaptation mechanisms remain relevant during evolution |
 
-These dependencies are illustrative reconstructions and should not be
-interpreted as quantified trade-offs established by the original project.
+These dependencies are useful contextual information.
 
----
-
-## 4. Prioritisation or trade-off decision
-
-The documentary evidence used in this retrospective example supports the
-importance of the identified concerns but does **not** provide sufficient basis
-for reconstructing a complete `High / Medium / Low` ordering across all
-principles.
-
-Accordingly, this worked example records a **contextual prioritisation
-constraint** rather than inventing a numerical or ordinal ranking:
-
-> Trustworthiness-related governance decisions must preserve applicable
-> regulatory and accountability constraints while maintaining the monitoring,
-> feedback, and continuity mechanisms required for long-lived AIoT operation.
-
-Where explanation, robustness, sustainability, or other concerns interact,
-their relative treatment should be justified against the applicable context
-rather than inferred from this retrospective example.
+They are not presented as quantified trade-offs or as evidence that CR.3 was
+independently reconstructed in the associated article.
 
 ---
 
-## 5. Decision rationale
+## 4. Illustrative prioritisation constraint
 
-The reconstructed prioritisation constraint is supported by:
+The documentary evidence does not provide a sufficient basis for reconstructing
+a complete `High / Medium / Low` ordering across the identified concerns.
 
-- Regulatory and governance inputs documented in TrustAIoT
-- Platform-level responsibility structures
-- Long-lived and evolving operation
-- Continuous monitoring and feedback
-- Maintenance and change-management mechanisms
-- Policy adaptation during platform evolution
+For purposes of demonstrating the reusable template, the documented concerns
+can instead be summarised through the following **illustrative contextual
+constraint**:
 
-### Alternatives not reconstructed
+> Platform governance should continue to account for applicable regulatory,
+> accountability, robustness, transparency, and lifecycle concerns as
+> TrustAIoT evolves, with their treatment justified against the relevant
+> contextual conditions.
 
-The available evidence does not justify retrospectively assigning fixed
-priority levels to every trustworthiness concern.
+This statement organises documented concerns without claiming a paper-supported
+CR.3 output.
 
-For this reason, the worked example does not reproduce the `High / Medium`
-ranking used in the earlier repository version.
+It should not be interpreted as:
 
----
-
-## 6. Resulting contextual decision
-
-- Affected concerns: Lawfulness, accountability, robustness,
-  explainability/transparency, sustainability, and related platform-level
-  trustworthiness concerns
-- Adopted contextual decision: Applicable regulatory and governance
-  constraints must be preserved while relevant operational trustworthiness
-  mechanisms remain monitorable, revisable, and continuous
-- Applicable constraints: Regulatory, organisational, architectural,
-  operational, and lifecycle conditions
-- Responsible actors: Reconstructed platform governance and technical actors
-- Related assumptions: `TAIOT-A01`, `TAIOT-A02`, `TAIOT-A03`
-- Related context record: `TAIOT-CTX-01`
-
-Where this contextual decision requires engineering operationalisation, the
-required response is represented separately through
-`engineering-representation.md`.
+- A universal ranking of trustworthiness principles
+- A reconstructed historical prioritisation decision
+- An additional contextual decision used by the paper's analytical evaluation
 
 ---
 
-## 7. Review and revision conditions
+## 5. Relationship to CR.4 — Assumption Documentation
 
-| Revision condition | Affected decision | Evidence source | Responsible role |
-|---|---|---|---|
-| Material regulatory or policy change | Regulatory and governance prioritisation constraints | Regulatory / policy evidence | Compliance / governance actor |
-| Material platform or architectural change | Operational trustworthiness priorities or dependencies | Platform change evidence | Platform Architecture Team |
-| Monitoring or validation evidence challenging existing expectations | Relevant contextual decision or assumption | Monitoring / validation evidence | Platform and governance actors |
-| Material change in stakeholder expectations | Human-centred or governance concerns | User / stakeholder feedback | Relevant governance actor |
-| Maintenance or lifecycle change affecting continuity | Long-term governance and operational constraints | Maintenance / change-management evidence | Platform Owner |
+The documented concerns represented here are relevant to the assumptions
+reconstructed through CR.4.
 
-Where such evidence challenges the existing contextual decision,
-**CR.5 — Context Revision Trigger** should determine whether it is retained,
-updated, or reconsidered.
+For example:
+
+- Regulatory and governance concerns contribute to the conditions represented
+  by `TAIOT-A01`.
+- Monitoring and stakeholder-related concerns contribute to the conditions
+  represented by `TAIOT-A02`.
+- Lifecycle, maintenance, and adaptation concerns contribute to the conditions
+  represented by `TAIOT-A03`.
+
+The paper-supported relationship is therefore not:
+
+**CR.3 prioritisation  
+→ CR.4 assumptions**
+
+but rather:
+
+**documented TrustAIoT contextual evidence  
+→ CR.4 assumptions and validity conditions**
+
+This file provides supporting organisation of that contextual evidence.
 
 ---
 
-## 8. Verification and evidence
+## 6. Relationship to CR.6 — Lifecycle Anchoring
+
+Several concerns represented in this file have identifiable lifecycle
+dependencies.
+
+For example:
+
+- Regulatory and governance requirements may affect governance and review
+  activities.
+- Robustness concerns may affect testing, validation, monitoring, and
+  maintenance.
+- Transparency concerns may affect governance, oversight, and project-level
+  activities.
+- Sustainability concerns may affect maintenance and platform evolution.
+- Accountability concerns may span multiple lifecycle and organisational
+  locations.
+
+These dependencies support interpretation of the paper-supported
+**CR.6 — Lifecycle Anchoring** reconstruction.
+
+Final mapping to a specific TrustAIoT lifecycle activity or mechanism belongs
+to Process Instantiation.
+
+---
+
+## 7. Relationship to FR.4 and FR.6
+
+The concerns and dependencies represented here may also help interpret later
+operational evidence.
+
+### FR.4 — Iterative Feedback Integration
+
+Monitoring, validation, or user evidence may reveal that an existing
+contextual assumption or engineering record requires review.
+
+### FR.6 — Continuity Enforcement
+
+Trustworthiness-related obligations associated with the documented concerns
+may need to remain active or be reconsidered during platform evolution.
+
+These are paper-supported TrustAIoT functions.
+
+Their reconstruction does not depend on treating this file as evidence of
+CR.3.
+
+---
+
+## 8. Additional illustrative review conditions
+
+For purposes of demonstrating the reusable prioritisation template, the
+represented concerns could be reviewed in a prospective application when the
+underlying context changes.
+
+| Illustrative review condition | Concern potentially affected | Evidence source |
+|---|---|---|
+| Material regulatory or policy change | Lawfulness; accountability | Regulatory / policy evidence |
+| Material architectural or platform change | Robustness; explainability / transparency | Platform / architectural evidence |
+| Material change in stakeholder expectations | Explainability / transparency; accountability | User / stakeholder feedback |
+| Material lifecycle or device-management change | Sustainability; robustness | Maintenance / lifecycle evidence |
+| Material organisational change | Accountability | Governance / organisational evidence |
+
+These are prospective illustrative review conditions.
+
+They do not establish historical CR.3 or CR.5 execution.
+
+---
+
+## 9. Conditional relationship to CR.5
+
+Where new evidence invalidates an assumption reconstructed through CR.4, a
+prospective application could invoke:
+
+**CR.5 — Context Revision Trigger**
+
+The relevant framework relation would be:
+
+**new evidence  
+→ review of an existing contextual assumption  
+→ CR.5 where contextual reconsideration is justified  
+→ subsequent Functional Refinement**
+
+This is a conditional framework path.
+
+It does not add CR.5 to the canonical TrustAIoT rule reconstruction.
+
+---
+
+## 10. Decisions not reconstructed
+
+The available evidence does not justify using this worked artefact to claim:
+
+- A formal `High / Medium / Low` ranking
+- A universal ordering among Lawfulness, Robustness, Explainability,
+  Sustainability, and Accountability
+- A quantified trade-off among those concerns
+- A historical CR.3 execution
+- A new contextual decision ID feeding the paper-supported Functional
+  Refinement reconstruction
+- Historical CR.5 execution
+
+These limitations are deliberate.
+
+Absence of documentary evidence should not be replaced by inferred
+prioritisation.
+
+---
+
+## 11. Verification and evidence
 
 Supporting documentary evidence includes:
 
@@ -151,42 +250,85 @@ Supporting documentary evidence includes:
 - Regulatory and governance inputs
 - Strategic objectives
 - Platform governance structures
-- Monitoring and validation mechanisms
+- Architectural organisation
+- Testing and validation mechanisms
+- Continuous monitoring
 - User-feedback mechanisms
 - Maintenance and change-management procedures
 - Policy-adaptation mechanisms
 
-Related worked artefacts:
+Related paper-supported worked artefacts:
 
 - `context-description.md`
-- `responsibility-map.csv`
 - `assumption-log.md`
+- `monitoring-plan.md`
+- `feedback-log.md`
+
+Supporting repository artefacts:
+
+- `responsibility-map.csv`
 - `engineering-representation.md`
 - `traceability-matrix.csv`
 
 ---
 
-## 9. Versioning and ownership
+## 12. Analytical boundary
 
-- Artefact type: Retrospectively completed CRISP-TAI v0.2.0 template
+For TrustAIoT, the associated article supports:
+
+### Contextual Refinement
+- **CR.4 — Assumption Documentation**
+- **CR.6 — Lifecycle Anchoring**
+
+### Functional Refinement
+- **FR.4 — Iterative Feedback Integration**
+- **FR.6 — Continuity Enforcement**
+
+### Assessment criteria
+- **P1 — Lifecycle Anchoring**
+- **P2 — Coordinated Contextual and Functional Refinement**
+- **P3 — Continuity and Iterative Feedback**
+
+This file illustrates the structure of a CR.3-oriented reusable template but
+does **not** add CR.3 to that analytical reconstruction.
+
+P4 — Cross-Domain Adaptability is assessed through cross-case comparison.
+
+---
+
+## 13. Versioning and ownership
+
+- Artefact type: Additional illustrative completion of a CRISP-TAI v0.2.0
+  template
 - Source case: TrustAIoT
 - Repository version: `0.2.0`
-- Status: Illustrative worked example
+- Status: Illustrative worked-template representation
 - Original project record: No
+- Paper-supported CR.3 reconstruction: No
+- Paper-supported CR.5 reconstruction: No
 
 ---
 
 ## Notes
 
-This artefact demonstrates an important property of retrospective application:
-**absence of documentary evidence should not be replaced by inferred
-prioritisation**.
+This artefact demonstrates that a reusable prioritisation template can remain
+useful even when the retrospective analytical evaluation does not reconstruct
+CR.3 for the case.
 
-The original TrustAIoT material supports identification of relevant
-trustworthiness concerns and contextual dependencies. This worked example
-therefore records only the prioritisation or constraint that can be supported
-by that evidence.
+Its role is:
 
-Any subsequent Engineering Representation derived from this contextual
-decision remains process-independent until mapped through Process
-Instantiation.
+**documented trustworthiness concerns and dependencies  
+→ supporting contextual representation  
+→ interpretation of CR.4 assumptions and CR.6 lifecycle dependencies**
+
+rather than:
+
+**documented concerns  
+→ claimed CR.3 reconstruction**
+
+The authoritative TrustAIoT analytical boundary remains:
+
+**CR.4 / CR.6  
+→ FR.4 / FR.6  
+→ documented Process Instantiation  
+→ P1 / P2 / P3**
