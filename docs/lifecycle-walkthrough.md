@@ -134,7 +134,7 @@ data-limitation requirements before being mapped to CRISP-DM artefacts.
 ### Supporting repository templates
 
 - `assumption-log.md`
-- `artefact-derivation.md`
+- `engineering-representation.md`
 - `traceability-matrix.csv`
 
 ### Supporting figure
@@ -176,7 +176,7 @@ final placement as CRISP-DM-specific artefacts.
 
 ### Supporting repository templates
 
-- `artefact-derivation.md`
+- `engineering-representation.md`
 - `traceability-matrix.csv`
 
 ### Supporting figure
@@ -217,7 +217,7 @@ Relevant rules may include:
 
 ### Supporting repository templates
 
-- `artefact-derivation.md`
+- `engineering-representation.md`
 - `traceability-matrix.csv`
 - `assumption-log.md`
 
