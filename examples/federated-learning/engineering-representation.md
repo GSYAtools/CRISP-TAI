@@ -7,10 +7,19 @@ Federated Learning case.
 It is not an original project record and does not imply prospective
 application of CRISP-TAI.
 
-This worked artefact illustrates **FR.1 — Engineering Representation
-Derivation** by showing how reconstructed contextual decisions can be expressed
-as **process-independent Engineering Representations** before their subsequent
-technical and lifecycle instantiation.
+For the analytical evaluation reported in the associated article, this worked
+artefact represents **FR.1 — Engineering Representation Derivation**.
+
+The paper-supported reconstruction expresses the operational priority
+reconstructed through **CR.3 — Principle Prioritisation** as
+process-independent Engineering Representations concerning:
+
+- Lightweight early detection
+- Benign-reference calibration
+- Threshold-based monitoring
+
+These representations remain distinct from the statistical and technical
+mechanisms through which they are subsequently instantiated.
 
 ---
 
@@ -18,254 +27,443 @@ technical and lifecycle instantiation.
 
 - Record group ID: `FL-ER`
 - System or component: Federated Learning setting
-- Trustworthiness concerns: Early detection, monitoring, operational response,
-  evidence interpretation, and continuity
-- Trigger for engineering representation: Reconstructed contextual decisions
-  require explicit engineering expression before their documented technical
-  enactment can be represented
-- Responsible engineering role(s): Reconstructed coordination, monitoring,
-  security, and operational actors
-- Supporting governance role(s): Reconstructed governance actors where
-  escalation or contextual reconsideration is required
-- Related context record: `FL-CTX-01`
-- Related prioritisation record: `FL-PRIO-01`
-- Related assumption records: `FL-A01` to `FL-A03`
-- Artefact status: Retrospective worked-example representation
+- Primary reconstructed rule:
+  - `FR.1 — Engineering Representation Derivation`
+- Originating Contextual Refinement:
+  - `CR.3 — Principle Prioritisation`
+- Originating contextual decision:
+  - `FL-CD01`
+- Primary challenge:
+  - Partial observability
+  - Distributed control
+  - Adversarial behaviour
+- Relevant operational priority:
+  - Lightweight early detection of strong and stealthy adversarial behaviour
+    while remaining compatible with secure aggregation
+- Related context record:
+  - `FL-CTX-01`
+- Related prioritisation record:
+  - `FL-PRIO-01`
+- Artefact status: Paper-supported retrospective worked-example representation
 - Repository version: `0.2.0`
 
 ---
 
-## 2. Originating contextual decisions
+## 2. Originating contextual decision
 
-| Contextual decision ID | Contextual decision / interpretation | Applicable constraint, priority, responsibility, or assumption | Source |
-|---|---|---|---|
-| FL-CD01 | The partially observable and adversarial FL environment requires relevant detection and monitoring evidence to be available early enough to support review before aggregation | Secure aggregation, limited observability, adversarial risk, and assumptions `FL-A01` to `FL-A03` | `context-description.md`; `principle-prioritisation.md`; `assumption-log.md` |
-| FL-CD02 | Detection evidence requires explicit interpretation before it can justify an engineering or operational response | A detection or anomaly signal is evidence for review rather than an automatic trustworthiness verdict | `context-description.md`; `principle-prioritisation.md`; `responsibility-map.csv` |
-| FL-CD03 | Detection, monitoring, and review capabilities must remain available across successive training rounds while their supporting conditions remain valid | Repeated operation, lifecycle anchoring, and assumptions `FL-A02` and `FL-A03` | `context-description.md`; `assumption-log.md` |
+The paper-supported FR.1 reconstruction originates from the contextual priority
+represented by `FL-CD01`.
 
-These contextual decisions are retrospective reconstructions from the
-documented Federated Learning evidence.
+### FL-CD01 — Operational priority
+
+> The engineering response should provide lightweight early detection of
+> adversarial behaviour, including strong and stealthy attacks, while
+> remaining compatible with the secure-aggregation constraints of the
+> Federated Learning setting.
+
+This decision is reconstructed through
+**CR.3 — Principle Prioritisation**.
+
+Its documentary basis includes:
+
+- Strong attack scenarios
+- Stealthy attack scenarios
+- Partial observability
+- Secure aggregation
+- Need for early detection
+- Need for lightweight operation
+
+FR.1 expresses this contextual priority in process-independent engineering
+form.
 
 ---
 
-## 3. Engineering Representation derivation
+## 3. FR.1 — Engineering Representation derivation
 
-| Representation ID | Contextual decision ID | Representation type | Engineering Representation | Rationale | Responsible role |
-|---|---|---|---|---|---|
-| FL-ER01 | FL-CD01 | Detection and monitoring requirement | Security-relevant detection and monitoring evidence shall be available before aggregation where supported by the documented detection mechanism and shall remain available for operational review | Operationalises the contextual requirement for early evidence under limited observability without prescribing the specific detection implementation | Operations and Security Team / Server Coordinator |
-| FL-ER02 | FL-CD02 | Operational review and adjustment requirement | Detection or anomaly evidence shall be interpreted against the applicable operating conditions before any resulting engineering adjustment or operational response is represented | Preserves the separation between technical evidence and subsequent engineering or governance decisions | Operations and Security Team |
-| FL-ER03 | FL-CD03 | Continuity requirement | Relevant detection, monitoring, and review obligations shall remain active across successive training rounds and shall be reconsidered when their supporting technical or contextual conditions materially change | Operationalises continued monitoring and review without making them one-time controls | Server / Coordinator and Operations and Security Team |
+| Representation ID | Contextual decision ID | Representation type | Engineering Representation | Rationale |
+|---|---|---|---|---|
+| FL-ER01 | FL-CD01 | Lightweight early-detection representation | The engineering solution shall provide a lightweight capability for detecting behaviour relevant to the documented strong and stealthy adversarial conditions while remaining compatible with the Federated Learning operating constraints | Expresses the required early-detection capability independently of the specific detection algorithm or its final technical placement |
+| FL-ER02 | FL-CD01 | Benign-reference calibration representation | The engineering solution shall establish a calibrated reference derived from benign behaviour against which relevant deviations can be evaluated | Expresses the required calibration capability independently of the specific bootstrap procedure or reference-distribution implementation |
+| FL-ER03 | FL-CD01 | Threshold-based monitoring representation | The engineering solution shall provide calibrated detection criteria through which relevant deviations from the benign reference can be made observable | Expresses the required threshold-based detection capability independently of the specific statistical distance measures, features, or numerical thresholds |
 
-These are **process-independent Engineering Representations**. They do not
-prescribe a specific CRISP-DM phase, implementation component, detection
-algorithm, mitigation action, or lifecycle artefact.
+These are **process-independent Engineering Representations**.
+
+They do not prescribe:
+
+- A specific CRISP-DM phase
+- A particular detection algorithm
+- A statistical distance measure
+- A bootstrap implementation
+- A feature set
+- A numerical threshold
+- A concrete technical component
+- A lifecycle artefact
+
+Those choices belong to subsequent technical and process-specific
+instantiation.
 
 ---
 
 ## 4. Representation specification
 
-### FL-ER01 — Early detection and monitoring
+### FL-ER01 — Lightweight early detection
 
-- Representation type: Detection and monitoring requirement
+- Representation type: Lightweight early-detection representation
 - Originating contextual decision: `FL-CD01`
-- Applicable constraints:
+- Relevant constraints:
+  - Strong adversarial behaviour
+  - Stealthy adversarial behaviour
+  - Partial observability
   - Secure aggregation
-  - Limited observability
-  - Distributed participation
-  - Detection before aggregation
-- Relevant assumptions: `FL-A01`, `FL-A02`, `FL-A03`
-- Responsible role(s): Operations and Security Team; Server / Coordinator
-- Verification condition: Relevant detection evidence is available for review
-  before aggregation under the documented operating conditions
-- Dependencies: Detection mechanism, training-round orchestration, and
-  aggregation configuration
-- Revision conditions: Material change in detection behaviour, client
-  conditions, aggregation configuration, or monitoring placement
+  - Lightweight operation
+- Verification condition: A documented technical mechanism can be identified
+  that provides the required early-warning capability under the relevant
+  Federated Learning constraints
+- Documented technical evidence:
+  - Client-level early-warning detection
+  - Detection prior to aggregation
 
-### FL-ER02 — Operational review and adjustment
+The fact that the documented mechanism operates before aggregation belongs to
+its technical instantiation. It does not make lifecycle placement part of
+FR.1.
 
-- Representation type: Operational review and adjustment requirement
-- Originating contextual decision: `FL-CD02`
-- Applicable constraints:
-  - Detection evidence may be uncertain or incomplete
-  - Evidence interpretation and operational decision-making remain distinct
-- Relevant assumptions: `FL-A01`, `FL-A02`
-- Responsible role(s): Operations and Security Team; governance actor where
-  escalation is required
-- Verification condition: A resulting response can be traced to reviewed
-  evidence and an explicit engineering or operational decision
-- Dependencies: Monitoring evidence, responsibility allocation, and escalation
-  conditions
-- Revision conditions: Repeated contradictory evidence, inappropriate response
-  conditions, or changed operating assumptions
+---
 
-### FL-ER03 — Monitoring and review continuity
+### FL-ER02 — Benign-reference calibration
 
-- Representation type: Continuity requirement
-- Originating contextual decision: `FL-CD03`
-- Applicable constraints:
-  - Repeated training rounds
-  - Continued validity of monitoring and aggregation conditions
-- Relevant assumptions: `FL-A02`, `FL-A03`
-- Responsible role(s): Server / Coordinator; Operations and Security Team
-- Verification condition: Relevant monitoring and review remain active across
-  successive rounds
-- Dependencies: Training orchestration, detection mechanism, and monitoring
-  capability
-- Revision conditions: Material system, protocol, aggregation, or monitoring
-  change
+- Representation type: Benign-reference calibration representation
+- Originating contextual decision: `FL-CD01`
+- Relevant constraints:
+  - Detection requires an operational reference against which deviations can
+    be assessed
+  - The reference must be established under the documented Federated Learning
+    conditions
+- Verification condition: A documented calibration mechanism can be related to
+  a benign reference used by the detection approach
+- Documented technical evidence:
+  - Benign reference distribution
+  - Bootstrap calibration procedure
+
+The benign reference distribution and bootstrap procedure are concrete
+technical mechanisms.
+
+They are not FR.1 outputs themselves.
+
+---
+
+### FL-ER03 — Threshold-based monitoring
+
+- Representation type: Threshold-based monitoring representation
+- Originating contextual decision: `FL-CD01`
+- Relevant constraints:
+  - Relevant deviations must become observable
+  - Detection criteria must be calibrated against the reference behaviour
+- Verification condition: A documented technical mechanism provides calibrated
+  criteria against which relevant deviations can be evaluated
+- Documented technical evidence:
+  - Statistical distance measures
+  - Per-feature detection thresholds
+  - Experimental threshold exceedances
+
+The statistical measures and numerical thresholds belong to technical
+instantiation rather than to the process-independent Engineering
+Representation.
 
 ---
 
 ## 5. Derivation rationale
 
-The reconstructed Engineering Representations are derived from documented
-operational constraints rather than from a direct mapping between a
-trustworthiness concern and a lifecycle artefact.
+The paper-supported reconstruction follows:
 
-The derivation logic is:
+**documented operational priorities and constraints  
+→ CR.3 Principle Prioritisation  
+→ FL-CD01  
+→ FR.1 Engineering Representation Derivation**
 
-**Documented operational evidence and constraints  
-→ reconstructed contextual interpretation or decision  
-→ required engineering function  
-→ process-independent Engineering Representation**
+The three Engineering Representations express complementary engineering
+capabilities required by the same contextual priority.
+
+### Early detection
+
+**Strong and stealthy adversarial conditions  
++ need for lightweight operation  
++ secure-aggregation constraints  
+→ lightweight early-detection capability  
+→ FL-ER01**
+
+### Calibration
+
+**Need to distinguish relevant deviations from expected benign behaviour  
+→ benign-reference calibration capability  
+→ FL-ER02**
+
+### Detection criterion
+
+**Calibrated reference  
++ need to make relevant deviations observable  
+→ threshold-based monitoring capability  
+→ FL-ER03**
+
+This decomposition remains independent of the concrete statistical mechanisms
+used by the original study.
+
+---
+
+## 6. Documented technical instantiation
+
+The original Federated Learning study documents concrete technical mechanisms
+through which the reconstructed Engineering Representations can be
+retrospectively mapped.
+
+| Representation ID | Instantiation ID | Documented technical enactment | Instantiation rationale |
+|---|---|---|---|
+| FL-ER01 | FL-PI01 | Client-level early-warning detection operating prior to aggregation | Provides the lightweight early-detection capability represented by FL-ER01 |
+| FL-ER02 | FL-PI02 | Benign reference distribution and bootstrap calibration procedure | Provides the calibrated benign-reference capability represented by FL-ER02 |
+| FL-ER03 | FL-PI03 | Statistical distance measures and per-feature detection thresholds | Provides the threshold-based detection capability represented by FL-ER03 |
+
+These mappings are **retrospective technical instantiations**.
+
+They do not imply that `FL-ER01` to `FL-ER03` were explicitly formulated
+before the original technical mechanisms were developed.
+
+---
+
+## 7. Experimental operational evidence
+
+The original study also provides experimental evidence associated with the
+technical instantiation.
+
+Relevant evidence includes:
+
+- Benign updates used to establish the calibrated reference
+- Strong attack scenarios
+- Stealthy attack scenarios
+- Independent experimental runs
+- Observed threshold exceedances
+
+The relationship can therefore be inspected as:
+
+**FL-ER01 / FL-ER02 / FL-ER03  
+→ documented technical mechanisms  
+→ experimental operational evidence**
+
+This experimental evidence belongs to the original technical study.
+
+It does not constitute independent empirical validation of FR.1 or of the
+Lifecycle Refinement Framework.
+
+---
+
+## 8. Relationship to P2
+
+The Federated Learning case provides analytical evidence for:
+
+**P2 — Coordinated Contextual and Functional Refinement**
+
+through the chain:
+
+**documented operational constraints  
+→ CR.3  
+→ FL-CD01  
+→ FR.1  
+→ FL-ER01 / FL-ER02 / FL-ER03  
+→ documented technical instantiation  
+→ experimental evidence**
+
+This demonstrates that the contextual priority reconstructed from the original
+case can be translated into identifiable process-independent engineering
+capabilities and related retrospectively to concrete technical mechanisms.
+
+---
+
+## 9. Process-instantiation boundary
+
+The distinction between Engineering Representation and technical enactment is
+particularly important in this case.
 
 For example:
 
-**Secure aggregation + limited observability + documented pre-aggregation
-detection  
-→ relevant security evidence must be available early enough for review  
-→ an explicit early-detection requirement is required  
-→ `FL-ER01`**
+### Process-independent representation
 
-Similarly:
+`FL-ER02`:
 
-**Detection signal + need for interpretation before intervention  
-→ evidence must be reviewed before a response is determined  
-→ an explicit operational review / adjustment requirement is required  
-→ `FL-ER02`**
+> The engineering solution shall establish a calibrated reference derived from
+> benign behaviour against which relevant deviations can be evaluated.
 
-This remains separate from the technical mechanism through which the
-requirement was originally enacted.
+### Documented technical enactment
 
----
+- Benign reference distribution
+- Bootstrap calibration procedure
 
-## 6. Traceability
+Likewise:
 
-| Representation ID | Trustworthiness concern | Contextual decision | Responsibility record | Assumption record(s) | Supporting documentary evidence |
-|---|---|---|---|---|---|
-| FL-ER01 | Early detection and security monitoring | FL-CD01 | FL-R02; FL-R03 | FL-A01; FL-A02; FL-A03 | Distributed FL architecture, secure aggregation, pre-aggregation detection and monitoring |
-| FL-ER02 | Evidence interpretation and operational response | FL-CD02 | FL-R03; FL-R04 | FL-A01; FL-A02 | Detection / anomaly evidence, review and response functions |
-| FL-ER03 | Operational continuity | FL-CD03 | FL-R02; FL-R03 | FL-A02; FL-A03 | Repeated training rounds and continued monitoring |
+### Process-independent representation
 
-The complete refinement-to-instantiation chain is represented in
-`traceability-matrix.csv`.
+`FL-ER03`:
 
----
+> The engineering solution shall provide calibrated detection criteria through
+> which relevant deviations from the benign reference can be made observable.
 
-## 7. Revision conditions
+### Documented technical enactment
 
-| Revision condition | Representation affected | Evidence source | Responsible role |
-|---|---|---|---|
-| Material degradation or change in detection evidence | FL-ER01; FL-ER02 | Detection / monitoring evidence | Operations and Security Team |
-| Material change in client participation or adversarial conditions | FL-ER01; FL-ER02 | Training / operational evidence | Operations and Security Team |
-| Material change in aggregation or training configuration | FL-ER01; FL-ER03 | Technical / configuration evidence | Server / Coordinator |
-| Evidence indicates that the current response conditions are inappropriate | FL-ER02 | Operational review evidence | Operations and Security Team; governance actor where required |
-| Monitoring or review cannot be maintained across rounds | FL-ER03 | Operational / continuity evidence | Server / Coordinator; Operations and Security Team |
+- Statistical distance measures
+- Per-feature detection thresholds
+
+The relationship is therefore:
+
+**CR.3 contextual decision  
+→ FR.1 Engineering Representation  
+→ technical / Process Instantiation  
+→ experimental evidence**
+
+and not:
+
+**CR.3  
+→ FR.1  
+→ statistical algorithm**
 
 ---
 
-## 8. Subsequent Process Instantiation
+## 10. Relationship to pre-aggregation placement
 
-The original Federated Learning case documents technical mechanisms through
-which the reconstructed Engineering Representations can be retrospectively
-mapped.
+The original study documents detection prior to aggregation.
 
-| Representation ID | Instantiation ID | Documented lifecycle location or mechanism | Documented process-specific enactment | Instantiation rationale |
-|---|---|---|---|---|
-| FL-ER01 | FL-PI01 | Before aggregation during each relevant training round | Documented pre-aggregation detection and monitoring mechanism | The mechanism provides the early evidence required by FL-ER01 |
-| FL-ER02 | FL-PI02 | Operational review following relevant detection evidence | Alert / anomaly interpretation and documented technical response or mitigation mechanisms | These mechanisms provide a process-specific location for evidence review and any resulting response |
-| FL-ER03 | FL-PI03 | Successive training rounds and continued operation | Continued detection, monitoring, and review across rounds | The repeated monitoring mechanism enacts the continuity requirement represented by FL-ER03 |
+This is retained as technical evidence concerning `FL-PI01`.
 
-These mappings are **retrospective Process Instantiations**. They do not imply
-that `FL-ER01` to `FL-ER03` were explicitly formulated before the original
-technical mechanisms were developed.
+Within the analytical evaluation reported in the associated article, it does
+not establish independent reconstruction of:
 
----
+- CR.6 — Lifecycle Anchoring
+- FR.5 — Shift-Left Integration
+- P1 — Lifecycle Anchoring
 
-## 9. Operational adjustment boundary
-
-`FL-ER02` is particularly relevant to **FR.3 — Operational Adjustment**.
-
-Where reviewed evidence indicates that an operational change is required, FR.3
-does not itself execute a client exclusion, threshold change, configuration
-change, or other intervention.
-
-Instead, the refinement relation is:
-
-**Reviewed operational evidence  
-→ required adjustment identified  
-→ new or revised Engineering Representation specifying the adjustment  
-→ subsequent Process Instantiation  
-→ technical enactment**
-
-This distinction prevents the detection mechanism from being treated as an
-automatic decision mechanism.
+The process-independent `FL-ER01` requires lightweight early detection but does
+not prescribe the final lifecycle or architectural location.
 
 ---
 
-## 10. Verification and evidence
+## 11. Additional illustrative assumptions
 
-The retrospective FR.1 reconstruction is supported by documented:
+The additional `assumption-log.md` demonstrates how validity conditions could
+be associated with the three Engineering Representations in a prospective
+application:
 
-- Distributed Federated Learning architecture
+- `FL-A01` ↔ `FL-ER01`
+- `FL-A02` ↔ `FL-ER02`
+- `FL-A03` ↔ `FL-ER03`
+
+These relations support reusable template integration.
+
+They are not inputs used to claim CR.4 reconstruction in the associated
+article.
+
+---
+
+## 12. Additional illustrative monitoring and feedback
+
+The original technical system produces repeated detection evidence across
+Federated Learning operation.
+
+The repository may represent such evidence using:
+
+- `monitoring-plan.md`
+- `feedback-log.md`
+
+Those worked artefacts demonstrate how the reusable templates could be
+connected to the technical setting.
+
+They do not establish paper-supported reconstruction of:
+
+- FR.3 — Operational Adjustment
+- FR.4 — Iterative Feedback Integration
+- FR.6 — Continuity Enforcement
+- P3 — Continuity and Iterative Feedback
+
+---
+
+## 13. Verification and evidence
+
+The paper-supported FR.1 reconstruction is grounded in documented:
+
+- Partial observability
+- Distributed Federated Learning
 - Secure aggregation
-- Adversarial poisoning / backdoor setting
-- Pre-aggregation detection
-- Monitoring evidence
-- Repeated training rounds
-- Technical response or mitigation mechanisms
-- Continued monitoring across rounds
+- Strong adversarial scenarios
+- Stealthy adversarial scenarios
+- Lightweight early-warning detection
+- Benign reference distribution
+- Bootstrap calibration
+- Statistical distance measures
+- Per-feature detection thresholds
+- Experimental threshold exceedances
 
 Verification in this worked example means that each reconstructed Engineering
 Representation can be related to:
 
-1. A documented contextual or operational condition
-2. A reconstructed contextual decision
-3. Supporting documentary evidence
-4. A documented technical enactment
+1. `FL-CD01`
+2. A documented technical mechanism
+3. Relevant experimental evidence
 
-It does not mean that FR.1 was prospectively executed in the original study.
+It does not mean that FR.1 was prospectively executed during the original
+study.
 
 ---
 
-## 11. Versioning and ownership
+## 14. Analytical boundary
+
+For the Federated Learning case, the associated article supports:
+
+### Contextual Refinement
+- **CR.3 — Principle Prioritisation**
+
+### Functional Refinement
+- **FR.1 — Engineering Representation Derivation**
+
+### Assessment criterion
+- **P2 — Coordinated Contextual and Functional Refinement**
+
+This artefact does not establish reconstruction of:
+
+- FR.2 — Decision Traceability
+- FR.3 — Operational Adjustment
+- FR.4 — Iterative Feedback Integration
+- FR.5 — Shift-Left Integration
+- FR.6 — Continuity Enforcement
+- P1 — Lifecycle Anchoring
+- P3 — Continuity and Iterative Feedback
+
+P4 — Cross-Domain Adaptability is assessed through cross-case comparison.
+
+---
+
+## 15. Versioning and ownership
 
 - Artefact type: Retrospectively completed CRISP-TAI v0.2.0 template
 - Source case: Federated Learning
 - Repository version: `0.2.0`
-- Status: Illustrative worked example
+- Status: Paper-supported illustrative worked example
 - Original project record: No
+- Paper-supported FR reconstruction: FR.1
 
 ---
 
 ## Notes
 
-This worked artefact demonstrates the revised methodological boundary:
+This worked artefact represents the principal paper-supported Functional
+Refinement result for the Federated Learning case.
 
-**Contextual decision  
-→ process-independent Engineering Representation  
-→ Process Instantiation  
-→ documented technical enactment**
+Its authoritative analytical chain is:
 
-The previous repository version represented the relation more directly as
-`Interpretation → Derived Artefact`. The v0.2.0 example separates these steps
-explicitly.
+**documented operational constraints  
+→ CR.3  
+→ FL-CD01  
+→ FR.1  
+→ lightweight early detection / benign-reference calibration /
+threshold-based monitoring  
+→ documented technical instantiation  
+→ experimental evidence  
+→ P2**
 
-The example also preserves a second boundary that is particularly important in
-this case:
-
-**Detection evidence ≠ operational or governance decision.**
-
-Evidence must first be interpreted before any required engineering adjustment
-or subsequent process-specific action is represented.
+The example deliberately separates the process-independent engineering
+capabilities reconstructed through FR.1 from the statistical and technical
+mechanisms used in the original Federated Learning study.
