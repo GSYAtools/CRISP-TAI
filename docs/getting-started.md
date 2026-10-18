@@ -105,7 +105,7 @@ Representative engineering representations include:
 
 Use, where applicable:
 
-- `artefact-derivation.md`
+- `engineering-representation.md`
 - `traceability-matrix.csv`
 
 This step primarily applies **FR.1** and **FR.2**.
