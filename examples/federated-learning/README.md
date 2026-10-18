@@ -1,143 +1,210 @@
-# Example — Federated Learning with Early Trustworthiness Monitoring
+# Worked Example — Federated Learning with Early Trustworthiness Monitoring
 
-This example illustrates how **CRISP-TAI** can be instantiated in a
-**Federated Learning (FL)** setting where trustworthiness concerns arise
-primarily during **system operation**, rather than at design time.
+This directory provides an **illustrative worked example** showing how the
+reusable CRISP-TAI repository templates can be populated retrospectively using
+documentary evidence from the Federated Learning case examined in the
+associated research article.
 
-The example is derived from the study  
-*Early detection of backdoor attacks in federated learning via ecosystemic symmetry breaking* (https://github.com/GSYAtools/Backdoor_attacks_FL),
-and reinterprets that work from a **process and lifecycle perspective**,
-focusing on how early warning, monitoring, and revision mechanisms can
-be embedded within an AI development lifecycle.
+The example is based on material documented in:
 
----
+*Early detection of backdoor attacks in federated learning via ecosystemic
+symmetry breaking*.
 
-## Context overview
+It represents that material using the **v0.2.0 CRISP-TAI artefact structure**.
 
-The system consists of a standard Federated Learning setup with:
-
-- A central coordinator orchestrating training rounds
-- Multiple distributed clients training locally on private, non-i.i.d. data
-- Secure aggregation preventing inspection of individual updates
-
-This setting is representative of large-scale, privacy-preserving
-deployments such as mobile services or cross-organisational learning.
+This example does **not** imply that the Lifecycle Refinement Framework or
+CRISP-TAI was prospectively applied during the original Federated Learning
+study. The completed artefacts are retrospective representations intended to
+illustrate how the current templates can be used.
 
 ---
 
-## Stakeholders and roles
+## Example scope
 
-The scenario involves the following roles:
+The case concerns a Federated Learning setting in which distributed clients
+participate in repeated training rounds and secure aggregation limits direct
+observability of individual client updates.
 
-- **Clients**  
-  Local training nodes producing model updates from private data.
+Relevant characteristics documented in the case include:
 
-- **Server / Coordinator**  
-  Entity responsible for aggregation and orchestration, with limited
-  visibility due to secure aggregation.
+- Distributed clients participating in repeated training rounds
+- A central coordination and aggregation function
+- Secure aggregation
+- Limited observability of individual client behaviour
+- Adversarial risk associated with backdoor or poisoning attacks
+- Detection and monitoring before aggregation
+- Operational evidence requiring interpretation rather than automatic
+  trustworthiness judgement
+- Continued monitoring across successive training rounds
 
-- **Operations and Security Team**  
-  Actors responsible for monitoring, interpreting alerts, and triggering
-  mitigation actions.
-
-- **Governance Board**  
-  Body responsible for defining acceptable risk levels and escalation policies.
-
-Trustworthiness-related responsibilities are **distributed** and
-must be coordinated without direct access to raw updates.
-
----
-
-## Trustworthiness concerns
-
-Based on the analysis presented in the paper :contentReference[oaicite:3]{index=3},
-the primary trustworthiness concerns in this scenario include:
-
-- **Robustness and security**  
-  Protection against poisoning and backdoor attacks.
-
-- **Early detection**  
-  Identification of malicious behaviour before aggregation.
-
-- **Interpretability of alerts**  
-  Ability to understand and act upon detection signals.
-
-- **Operational continuity**  
-  Sustained monitoring across training rounds and system evolution.
-
-These concerns motivate a strong emphasis on **Functional Refinement**.
+These characteristics make the case useful for illustrating operational
+context interpretation, assumption management, lifecycle anchoring, early
+detection and monitoring requirements, operational adjustment, feedback, and
+continuity.
 
 ---
 
-## Application of Contextual Refinement (CR)
+## How to interpret the files in this directory
 
-Contextual Refinement artefacts are used to define the operational
-and governance setting of FL security monitoring:
+The files in this directory are **completed examples of the reusable
+templates** provided under `/templates`.
 
-- `context-description.md`  
-  Captures assumptions about secure aggregation, client behaviour,
-  and acceptable operational risk.
+They should be read as retrospective representations of documented case
+evidence, not as original project records.
 
-- `responsibility-map.csv`  
-  Allocates responsibility for monitoring, alert interpretation,
-  and mitigation decisions.
+The example follows the refinement and instantiation chain:
 
-- `principle-prioritisation.md`  
-  Prioritises early detection and robustness over performance
-  optimisation in adversarial settings.
+**Documented case evidence  
+→ reconstructed contextual decision  
+→ reconstructed process-independent Engineering Representation  
+→ documented process-specific instantiation  
+→ operational evidence and revision, where available**
 
-- `assumption-log.md`  
-  Records assumptions about benign client behaviour and
-  calibration validity, together with revision triggers.
-
-These artefacts support **CR.1–CR.5**.
+The example deliberately distinguishes detection or monitoring evidence from
+the governance and engineering decisions that may follow from it.
 
 ---
 
-## Application of Functional Refinement (FR)
+## Contextual Refinement worked artefacts
 
-Functional Refinement connects the monitoring technique described
-in the paper :contentReference[oaicite:4]{index=4} to lifecycle artefacts:
+### `context-description.md`
 
-- `artefact-derivation.md`  
-  Links early-warning interpretations to monitoring and response artefacts.
+Represents the distributed, partially observable operational context
+reconstructed from the Federated Learning case, including secure aggregation,
+repeated training rounds, adversarial risk, and relevant contextual
+constraints.
 
-- `traceability-matrix.csv`  
-  Provides traceability between trustworthiness concerns,
-  lifecycle decisions, and operational artefacts.
+### `responsibility-map.csv`
 
-- `monitoring-plan.md`  
-  Defines how per-client statistical signals are monitored
-  before aggregation.
+Illustrates how responsibilities associated with coordination, monitoring,
+evidence interpretation, and subsequent decision-making can be represented
+without assuming that detection signals automatically determine governance or
+operational actions.
 
-- `feedback-log.md`  
-  Records alerts, interpretations, and resulting mitigation actions.
+### `principle-prioritisation.md`
 
-These artefacts support **FR.1–FR.6**.
+Illustrates how relevant trustworthiness concerns and contextual dependencies
+can be represented where the documentary evidence supports an explicit
+priority, constraint, or trade-off.
 
----
+### `assumption-log.md`
 
-## Relation to the detection method
-
-This example does **not** reimplement or evaluate the detection method
-itself. Instead, it demonstrates how such a method can be:
-
-- Embedded into an AI lifecycle
-- Interpreted as a trustworthiness signal rather than a binary verdict
-- Integrated with governance and escalation mechanisms
-
-CRISP-TAI thus complements the technical contribution by providing
-a **process-level structure** for its operational use.
+Represents assumptions and validity conditions associated with the operating
+environment, detection conditions, and continued monitoring across training
+rounds.
 
 ---
 
-## Purpose of the example
+## Functional Refinement worked artefacts
 
-This example is **illustrative and partial**.
+### `engineering-representation.md`
 
-Its goal is to show how CRISP-TAI:
-- Structures early-warning mechanisms
-- Supports interpretability and decision-making
-- Enables continuous trustworthiness management in FL systems
+Shows how reconstructed contextual constraints can be expressed as
+**process-independent Engineering Representations** concerning detection,
+monitoring, response, and continuity before their process-specific technical
+placement.
 
-It is not intended as a reference implementation or a certification procedure.
+### `traceability-matrix.csv`
+
+Provides the principal end-to-end mapping artefact for the worked example. It
+links:
+
+**contextual decision  
+→ Engineering Representation  
+→ lifecycle anchoring / scope / placement constraints  
+→ Process Instantiation  
+→ documented technical enactment**
+
+The Federated Learning case is particularly useful for illustrating lifecycle
+anchoring because relevant detection and monitoring requirements must be
+addressed before aggregation and maintained across repeated training rounds.
+
+### `monitoring-plan.md`
+
+Illustrates how detection and monitoring requirements can be related to
+operational evidence collected during repeated training rounds.
+
+### `feedback-log.md`
+
+Illustrates how alerts, anomaly signals, reviews, or other operational evidence
+can be assessed against existing contextual assumptions and Engineering
+Representations before any contextual revision, engineering adjustment, or
+process-specific response is represented.
+
+---
+
+## Relationship to the detection method
+
+This worked example does **not** reimplement, reproduce, or evaluate the
+underlying detection method.
+
+The detection mechanism remains part of the original technical study. Within
+this repository, its documented behaviour is used only as evidence for
+illustrating how a technical detection capability can relate to:
+
+- Contextual operational constraints
+- Process-independent detection and monitoring requirements
+- Lifecycle anchoring before aggregation
+- Evidence interpretation
+- Potential engineering adjustment
+- Continued monitoring across training rounds
+
+A detection signal is therefore represented as **evidence requiring
+interpretation**, not as an automatic trustworthiness verdict or governance
+decision.
+
+---
+
+## Canonical retrospective application record
+
+The methodological reconstruction of this case is documented separately in:
+
+`/logs/federated-learning-retrospective-application.md`
+
+That record explains:
+
+- The documentary evidence used
+- Which CR and FR functions can be reconstructed from that evidence
+- The reconstructed Engineering Representations
+- The documented technical enactment
+- The process-level properties for which the case provides analytical evidence
+
+The files in this directory complement that record by showing **how the
+reconstruction can be represented using the reusable v0.2.0 templates**.
+
+---
+
+## Relationship to the original Federated Learning material
+
+The original Federated Learning study remains the evidential source for the
+retrospective reconstruction.
+
+The completed templates in this directory:
+
+- Do not replace the original technical or experimental description
+- Do not constitute original project documentation
+- Do not reimplement or validate the detection method
+- Do not demonstrate prospective execution of CRISP-TAI
+- Do not constitute independent empirical validation of the Lifecycle
+  Refinement Framework
+- Do provide an illustrative, inspectable representation of how documented
+  case evidence can be structured using the current CRISP-TAI artefacts
+
+---
+
+## Purpose of the worked example
+
+This example is intended to help practitioners understand how to move from a
+documented technical and operational setting to:
+
+1. Contextual interpretations and assumptions
+2. Process-independent detection, monitoring, response, and continuity
+   Engineering Representations
+3. Process-specific technical instantiation
+4. Traceability across those elements
+5. Operational evidence and feedback
+6. Contextual or engineering revision where supported by evidence
+
+It should therefore be used as an **illustrative worked example**, not as a
+reference implementation, certification procedure, or claim that CRISP-TAI
+was used during the original Federated Learning study.
