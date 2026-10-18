@@ -88,13 +88,11 @@ operationalisation**, not automated judgement or normative enforcement.
 This directory contains practical documentation explaining how to apply
 the CRISP-TAI instantiation in engineering projects.
 
-Typical contents include:
+This directory contains:
 
 -   `getting-started.md`
 -   `lifecycle-walkthrough.md`
--   `rule-application-guide.md`
--   `governance-notes.md`
--   `crisp-tai-instantiation.md`
+-   `rule-application-guide.md
 
 These documents explain **how** the refinement method is applied in
 practice rather than the conceptual rationale behind the framework.
