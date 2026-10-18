@@ -113,6 +113,39 @@ Framework**, which defines the process-independent refinement method, and
   templates that can represent the reconstructed refinement and
   instantiation chain.
 
+#### Design provenance and supplementary material
+
+- Updated `/appendices/activity-selection-trace/` to identify the phase-level
+  activity-selection records explicitly as **design-provenance material**
+  documenting the construction of the CRISP-TAI instantiation.
+- Clarified that the phase associations in the activity-selection traces are
+  process-specific and do not imply that CR or FR rules are intrinsically
+  tied to particular CRISP-DM lifecycle phases.
+- Clarified that references between historical phase-level activities and
+  current CR or FR rules represent **retrospective correspondences**, while
+  final lifecycle placement belongs to Process Instantiation.
+- Updated the Business Understanding trace to relate its historical design
+  concerns retrospectively to contextual interpretation, responsibility
+  allocation, and principle prioritisation without treating CR.1--CR.3 as
+  phase-specific rules.
+- Updated the Data Preparation trace to distinguish historical preprocessing
+  activities from the process-independent engineering representation and
+  traceability functions subsequently formalised through FR.1 and FR.2.
+- Updated the Evaluation trace to distinguish its process-specific evaluation
+  activities from the iterative feedback function subsequently formalised
+  through FR.4.
+- Updated the Data Understanding, Modeling, and Continuous Deployment &
+  Monitoring traces to clarify their role as CRISP-TAI design provenance and
+  preserve the distinction between historical activity selection and the
+  process-independent refinement mechanisms.
+- Corrected phase-level trace filenames for consistency, including
+  `business-understanding.md` and `data-preparation.md`.
+- Retained the six expanded lifecycle figures under `/appendices/figures/` as
+  supplementary design-provenance material documenting the detailed
+  phase-level construction of CRISP-TAI.
+- Clarified that the supplementary figures and activity-selection traces do
+  not introduce new refinement rules, requirements, or validation claims.
+
 #### Citation and version information
 
 - Updated `CITATION.cff` to identify repository version `0.2.0`.
@@ -122,10 +155,10 @@ Framework**, which defines the process-independent refinement method, and
 
 ### Repository alignment under review
 
-The remaining illustrative applications and supplementary materials in
-`/examples` and `/appendices` are being reviewed for consistency with the
-revised framework specification. Their corresponding changes will be recorded
-in this section before version 0.2.0 is released.
+The remaining illustrative application material in `/examples` is being
+reviewed for consistency with the revised framework specification. Its
+corresponding changes will be recorded in this section before version 0.2.0
+is released.
 
 ---
 
