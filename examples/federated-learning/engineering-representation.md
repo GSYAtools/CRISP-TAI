@@ -1,3 +1,5 @@
+# Engineering Representation — Federated Learning Worked Example
+
 This document is an **illustrative retrospective completion** of the
 `engineering-representation.md` template using documentary evidence from the
 Federated Learning case.
