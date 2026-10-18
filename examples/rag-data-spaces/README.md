@@ -1,139 +1,175 @@
-# Example — RAG in Federated Data Spaces
+# Worked Example — RAG in Federated Data Spaces
 
-This example illustrates how **CRISP-TAI** can be instantiated in a real-world–motivated
-scenario involving **Retrieval-Augmented Generation (RAG)** deployed over **federated Data Spaces (DSs)**.
+This directory provides an **illustrative worked example** showing how the
+reusable CRISP-TAI repository templates can be populated retrospectively using
+documentary evidence from the RAG-in-Data-Spaces case examined in the
+associated research article.
 
-The example is derived from the architectural and experimental study presented in  
-*Guided and Federated RAG: Architectural Models for Trustworthy AI in Data Spaces* (https://github.com/GSYAtools/DSRAG) ,
-and reinterprets that work from a **process and lifecycle perspective**, focusing on
-trustworthiness-related reasoning rather than architectural design or performance evaluation.
+The example concerns Retrieval-Augmented Generation in a federated Data Spaces
+setting and represents the available case evidence using the **v0.2.0
+CRISP-TAI artefact structure**.
 
----
-
-## Context overview
-
-The system under consideration integrates:
-
-- **Large Language Models (LLMs)** for natural language generation
-- **Retrieval-Augmented Generation (RAG)** to ground responses in external documents
-- **Federated Data Spaces (DSs)** to ensure data sovereignty, policy enforcement,
-  and controlled access across organisations
-
-The deployment context is **policy-sensitive and distributed**, representative of
-domains such as healthcare, public administration, or regulatory support.
+This example does **not** imply that the Lifecycle Refinement Framework or
+CRISP-TAI was prospectively applied during the original study. The completed
+artefacts are retrospective representations intended to illustrate how the
+current templates can be used.
 
 ---
 
-## Stakeholders and roles
+## Example scope
 
-The scenario involves the following high-level roles:
+The case concerns a RAG architecture operating over distributed information
+sources within a federated Data Spaces setting.
 
-- **Data Providers (DPs)**  
-  Organisations that publish documents within a Data Space while retaining
-  sovereignty and defining usage constraints.
+The retrospective analysis focuses primarily on documented evidence concerning:
 
-- **Data Consumers (DCs)**  
-  Entities that issue queries and generate responses using RAG, while remaining
-  responsible for contextualisation and final output.
+- Governance roles and responsibilities
+- Source identification and metadata
+- Provenance
+- Traceability
+- Governed retrieval and information use
+- Architectural mechanisms through which these concerns are enacted
 
-- **Federators (Fs)**  
-  Infrastructure actors that coordinate metadata, enforce policies, and support
-  semantic interoperability across the Data Space.
-
-These roles introduce **distributed responsibility and accountability**, making
-the explicit allocation of trustworthiness-related decisions a key concern.
-
----
-
-## Trustworthiness concerns
-
-Based on the analysis and evaluation presented in the paper :contentReference[oaicite:3]{index=3},
-the following trustworthiness dimensions are particularly relevant in this scenario:
-
-- **Traceability**  
-  Ability to identify the origin of retrieved fragments and link them to generated outputs.
-
-- **Transparency**  
-  Visibility into how responses are constructed, especially in federated settings.
-
-- **Data sovereignty and lawfulness**  
-  Preservation of data locality and enforcement of usage policies defined by providers.
-
-- **Control delegation**  
-  Clear distribution of responsibilities between DPs, DCs, and Fs.
-
-These concerns motivate the application of CRISP-TAI refinement mechanisms.
+These characteristics make the case particularly useful for illustrating the
+relationship between contextual governance decisions, process-independent
+provenance and traceability requirements, and their documented architectural
+instantiation.
 
 ---
 
-## Application of Contextual Refinement (CR)
+## How to interpret the files in this directory
 
-In this example, the following Contextual Refinement artefacts are used:
+The files in this directory are **completed examples of the reusable
+templates** provided under `/templates`.
 
-- `context-description.md`  
-  Documents the federated governance setting, applicable regulations,
-  and operational assumptions of RAG in Data Spaces.
+They should be read as retrospective representations of documented case
+evidence, not as original project records.
 
-- `responsibility-map.csv`  
-  Explicitly allocates trustworthiness-related responsibilities across
-  DPs, DCs, and Fs, clarifying accountability boundaries.
+The principal reconstruction chain is:
 
-- `principle-prioritisation.md`  
-  Records the prioritisation of trustworthiness dimensions, highlighting
-  traceability and sovereignty as dominant concerns.
+**Documented governance and source evidence  
+→ reconstructed contextual decision  
+→ reconstructed process-independent Engineering Representation  
+→ documented architectural instantiation**
 
-- `assumption-log.md`  
-  Captures assumptions about data stability, provider behaviour, and
-  regulatory interpretation, together with revision triggers.
-
-These artefacts support **CR.1–CR.5**.
+Not every reusable template is equally exercised by this case. Where the
+available documentary evidence does not support a specific refinement
+decision, monitoring relation, feedback event, or revision outcome, the worked
+example records that limitation rather than inventing additional evidence.
 
 ---
 
-## Application of Functional Refinement (FR)
+## Contextual Refinement worked artefacts
 
-Functional Refinement connects the above interpretations to concrete artefacts:
+### `context-description.md`
 
-- `artefact-derivation.md`  
-  Links contextual interpretations to requirements, design rationales,
-  and monitoring specifications.
+Represents the governance, federation, source-use, and provenance context that
+can be reconstructed from the documented case material.
 
-- `traceability-matrix.csv`  
-  Provides explicit traceability between trustworthiness concerns,
-  lifecycle decisions, and produced artefacts.
+### `responsibility-map.csv`
 
-- `monitoring-plan.md`  
-  Defines how trustworthiness-related signals (e.g., provenance loss,
-  policy updates) are monitored during operation.
+Illustrates responsibility and accountability relations associated with
+information provision, governance, retrieval, and use.
 
-- `feedback-log.md`  
-  Records feedback from monitoring and review activities and triggers
-  contextual or operational revisions when needed.
+### `principle-prioritisation.md`
 
-These artefacts support **FR.1–FR.6**.
+Records only those contextual priorities or constraints that can be supported
+by the available documentary evidence. It does not infer a complete ranking of
+trustworthiness principles.
 
----
+### `assumption-log.md`
 
-## Relation to the architectural models
-
-This example does **not** redefine the Guided RAG or Federated RAG architectures
-described in the paper :contentReference[oaicite:4]{index=4}.
-Instead, it demonstrates how CRISP-TAI can be used to:
-
-- Structure trustworthiness reasoning around those architectures
-- Make governance and operational decisions explicit and traceable
-- Support evaluability and audit-readiness without introducing new metrics
+Represents contextual assumptions and validity conditions concerning governed
+information use, source metadata, provenance, and related contextual
+conditions.
 
 ---
 
-## Purpose of the example
+## Functional Refinement worked artefacts
 
-This example is **illustrative**, not exhaustive.
+### `engineering-representation.md`
 
-Its goal is to show:
+Shows how reconstructed contextual decisions can be represented as
+**process-independent Engineering Representations**, particularly provenance,
+source-identification, responsibility, and traceability requirements.
 
-- How CRISP-TAI artefacts are instantiated in a realistic setting
-- How trustworthiness reasoning evolves across the lifecycle
-- How execution-based insights from the paper can be captured at process level
+### `traceability-matrix.csv`
 
-It is not intended as a reference implementation or a compliance checklist.
+Provides the principal end-to-end mapping artefact for this worked example,
+linking:
+
+**contextual decision  
+→ Engineering Representation  
+→ instantiation constraints  
+→ Process Instantiation  
+→ documented architectural enactment**
+
+### `monitoring-plan.md`
+
+Where the documentary evidence supports continued observation of provenance,
+metadata, governance, or traceability conditions, this file illustrates how
+such evidence could be represented using the current monitoring template.
+
+It does not infer monitoring frequencies, thresholds, or operational
+procedures that are not documented in the case.
+
+### `feedback-log.md`
+
+Where documented evidence supports review or revision, this file illustrates
+the corresponding evidence-to-decision structure.
+
+It does not invent historical feedback events or revision outcomes.
+
+---
+
+## Canonical retrospective application record
+
+The methodological reconstruction of this case is documented separately in:
+
+`/logs/rag-data-spaces-retrospective-application.md`
+
+That record explains:
+
+- The documentary evidence used
+- Which CR and FR functions can be reconstructed from that evidence
+- The reconstructed Engineering Representations
+- The documented architectural instantiation
+- The process-level properties for which the case provides analytical evidence
+
+The files in this directory complement that record by showing **how the
+reconstruction can be represented using the reusable v0.2.0 templates**.
+
+---
+
+## Relationship to the original case material
+
+The original RAG-in-Data-Spaces material remains the evidential source for the
+retrospective reconstruction.
+
+The completed templates in this directory:
+
+- Do not replace the original architectural or technical descriptions
+- Do not constitute original project documentation
+- Do not demonstrate prospective execution of CRISP-TAI
+- Do not constitute independent empirical validation
+- Do not infer undocumented lifecycle decisions or operational events
+- Do provide an illustrative, inspectable representation of how documented
+  governance, provenance, and traceability evidence can be structured using
+  the current CRISP-TAI artefacts
+
+---
+
+## Purpose of the worked example
+
+This example is intended primarily to illustrate:
+
+1. Reconstruction of contextual governance and responsibility decisions
+2. Derivation of process-independent provenance and traceability Engineering
+   Representations
+3. Separation of those representations from their documented architectural
+   enactment
+4. End-to-end traceability across the reconstructed chain
+
+It should therefore be used as an **illustrative worked example**, not as a
+reference implementation or as evidence that CRISP-TAI was prospectively
+executed in the original case.
