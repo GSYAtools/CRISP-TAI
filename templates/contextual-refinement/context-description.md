@@ -1,127 +1,257 @@
 # Context Description
 
-This document captures the **contextual interpretation** required by CRISP-TAI to support
-trustworthiness-related reasoning at the governance and design level.
+This template supports the documentation of **contextual interpretations**
+produced through Contextual Refinement (CR) when applying the Lifecycle
+Refinement Framework through CRISP-TAI.
 
-It is intended to be created and maintained early in the lifecycle and revisited whenever
-significant contextual changes occur (e.g., regulatory updates, deployment changes, or
-operational feedback).
+It is intended to make the organisational, regulatory, social, and operational
+context of a trustworthiness concern explicit and traceable. It may be created
+during initial refinement or updated whenever material contextual changes or
+new evidence require reconsideration.
 
-This artefact primarily supports **Contextual Refinement rules CR.1, CR.4, and CR.5**.
+This template primarily supports:
+
+- **CR.1 — Context Interpretation**
+- **CR.3 — Principle Prioritisation**
+- **CR.4 — Assumption Documentation**
+- **CR.5 — Context Revision Trigger**
+
+Dedicated templates such as `responsibility-map.csv`,
+`principle-prioritisation.md`, and `assumption-log.md` may be used where more
+detailed records are required.
 
 ---
 
-## 1. System overview
+## 1. Refinement record
 
-Provide a concise description of the AI system under development.
+Identify the refinement activity to which this contextual interpretation
+belongs.
+
+- Record ID:
+- Trustworthiness concern or principle:
+- Trigger for contextual interpretation or revision:
+- Responsible role(s):
+- Supporting stakeholders:
+- Date created:
+- Last revision date:
+- Related record(s), if applicable:
+
+---
+
+## 2. System overview
+
+Provide a concise description of the AI system and the context relevant to the
+trustworthiness concern.
 
 - System name:
 - High-level purpose:
 - Intended users and beneficiaries:
+- Affected stakeholders:
 - Decision or action supported by the system:
-- Deployment environment (organisational, technical, geographical):
+- Intended use:
+- Relevant foreseeable use or contextual variation:
+- Deployment environment:
 
 ---
 
-## 2. Organisational context
+## 3. Organisational context
 
-Describe the organisational setting in which the system is developed and operated.
+Describe the organisational factors relevant to the trustworthiness concern.
 
 - Owning organisation(s):
 - Participating teams or units:
 - External partners or third parties:
-- Existing governance structures (committees, review boards, roles):
+- Existing governance structures:
+- Relevant organisational policies or constraints:
+- Relevant responsibility or accountability boundaries:
+
+Where detailed responsibility allocation is required, use
+`responsibility-map.csv` in support of **CR.2**.
 
 ---
 
-## 3. Legal and regulatory context
+## 4. Legal and regulatory context
 
-Identify applicable legal and regulatory constraints.
+Identify legal or regulatory factors relevant to the contextual
+interpretation.
 
-- Applicable regulations (e.g., AI Act, GDPR, sector-specific regulation):
+- Applicable regulation or legal requirement:
 - Jurisdiction(s):
-- Compliance obligations relevant to the system:
-- Known regulatory uncertainties or interpretative challenges:
+- Relevant obligations or constraints:
+- Known regulatory uncertainty:
+- Interpretation adopted for this refinement:
+- Source or evidence supporting the interpretation:
+
+This template records the contextual interpretation of applicable requirements;
+it does not constitute a compliance determination or legal certification.
 
 ---
 
-## 4. Social and ethical context
+## 5. Social and ethical context
 
-Describe relevant social, ethical, or societal considerations.
+Describe relevant social, ethical, or stakeholder-related factors.
 
 - Affected groups or stakeholders:
-- Potential social impact (benefits and risks):
-- Ethical concerns specific to the use context:
+- Expected benefits:
+- Potential harms or adverse effects:
+- Ethical concerns relevant to the use context:
 - Power asymmetries or dependency relationships:
+- Stakeholder expectations or constraints:
 
 ---
 
-## 5. Operational context
+## 6. Operational context
 
-Describe operational characteristics that may influence trustworthiness.
+Describe operational conditions that influence the contextual interpretation.
 
-- Data sources and data providers:
-- Model type(s) and level of autonomy:
+- Data sources and providers:
+- Relevant data characteristics or limitations:
+- Model or AI component characteristics:
+- Level of autonomy and human involvement:
 - Integration with other systems:
 - Expected operational lifetime:
+- Deployment conditions:
 - Monitoring and maintenance constraints:
+- Other relevant operational dependencies:
 
 ---
 
-## 6. Trustworthiness priorities
+## 7. Contextual interpretation
 
-Document initial priorities among trustworthiness dimensions.
+Summarise the contextual meaning assigned to the trustworthiness concern after
+considering the organisational, regulatory, social, and operational factors
+above.
 
-For each relevant dimension, indicate:
-- Priority level (e.g., high / medium / low)
-- Rationale for prioritisation
-- Known trade-offs with other dimensions
+- Trustworthiness concern:
+- Applicable contextual constraints:
+- Relevant expectations:
+- Affected stakeholders or roles:
+- Contextual interpretation:
+- Supporting rationale:
+- Supporting source(s) or evidence:
 
-Example:
-
-| Dimension | Priority | Rationale |
-|----------|----------|-----------|
-| Lawfulness | High | Regulated deployment environment |
-| Fairness | Medium | Indirect impact on users |
-| Transparency | High | Human oversight required |
-
----
-
-## 7. Contextual assumptions
-
-Explicitly document assumptions underlying trustworthiness-related decisions.
-
-- Assumptions about system use:
-- Assumptions about user behaviour:
-- Assumptions about data quality or stability:
-- Assumptions about organisational practices:
+This section represents the principal documented output of **CR.1**.
 
 ---
 
-## 8. Revision triggers
+## 8. Trustworthiness priorities and trade-offs
 
-Specify conditions under which this context description must be revisited.
+Where multiple trustworthiness objectives interact or impose competing
+requirements, record the relevant prioritisation or trade-off.
 
-- Regulatory changes:
-- Deployment context changes:
-- New data sources or use cases:
-- Observed operational issues:
-- Stakeholder feedback:
+| Principle / concern | Contextual priority | Constraint or competing concern | Rationale | Responsible actor |
+|---|---|---|---|---|
+| | | | | |
+
+Where a more detailed prioritisation decision is required, use
+`principle-prioritisation.md` in support of **CR.3**.
 
 ---
 
-## 9. Versioning and responsibility
+## 9. Contextual assumptions
+
+Explicitly identify assumptions on which the contextual interpretation or
+related trustworthiness decisions depend.
+
+| Assumption | Validity condition | Affected decision / interpretation | Evidence or rationale |
+|---|---|---|---|
+| | | | |
+
+Where assumptions require continued management, use `assumption-log.md` in
+support of **CR.4**.
+
+---
+
+## 10. Revision conditions
+
+Specify conditions or evidence that should trigger reconsideration of the
+current contextual interpretation.
+
+Examples may include:
+
+- Regulatory or policy changes
+- Changes in intended use
+- Changes in deployment context
+- New data sources or material changes in data characteristics
+- Changes in affected stakeholders
+- Monitoring or evaluation evidence
+- Operational incidents or unexpected behaviour
+- Invalidated assumptions
+- Stakeholder feedback
+
+Record the applicable conditions:
+
+| Revision condition | Affected contextual element | Evidence source | Responsible role |
+|---|---|---|---|
+| | | | |
+
+When a revision condition occurs, apply **CR.5 — Context Revision Trigger** to
+determine whether the contextual interpretation must be retained, updated, or
+reconsidered.
+
+---
+
+## 11. Context revision record
+
+Complete this section when the contextual interpretation is reviewed following
+a revision trigger.
+
+- Triggering condition or evidence:
+- Date of review:
+- Responsible role(s):
+- Affected assumption(s), constraint(s), priority(ies), or interpretation(s):
+- Revision decision:
+  - Retain
+  - Update
+  - Reconsider through a new refinement cycle
+- Rationale:
+- Resulting contextual interpretation:
+- Downstream engineering representation(s) potentially affected:
+- Related feedback or traceability record(s):
+
+---
+
+## 12. Verification and evidence
+
+Identify the evidence retained to make the contextual interpretation
+inspectable and traceable.
+
+- Contextual source(s):
+- Stakeholder information:
+- Regulatory or organisational source(s):
+- Supporting operational evidence:
+- Related responsibility record:
+- Related prioritisation record:
+- Related assumption record:
+- Related revision record:
+- Other supporting evidence:
+
+---
+
+## 13. Versioning and ownership
 
 - Document owner:
-- Responsible role:
+- Accountable role:
+- Current version:
 - Date created:
 - Last revision date:
-- Revision history summary:
+
+### Revision history
+
+| Version | Date | Trigger / reason | Change | Responsible role |
+|---|---|---|---|---|
+| | | | | |
 
 ---
 
 ## Notes
 
-This document is a **living artefact**. Its purpose is not to freeze context, but to
-make contextual interpretations explicit, traceable, and revisable throughout the
-system lifecycle.
+This document is a **living contextual refinement artefact**. Its purpose is
+not to freeze the system context or prescribe a lifecycle-specific decision,
+but to make contextual interpretations, assumptions, priorities, revision
+conditions, and supporting evidence explicit and traceable.
+
+The resulting contextual decisions may subsequently provide input to
+Functional Refinement (FR), through which process-independent engineering
+representations are derived before their process-specific instantiation within
+CRISP-TAI.
