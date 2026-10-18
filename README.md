@@ -117,7 +117,7 @@ Supports governance-oriented reasoning through artefacts such as:
 
 Supports engineering operationalisation through artefacts such as:
 
--   `artefact-derivation.md`
+-   `engineering-representation.md`
 -   `traceability-matrix.csv`
 -   `monitoring-plan.md`
 -   `feedback-log.md`
