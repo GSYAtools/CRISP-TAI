@@ -98,22 +98,28 @@ Framework**, which defines the process-independent refinement method, and
 - Removed claims implying prospective execution, execution-based validation,
   or independent empirical validation of CRISP-TAI in the three original
   case studies.
-- Updated the RAG-in-Data-Spaces record to distinguish documented governance
-  and provenance evidence, reconstructed Contextual Refinement, reconstructed
-  process-independent Engineering Representations, and documented
-  process-specific instantiation.
-- Updated the Federated Learning record to distinguish operational and
-  contextual constraints, reconstructed detection, monitoring, adjustment,
-  and continuity representations, and their documented technical enactment.
-- Updated the TrustAIoT record to distinguish contextual assumptions and
-  lifecycle anchoring from reconstructed feedback and continuity
-  representations and their documented process-specific enactment.
+- Aligned the RAG-in-Data-Spaces retrospective reconstruction with
+  **CR.1--CR.3**, **FR.1--FR.2**, and the case-level evidence for **P1** and
+  **P2** reported in the revised manuscript.
+- Aligned the Federated Learning retrospective reconstruction with
+  **CR.3**, **FR.1**, and the case-level evidence for **P2**, distinguishing
+  the paper-supported refinement chain from additional technical
+  characteristics of the original study.
+- Aligned the TrustAIoT retrospective reconstruction with
+  **CR.4**, **CR.6**, **FR.4**, **FR.6**, and the case-level evidence for
+  **P1**, **P2**, and **P3**.
+- Clarified that **P4 — Cross-Domain Adaptability** is assessed through the
+  cross-case comparison rather than attributed independently to any one
+  retrospective application.
 - Added explicit traceability summaries linking documentary case evidence,
   reconstructed CR and FR rules, process-independent Engineering
-  Representations, and documented instantiation evidence.
+  Representations where applicable, documented Process Instantiation, and
+  the assessment criteria supported by each case.
 - Linked each retrospective application record to the reusable repository
   templates that can represent the reconstructed refinement and
   instantiation chain.
+- Distinguished case-specific technical or lifecycle characteristics from
+  evidence that a corresponding CR or FR rule was actually reconstructed.
 
 #### Worked retrospective examples
 
@@ -135,9 +141,14 @@ Framework**, which defines the process-independent refinement method, and
   the canonical methodological reconstructions are now maintained under
   `/logs` as retrospective application records.
 - Renamed example-level `artefact-derivation.md` files to
-  `engineering-representation.md` and revised their contents to distinguish
-  contextual decisions, process-independent Engineering Representations, and
-  subsequent Process Instantiation.
+  `engineering-representation.md`.
+- Revised the worked examples to distinguish explicitly among:
+  - **paper-supported retrospective reconstruction**,
+  - **supporting repository representations**, and
+  - **additional illustrative template usage**.
+- Clarified that availability or completion of a reusable template does not
+  imply that the CR or FR rule associated with that template was
+  reconstructed for the corresponding case.
 - Revised the worked examples to distinguish documentary case evidence from
   retrospectively reconstructed refinement records and to state explicitly
   that the completed artefacts are not original project records.
@@ -145,70 +156,142 @@ Framework**, which defines the process-independent refinement method, and
   CR/FR rule coverage, execution-based validation, and independent empirical
   validation from the example documentation.
 - Removed or reformulated unsupported fixed priority rankings, review
-  frequencies, dates, thresholds, and historical actions where the available
-  documentary evidence did not justify them.
-- Standardised example-level identifiers linking contextual decisions,
-  assumptions, Engineering Representations, Process Instantiations, monitoring
-  evidence, feedback, and traceability records.
-- Expanded the worked traceability matrices to represent the chain:
-  **contextual decision → Engineering Representation → instantiation
-  constraints → Process Instantiation → documented process-specific
-  enactment**.
+  frequencies, dates, thresholds, organisational actors, and historical
+  actions where the available documentary evidence did not justify them.
+- Standardised example-level identifiers linking contextual records,
+  assumptions, Engineering Representations, Process Instantiations,
+  monitoring evidence, feedback, and traceability records.
+- Removed obsolete or inferred identifiers where they were no longer required
+  by the paper-supported reconstruction.
+- Revised the worked traceability matrices so that repository-level
+  traceability does not itself imply reconstruction of
+  **FR.2 — Decision Traceability**.
+- Clarified similarly that use of Engineering Representations in a worked
+  example does not itself imply reconstruction of
+  **FR.1 — Engineering Representation Derivation**.
 - Separated `framework_instantiation` (`CRISP-TAI`) from `target_process`
   (`CRISP-DM`) in the worked traceability matrices.
-- Treated availability of a traceability field as distinct from evidence that
-  a corresponding CR or FR rule was reconstructed, avoiding artificial rule
-  coverage.
-
-##### TrustAIoT worked example
-
-- Reconstructed contextual assumptions, governance conditions, lifecycle
-  anchoring, monitoring, feedback, continuity, and contextual adaptation from
-  documented TrustAIoT material.
-- Introduced explicit Engineering Representations for governance/lifecycle
-  traceability, monitoring/continuity, and contextual revision.
-- Linked those representations retrospectively to documented BPMN lifecycle
-  activities, governance mechanisms, continuous monitoring, user feedback,
-  maintenance, change management, and policy-adaptation mechanisms.
-- Represented monitoring and feedback as evidence-to-decision paths rather
-  than as automatic revision mechanisms.
-
-##### Federated Learning worked example
-
-- Reconstructed the distributed, partially observable Federated Learning
-  context, including secure aggregation, repeated training rounds, adversarial
-  risk, and early pre-aggregation detection.
-- Introduced explicit Engineering Representations for early detection and
-  monitoring, operational review and adjustment, and continuity across
-  successive training rounds.
-- Represented **lifecycle anchoring before aggregation** explicitly while
-  preserving the distinction between anchoring constraints and final
-  process-specific technical placement.
-- Separated detection evidence from operational or governance decisions and
-  removed direct `alert → action` relationships from the earlier example.
-- Clarified that FR.3 represents a required operational adjustment through a
-  new or revised Engineering Representation and does not itself execute
-  client exclusion, threshold changes, configuration changes, or other
-  interventions.
+- Preserved the distinction between process-independent Engineering
+  Representations and the concrete architectural, statistical, lifecycle,
+  or operational mechanisms through which they are retrospectively
+  instantiated.
 
 ##### RAG in Federated Data Spaces worked example
 
-- Refocused the worked example on the documentary evidence most strongly
-  supported by the retrospective assessment: distributed governance,
-  responsibility, source identification, provenance, and traceability.
-- Introduced explicit Engineering Representations for responsibility and
-  governance traceability, provenance and source identification, and
-  information-use traceability.
-- Distinguished these process-independent representations from the documented
-  source metadata, provenance mechanisms, traceability structures, and
-  architectural relationships through which they are retrospectively
-  instantiated.
-- Kept monitoring and feedback artefacts deliberately conditional and limited
-  where the documentary evidence did not support reconstruction of historical
-  monitoring schedules, feedback events, operational adjustments, or
-  continuity mechanisms.
-- Demonstrated that reusable templates do not require artificial completion of
-  every refinement rule or lifecycle property in every application setting.
+- Aligned the paper-supported RAG reconstruction with:
+  - **CR.1 — Context Interpretation**
+  - **CR.2 — Responsibility Allocation**
+  - **CR.3 — Principle Prioritisation**
+  - **FR.1 — Engineering Representation Derivation**
+  - **FR.2 — Decision Traceability**
+  - **P1 — Lifecycle Anchoring**
+  - **P2 — Coordinated Contextual and Functional Refinement**
+- Reconstructed the documented distributed-governance, provenance,
+  responsibility, source-identification, and architectural context without
+  extending the rule coverage beyond that reported in the revised manuscript.
+- Reconstructed the CR.3 decision around the documented architectural
+  trade-off between **sovereignty, distributed control, and traceability**
+  and **response latency**, rather than assigning unsupported fixed
+  trustworthiness-principle rankings.
+- Standardised the principal RAG Engineering Representations as:
+  - `RAG-ER01` — distributed-control representation
+  - `RAG-ER02` — provenance representation
+  - `RAG-ER03` — traceability representation
+- Distinguished those process-independent representations from their
+  documented architectural enactment through role allocation, source
+  metadata, provenance mechanisms, source-labelled retrieval, and
+  architectural traceability mechanisms.
+- Removed the inferred `RAG-R04` governance-function record and retained the
+  documented Data Provider, Federator, and Data Consumer responsibility
+  structure.
+- Reclassified assumption, monitoring, and feedback artefacts as
+  **additional illustrative template usage** where the associated article
+  does not reconstruct CR.4, CR.5, FR.3, FR.4, FR.6, or P3 for the RAG case.
+- Preserved conditional review paths without representing them as historical
+  feedback, revision, or continuity events.
+
+##### Federated Learning worked example
+
+- Restricted the paper-supported Federated Learning reconstruction to:
+  - **CR.3 — Principle Prioritisation**
+  - **FR.1 — Engineering Representation Derivation**
+  - **P2 — Coordinated Contextual and Functional Refinement**
+- Reconstructed the CR.3 operational priority as the requirement for
+  **lightweight early detection of strong and stealthy adversarial behaviour
+  while remaining compatible with secure aggregation**.
+- Standardised the principal Federated Learning Engineering Representations
+  as:
+  - `FL-ER01` — lightweight early-detection representation
+  - `FL-ER02` — benign-reference calibration representation
+  - `FL-ER03` — threshold-based monitoring representation
+- Linked those representations retrospectively to documented technical
+  mechanisms including pre-aggregation client-level early-warning detection,
+  the benign reference distribution, bootstrap calibration, statistical
+  distance measures, and per-feature detection thresholds.
+- Added explicit links from the reconstructed Engineering Representations to
+  experimental evidence including benign updates, strong and stealthy attack
+  scenarios, independent experimental runs, and observed threshold
+  exceedances.
+- Treated pre-aggregation placement as documented technical-instantiation
+  evidence rather than as independent reconstruction of CR.6, FR.5, or P1.
+- Treated repeated technical monitoring across training rounds as distinct
+  from FR.4, FR.6, and P3.
+- Reclassified `context-description.md`, `responsibility-map.csv`,
+  `assumption-log.md`, `monitoring-plan.md`, and `feedback-log.md` as
+  supporting or additional illustrative template usage where they exceed the
+  paper-supported CR.3 / FR.1 reconstruction.
+- Removed obsolete contextual-decision and governance records associated with
+  the earlier broader reconstruction, including `FL-CD02`, `FL-CD03`, and the
+  inferred governance-board responsibility record.
+- Removed claims of paper-supported operational adjustment, lifecycle
+  anchoring, iterative feedback integration, and continuity enforcement from
+  the Federated Learning worked example.
+
+##### TrustAIoT worked example
+
+- Aligned the paper-supported TrustAIoT reconstruction with:
+  - **CR.4 — Assumption Documentation**
+  - **CR.6 — Lifecycle Anchoring**
+  - **FR.4 — Iterative Feedback Integration**
+  - **FR.6 — Continuity Enforcement**
+  - **P1 — Lifecycle Anchoring**
+  - **P2 — Coordinated Contextual and Functional Refinement**
+  - **P3 — Continuity and Iterative Feedback**
+- Made the CR.4 reconstruction explicit through contextual assumptions and
+  validity conditions grounded in stakeholder requirements, regulatory and
+  governance conditions, platform/project relationships, monitoring,
+  maintenance, and feedback evidence.
+- Made the CR.6 reconstruction explicit through documented lifecycle
+  dependencies associated with governance, testing and validation,
+  deployment, monitoring, feedback, maintenance, change management, platform
+  updates, and policy adaptation.
+- Standardised the supporting TrustAIoT Engineering Representations as:
+  - `TAIOT-ER01` — lifecycle governance and anchoring representation
+  - `TAIOT-ER02` — monitoring and feedback representation
+  - `TAIOT-ER03` — continuity and adaptation representation
+- Clarified that these Engineering Representations are supporting repository
+  representations and do not imply independent reconstruction of FR.1 for
+  TrustAIoT.
+- Reconstructed FR.4 through documented monitoring, validation, stakeholder,
+  governance, and policy evidence linked back to existing contextual or
+  engineering records.
+- Reconstructed FR.6 through documented continuity of monitoring, review,
+  maintenance, responsibility, update, change-management, and
+  policy-adaptation obligations during platform evolution.
+- Reclassified the responsibility and principle-prioritisation artefacts as
+  supporting template representations rather than independent CR.2 or CR.3
+  reconstruction.
+- Removed obsolete intermediate contextual-decision identifiers
+  `TAIOT-CD01`, `TAIOT-CD02`, and `TAIOT-CD03`.
+- Retained CR.5 only as a **conditional framework path** where FR.4 evidence
+  materially invalidates a CR.4 assumption; CR.5 is not claimed as an
+  additional TrustAIoT case-level reconstruction.
+- Removed FR.3 from the paper-supported TrustAIoT reconstruction and retained
+  subsequent engineering or process-specific change only as a possible
+  consequence of evidence review where justified.
+- Linked FR.4 and FR.6 explicitly to the case-level evidence for P2 and P3,
+  while preserving CR.6 and documented Process Instantiation as the basis for
+  P1.
 
 #### Design provenance and supplementary material
 
