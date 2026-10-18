@@ -82,6 +82,37 @@ Framework**, which defines the process-independent refinement method, and
   evidence-to-decision chain across FR.4, CR.5, subsequent re-refinement,
   and process-specific re-instantiation where required.
 
+#### Retrospective application records
+
+- Reframed the former execution-based instantiation logs as
+  **retrospective application records** to align repository claims with the
+  retrospective analytical evaluation reported in the revised manuscript.
+- Renamed `logs/rag-data-spaces-instantiation-log.md` to
+  `logs/rag-data-spaces-retrospective-application.md`.
+- Renamed `logs/federated-learning--instantiation-log.md` to
+  `logs/federated-learning-retrospective-application.md`.
+- Renamed `logs/trustaiot-instantiation-log.md` to
+  `logs/trustaiot-retrospective-application.md`.
+- Removed claims implying prospective execution, execution-based validation,
+  or independent empirical validation of CRISP-TAI in the three original
+  case studies.
+- Updated the RAG-in-Data-Spaces record to distinguish documented governance
+  and provenance evidence, reconstructed Contextual Refinement, reconstructed
+  process-independent engineering representations, and documented
+  process-specific instantiation.
+- Updated the Federated Learning record to distinguish operational and
+  contextual constraints, reconstructed detection, monitoring, adjustment,
+  and continuity representations, and their documented technical enactment.
+- Updated the TrustAIoT record to distinguish contextual assumptions and
+  lifecycle anchoring from reconstructed feedback and continuity
+  representations and their documented process-specific enactment.
+- Added explicit traceability summaries linking documentary case evidence,
+  reconstructed CR and FR rules, process-independent engineering
+  representations, and documented instantiation evidence.
+- Linked each retrospective application record to the reusable repository
+  templates that can represent the reconstructed refinement and
+  instantiation chain.
+
 #### Citation and version information
 
 - Updated `CITATION.cff` to identify repository version `0.2.0`.
@@ -91,10 +122,10 @@ Framework**, which defines the process-independent refinement method, and
 
 ### Repository alignment under review
 
-The remaining illustrative applications, execution logs, and supplementary
-materials in `/examples`, `/logs`, and `/appendices` are being reviewed for
-consistency with the revised framework specification. Their corresponding
-changes will be recorded in this section before version 0.2.0 is released.
+The remaining illustrative applications and supplementary materials in
+`/examples` and `/appendices` are being reviewed for consistency with the
+revised framework specification. Their corresponding changes will be recorded
+in this section before version 0.2.0 is released.
 
 ---
 
