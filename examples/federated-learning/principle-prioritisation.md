@@ -7,186 +7,352 @@ Federated Learning case.
 It is not an original project record and does not imply prospective
 application of CRISP-TAI.
 
-This worked artefact illustrates **CR.3 — Principle Prioritisation** where the
-documented adversarial and operational context supports an explicit
-context-dependent priority, constraint, or trade-off.
+For the analytical evaluation reported in the associated article, this worked
+artefact represents **CR.3 — Principle Prioritisation**.
+
+The reconstruction is grounded in documented operational priorities and
+constraints from the original Federated Learning study. It does not infer a
+complete or universal ranking of trustworthiness principles.
 
 ---
 
 ## 1. Prioritisation record
 
 - Record ID: `FL-PRIO-01`
+- Contextual decision ID: `FL-CD01`
+- Primary reconstructed rule: `CR.3 — Principle Prioritisation`
 - System or component: Federated Learning setting
-- Trigger for prioritisation: Adversarial risk must be addressed under secure
-  aggregation, limited observability, and repeated training rounds
-- Decision context: Early detection and operational monitoring of potentially
+- Primary challenge: Partial observability, distributed control, and
   adversarial behaviour
-- Applicable trustworthiness concerns:
-  - Robustness and security
+- Trigger for prioritisation: The detection mechanism must address strong and
+  stealthy adversarial behaviour while remaining compatible with the
+  secure-aggregation constraints of the Federated Learning setting
+- Decision context: Early detection of potentially adversarial client
+  behaviour
+- Relevant concerns:
+  - Robustness against adversarial behaviour
   - Early detection
-  - Interpretability of detection evidence
-  - Operational continuity
-- Responsible role(s): Reconstructed operational, security, coordination, and
-  governance actors
-- Accountable role: Relevant governance authority where escalation requires a
-  governance decision
+  - Lightweight operation
+  - Compatibility with secure aggregation
 - Related context record: `FL-CTX-01`
-- Related responsibility records: `FL-R01` to `FL-R04`
-- Artefact status: Retrospective worked-example representation
+- Artefact status: Paper-supported retrospective worked-example representation
+- Repository version: `0.2.0`
 
 ---
 
-## 2. Applicable trustworthiness principles or concerns
+## 2. Documented operational priorities and constraints
 
-| Principle / concern | Why applicable | Contextual constraint or expectation | Relevant actor(s) |
-|---|---|---|---|
-| Robustness and security | The documented scenario considers poisoning and backdoor attacks during Federated Learning | Relevant adversarial behaviour should be detectable early enough to support review before aggregation where the documented mechanism permits it | Operations and Security Team; Server / Coordinator |
-| Early detection | The technical contribution specifically addresses detection before aggregation | Detection evidence must become available at a point where it can still inform subsequent review or response | Operations and Security Team; Server / Coordinator |
-| Interpretability of detection evidence | Detection signals require interpretation before they can support an engineering or governance decision | An anomaly or alert must not be treated as an automatic trustworthiness verdict | Operations and Security Team; Governance Board where escalation is required |
-| Operational continuity | Federated Learning proceeds through repeated training rounds | Monitoring and review capabilities must remain available across successive rounds | Server / Coordinator; Operations and Security Team |
+The original Federated Learning study provides documentary and experimental
+evidence for several interrelated operational concerns.
 
-The presence of these concerns does not imply a universal ordering among
-trustworthiness principles.
+| Concern / constraint | Why applicable | Documentary basis |
+|---|---|---|
+| Robustness against strong attacks | The system is evaluated under explicit adversarial attack conditions | Strong attack scenarios documented in the original study |
+| Robustness against stealthy attacks | Detection must remain useful when adversarial behaviour is less directly observable | Stealthy attack scenarios documented in the original study |
+| Early detection | The technical contribution is intended to identify relevant anomalous behaviour before aggregation | Client-level early-warning mechanism operating prior to aggregation |
+| Lightweight operation | Detection must remain compatible with the operational characteristics of distributed Federated Learning | Lightweight detection approach documented in the original study |
+| Compatibility with secure aggregation | The detection approach operates under restricted observability associated with secure aggregation | Secure-aggregation setting documented in the original study |
 
----
-
-## 3. Tensions and dependencies
-
-The documented case supports several operational dependencies relevant to
-context-specific prioritisation.
-
-| Tension / dependency | Concerns involved | Contextual consideration | Retrospective interpretation |
-|---|---|---|---|
-| Early detection vs. erroneous intervention | Early detection; robustness and security; evidence interpretation | Acting on insufficiently interpreted detection evidence may result in unnecessary intervention | Early detection should provide evidence for review rather than automatically determine an operational action |
-| Security response vs. continued training | Robustness and security; operational continuity | A response to suspected adversarial behaviour may affect participation or training progression | Any operational adjustment should be justified against the available evidence and represented explicitly before enactment |
-| Limited observability vs. evidence interpretation | Security; interpretability of detection evidence | Secure aggregation constrains direct inspection of individual client behaviour | Monitoring and decision-making must operate using the evidence available under the documented observability constraints |
-| Early placement vs. continued monitoring | Early detection; operational continuity | Detection is relevant before aggregation but the system evolves across repeated rounds | Early detection must be combined with continued monitoring rather than treated as a one-time control |
+These concerns establish the context for prioritisation without requiring a
+`High / Medium / Low` ranking.
 
 ---
 
-## 4. Prioritisation or trade-off decision
+## 3. Operational tension
 
-The documentary evidence supports a contextual priority concerning early
-adversarial detection, but it does not justify reconstructing a complete
-`High / Medium / Low` ranking across all trustworthiness concerns.
+The relevant prioritisation is not represented as a generic
+security-versus-performance trade-off.
 
-The retrospective contextual decision is therefore represented as:
+Instead, the documented setting imposes a combined engineering constraint:
 
-> Under the documented adversarial and limited-observability conditions,
-> detection and monitoring of potentially malicious behaviour should occur
-> early enough to provide evidence for review before aggregation, while
-> preserving explicit interpretation of that evidence and continued
-> monitoring across subsequent training rounds.
+> Adversarial behaviour should be detected early and with sufficient
+> sensitivity to strong and stealthy attacks, while the detection approach
+> remains lightweight and compatible with secure aggregation.
 
-This decision prioritises the **timely availability of security-relevant
-evidence** without treating detection signals as automatic decisions or
-assuming that security concerns eliminate other operational constraints.
+The relevant tension therefore concerns the need to preserve useful
+adversarial detection under the observability and operational constraints of
+the Federated Learning setting.
+
+This is the documentary basis for the CR.3 reconstruction.
+
+---
+
+## 4. CR.3 — Prioritisation decision
+
+The retrospective contextual decision is represented as:
+
+> The engineering response should provide lightweight early detection of
+> adversarial behaviour, including strong and stealthy attacks, while
+> remaining compatible with the secure-aggregation constraints of the
+> Federated Learning setting.
+
+This decision is identified as:
+
+`FL-CD01`
+
+The decision prioritises:
+
+- Robustness against documented adversarial behaviour
+- Early detection
+
+subject to:
+
+- Lightweight operation
+- Secure-aggregation compatibility
+- Partial observability
+
+This is a **context-dependent operational priority**.
+
+It does not establish that robustness or security universally dominates other
+trustworthiness concerns.
 
 ---
 
 ## 5. Decision rationale
 
-The reconstructed decision is supported by:
+The CR.3 reconstruction is supported by documented:
 
-- The documented poisoning and backdoor threat setting
-- Secure aggregation and limited observability
-- Detection before aggregation
-- Repeated training rounds
-- The need to interpret anomaly or detection evidence
-- Continued monitoring during operation
+- Distributed Federated Learning
+- Partial observability
+- Secure aggregation
+- Strong attack scenarios
+- Stealthy attack scenarios
+- Client-level early-warning detection
+- Detection prior to aggregation
+- Lightweight detection requirements
 
-### Alternatives not reconstructed
+The original study additionally documents the technical and experimental
+mechanisms used to satisfy and evaluate this operational priority.
 
-The available evidence does not justify:
+These include:
 
-- Assigning fixed `High / Medium / Low` levels to all trustworthiness concerns
-- Inferring a universal priority of security over every other system objective
-- Treating every detection signal as sufficient evidence for mitigation
-- Inferring a fixed acceptable false-positive rate or intervention threshold
+- Benign reference distribution
+- Bootstrap calibration
+- Statistical distance measures
+- Per-feature detection thresholds
+- Experimental threshold exceedances
 
-These decisions would require additional contextual or empirical evidence.
-
----
-
-## 6. Resulting contextual decision
-
-- Affected concerns: Robustness and security, early detection,
-  interpretability of evidence, and operational continuity
-- Adopted contextual decision: Security-relevant evidence should be available
-  before aggregation where supported by the documented mechanism and should
-  remain subject to explicit interpretation before subsequent action
-- Continuity condition: Relevant monitoring should persist across successive
-  training rounds
-- Applicable constraints: Secure aggregation, limited observability,
-  distributed participation, and repeated operation
-- Responsible actors: Reconstructed coordination, monitoring, security, and
-  governance actors
-- Related assumptions: `FL-A01`, `FL-A02`, `FL-A03`
-- Related context record: `FL-CTX-01`
-
-The engineering response required by this contextual decision is represented
-separately through `engineering-representation.md`.
+Those elements provide evidence for subsequent FR.1 reconstruction and
+technical instantiation. They are not themselves CR.3 outputs.
 
 ---
 
-## 7. Review and revision conditions
+## 6. Decisions not reconstructed
 
-| Revision condition | Affected decision | Evidence source | Responsible role |
-|---|---|---|---|
-| Material change in the adversarial or operating conditions | Early-detection and monitoring priority | Operational / threat evidence | Operations and Security Team |
-| Material change in detection behaviour or evidence quality | Interpretation and use of detection evidence | Detection / monitoring evidence | Operations and Security Team |
-| Material change in aggregation or training configuration | Early placement and monitoring conditions | Technical / configuration evidence | Server / Coordinator |
-| Repeated evidence suggesting that the current response conditions are inappropriate | Relationship between detection evidence and operational response | Review / operational evidence | Operations and Security Team; governance actor where required |
+The available evidence does not require reconstruction of:
 
-Where such evidence challenges the contextual decision or its assumptions,
-**CR.5 — Context Revision Trigger** determines whether the decision should be
-retained, updated, or reconsidered.
+- A complete `High / Medium / Low` ranking of trustworthiness principles
+- A universal priority of security over all other system objectives
+- A governance-level escalation decision
+- A context-revision decision
+- A continuity decision across training rounds
+- A fixed acceptable false-positive rate
+- A universal intervention threshold
+- An automatic response to every threshold exceedance
+
+These would require additional contextual or methodological evidence beyond
+the CR.3 reconstruction reported in the associated article.
 
 ---
 
-## 8. Verification and evidence
+## 7. Resulting contextual decision
 
-Supporting documentary evidence includes:
+- Contextual decision ID: `FL-CD01`
+- Rule: `CR.3 — Principle Prioritisation`
+- Decision: Provide lightweight early detection of adversarial behaviour,
+  including strong and stealthy attacks, while preserving compatibility with
+  secure aggregation
+- Prioritised concerns:
+  - Robustness against adversarial behaviour
+  - Early detection
+- Operational constraints:
+  - Lightweight operation
+  - Secure aggregation
+  - Partial observability
+- Supporting context record:
+  - `FL-CTX-01`
+- Downstream Functional Refinement:
+  - `FR.1 — Engineering Representation Derivation`
 
-- Distributed Federated Learning architecture
-- Secure-aggregation conditions
-- Adversarial backdoor / poisoning setting
-- Detection before aggregation
-- Monitoring across repeated training rounds
-- Detection or anomaly evidence requiring interpretation
+The process-independent engineering consequences of this decision are
+represented in `engineering-representation.md`.
 
-Related worked artefacts:
+---
+
+## 8. Relationship to FR.1
+
+The paper-supported CR.3 output provides input to
+**FR.1 — Engineering Representation Derivation**.
+
+The associated article reconstructs Engineering Representations requiring:
+
+- `FL-ER01` — Lightweight early detection
+- `FL-ER02` — Benign-reference calibration
+- `FL-ER03` — Threshold-based monitoring
+
+The relationship is:
+
+**documented operational constraints  
+→ CR.3  
+→ FL-CD01  
+→ FR.1  
+→ FL-ER01 / FL-ER02 / FL-ER03**
+
+The concrete statistical mechanisms used in the original study belong to
+subsequent technical instantiation.
+
+---
+
+## 9. Documented technical and experimental evidence
+
+The original study provides evidence through:
+
+| Engineering concern | Documented evidence |
+|---|---|
+| Lightweight early detection | Client-level early-warning mechanism operating prior to aggregation |
+| Calibration | Benign reference distribution and bootstrap calibration procedure |
+| Detection criterion | Statistical distance measures and per-feature detection thresholds |
+| Operational behaviour | Threshold exceedances observed under strong and stealthy attack scenarios |
+
+This evidence supports the relationship between the contextual priority and
+the reconstructed Engineering Representations.
+
+It does not imply prospective execution of CR.3 or FR.1 during the original
+study.
+
+---
+
+## 10. Additional illustrative review conditions
+
+For purposes of demonstrating the reusable template, a prospective application
+could review `FL-CD01` if the conditions supporting the prioritisation
+materially changed.
+
+| Illustrative review condition | Potentially affected element | Evidence source |
+|---|---|---|
+| Material change in adversarial behaviour | FL-CD01 | Threat / experimental evidence |
+| Material change in secure-aggregation constraints | FL-CD01 | Technical / architectural evidence |
+| Material change in lightweight-operation requirements | FL-CD01 | Operational evidence |
+| Evidence that the existing detection approach no longer addresses the relevant attack conditions | FL-CD01 | Detection / experimental evidence |
+
+In a prospective application, such evidence could provide input to
+**CR.5 — Context Revision Trigger**.
+
+This section is an **additional worked-template illustration**.
+
+It does not claim paper-supported reconstruction or historical execution of
+CR.5 in the Federated Learning case.
+
+---
+
+## 11. Verification and evidence
+
+The paper-supported CR.3 reconstruction can be verified against documented:
+
+- Adversarial threat conditions
+- Strong attack scenarios
+- Stealthy attack scenarios
+- Partial observability
+- Secure aggregation
+- Lightweight early-warning detection
+- Detection prior to aggregation
+
+The downstream relationship with FR.1 can additionally be inspected through:
+
+- Benign reference distribution
+- Bootstrap calibration
+- Statistical distance measures
+- Per-feature detection thresholds
+- Experimental threshold exceedances
+
+Related paper-supported worked artefact:
+
+- `engineering-representation.md`
+
+Supporting repository artefacts:
 
 - `context-description.md`
 - `responsibility-map.csv`
-- `assumption-log.md`
-- `engineering-representation.md`
 - `traceability-matrix.csv`
+
+Additional illustrative template artefacts:
+
+- `assumption-log.md`
 - `monitoring-plan.md`
 - `feedback-log.md`
 
 ---
 
-## 9. Versioning and ownership
+## 12. Assessment criterion
+
+This contextual reconstruction contributes to:
+
+**P2 — Coordinated Contextual and Functional Refinement**
+
+through the relationship:
+
+**CR.3 operational priority  
+→ FR.1 Engineering Representations  
+→ documented technical instantiation  
+→ experimental operational evidence**
+
+The Federated Learning case is not used in the associated article as
+independent evidence of:
+
+- P1 — Lifecycle Anchoring
+- P3 — Continuity and Iterative Feedback
+
+P4 — Cross-Domain Adaptability is assessed through cross-case comparison.
+
+---
+
+## 13. Analytical boundary
+
+For this artefact, the paper-supported claim is:
+
+**CR.3 — Principle Prioritisation**
+
+The artefact does not establish reconstruction of:
+
+- CR.1 — Context Interpretation
+- CR.2 — Responsibility Allocation
+- CR.4 — Assumption Documentation
+- CR.5 — Context Revision Trigger
+- CR.6 — Lifecycle Anchoring
+- CR.7 — Scope Control
+
+Pre-aggregation placement, repeated training rounds, and other documented
+technical characteristics remain valid evidence about the original system but
+do not independently extend the CR rule reconstruction.
+
+---
+
+## 14. Versioning and ownership
 
 - Artefact type: Retrospectively completed CRISP-TAI v0.2.0 template
 - Source case: Federated Learning
 - Repository version: `0.2.0`
-- Status: Illustrative worked example
+- Status: Paper-supported illustrative worked example
 - Original project record: No
+- Paper-supported CR reconstruction: CR.3
 
 ---
 
 ## Notes
 
-This worked artefact distinguishes **documented contextual priority** from an
-invented ordinal ranking.
+This worked artefact represents the principal paper-supported Contextual
+Refinement result for the Federated Learning case.
 
-The earlier repository version represented Robustness and Security as `High`
-and Transparency and Fairness as `Medium`. The v0.2.0 example does not retain
-those levels unless the underlying documentary evidence establishes that such
-a formal ranking was actually made.
+Its analytical relation is:
 
-The resulting contextual decision remains process-independent. Its engineering
-operationalisation is represented through Functional Refinement before
-subsequent Process Instantiation.
+**documented adversarial and operational constraints  
+→ CR.3 context-dependent prioritisation  
+→ FL-CD01  
+→ FR.1 Engineering Representation Derivation  
+→ documented technical instantiation  
+→ experimental evidence  
+→ P2**
+
+The example deliberately distinguishes the documented technical properties of
+the original Federated Learning system from the specific refinement rule
+reconstructed in the associated article.
